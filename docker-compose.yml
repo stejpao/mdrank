@@ -1,0 +1,58 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: mdrank-db
+    environment:
+      POSTGRES_USER: mdrank
+      POSTGRES_PASSWORD: mdrank
+      POSTGRES_DB: mdrank
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./database/seed/mdrank.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mdrank -d mdrank"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: mdrank-web
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://mdrank:mdrank@db:5432/mdrank
+      NODE_ENV: production
+    volumes:
+      - ./assets:/app/public/assets:ro
+    depends_on:
+      db:
+        condition: service_healthy
+
+  scraper:
+    profiles: ["tools"]
+    build:
+      context: ./scraper
+      dockerfile: Dockerfile
+    container_name: mdrank-scraper
+    environment:
+      DATABASE_URL: postgresql://mdrank:mdrank@db:5432/mdrank
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      XAI_API_KEY: ${XAI_API_KEY:-}
+      LLM_PROVIDER: ${LLM_PROVIDER:-openai}
+      PROXY_URLS: ${PROXY_URLS:-}
+      MAX_DEVICES_PER_SUBCATEGORY: ${MAX_DEVICES_PER_SUBCATEGORY:-6}
+    volumes:
+      - ./assets:/app/assets
+      - ./database/seed:/app/seed
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

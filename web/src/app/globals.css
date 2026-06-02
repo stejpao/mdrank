@@ -1,0 +1,47 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --color-primary: #4338ca;
+  --color-primary-dark: #3730a3;
+  --color-accent: #059669;
+  --color-surface: #f8fafc;
+  --color-border: #e2e8f0;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+.score-badge {
+  @apply inline-flex items-center justify-center rounded-full font-bold text-white;
+}
+
+.score-high {
+  @apply bg-emerald-600;
+}
+
+.score-mid {
+  @apply bg-blue-600;
+}
+
+.score-low {
+  @apply bg-amber-600;
+}
+
+.fda-badge {
+  @apply inline-block rounded px-2 py-0.5 text-xs text-xs font-medium;
+}
+
+.fda-cleared {
+  @apply bg-emerald-100 text-emerald-800;
+}
+
+.fda-registered {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.fda-unknown {
+  @apply bg-slate-100 text-slate-600;
+}

@@ -1,0 +1,16 @@
+.env
+.env.local
+node_modules/
+.next/
+__pycache__/
+*.pyc
+.venv/
+venv/
+assets/devices/*
+!assets/devices/.gitkeep
+*.log
+.DS_Store
+.vercel
+web/.env.local
+scraper/.venv/
+scraper/raw_scrape.json

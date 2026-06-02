@@ -1,0 +1,10 @@
+{
+  "name": "mdrank-org",
+  "private": true,
+  "scripts": {
+    "dev": "cd web && npm run dev",
+    "build": "cd web && npm run build",
+    "deploy": "cd web && npx vercel --prod",
+    "deploy:preview": "cd web && npx vercel"
+  }
+}
