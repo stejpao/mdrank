@@ -6,21 +6,18 @@ One-command deploys assume the [Vercel CLI](https://vercel.com/docs/cli) is inst
 
 ### 1. Link the project
 
-From the repo root:
+**GitHub (connected):** https://github.com/stejpao/mdrank
+
+Pushes to `main` auto-deploy to Vercel. The repo uses a root `vercel.json` that builds the `web/` app.
+
+For CLI deploys from `web/`:
 
 ```bash
 cd web
 vercel link
 ```
 
-When prompted:
-
-- **Set up and deploy?** Yes
-- **Which scope?** Your team or personal account
-- **Link to existing project?** Create new → name it `mdrank` (or similar)
-- **In which directory is your code located?** `./` (you are already in `web/`)
-
-Alternatively, import the Git repo in the [Vercel dashboard](https://vercel.com/new) and set **Root Directory** to `web`.
+When importing manually in the [Vercel dashboard](https://vercel.com/new), set **Root Directory** to `web` (or use the repo as-is with root `vercel.json`).
 
 ### 2. Deploy preview (no database required)
 
