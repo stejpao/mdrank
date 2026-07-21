@@ -40,6 +40,13 @@ test('GA4 is centrally wired with consent mode, route pageviews, and privacy con
   assert.equal(measurement.analytics.ga4.status,'configured');
 });
 
+test('runtime and dependency overrides keep the production image stack patched',()=>{
+  const pkg=readJson('web/package.json');
+  assert.equal(pkg.engines?.node,'>=20.9.0');
+  assert.equal(pkg.overrides?.next?.sharp,'0.35.3');
+  assert.equal(pkg.overrides?.next?.postcss,'8.5.21');
+});
+
 test('90-day calendar is contiguous, private, and 80–90 percent blood-pressure',()=>{
   const calendar=readJson('data/content-calendar/2026-07-22-to-2026-10-19-mdrank-bp-depth.json');
   assert.equal(calendar.entries.length,90);

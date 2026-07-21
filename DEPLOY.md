@@ -19,9 +19,9 @@ vercel link
 
 When importing manually in the [Vercel dashboard](https://vercel.com/new), set **Root Directory** to `web` (or use the repo as-is with root `vercel.json`).
 
-### 2. Deploy preview (no database required)
+### 2. Deploy preview
 
-The app uses bundled JSON fallback until Postgres is connected.
+The app serves only the bundled, reviewed public corpus. The inherited SQL schema and rows are unreachable from the web application.
 
 ```bash
 npm run deploy:preview
@@ -35,9 +35,9 @@ vercel
 
 ### 3. Database safety
 
-The inherited PostgreSQL seed contains synthetic scores and unsupported testing claims. It is quarantined and must not be loaded. Production intentionally ignores `DATABASE_URL` unless `MDRANK_EVIDENCE_DB_V1=enabled` is also present.
+The inherited PostgreSQL seed contains synthetic scores and unsupported testing claims. It is quarantined and must not be loaded. The legacy PostgreSQL adapter has been removed from the web application, and `DATABASE_URL` is ignored.
 
-Do not set that flag until the evidence-v1 schema, migrated records, approval fields, and validators have passed review. The current safe deployment uses the bundled empty approved corpus.
+A future evidence-v1 adapter may be introduced only after its schema, migrated records, approval fields, and publication validators pass review. The current safe deployment uses the bundled empty approved corpus.
 
 ### 5. Add custom domain
 
@@ -76,10 +76,7 @@ npx vercel --prod
 
 ### Vercel (web app)
 
-| Variable | Required | Notes |
-|----------|----------|-------|
-| `DATABASE_URL` | No, during quarantine | Ignored unless the evidence-v1 opt-in is enabled |
-| `MDRANK_EVIDENCE_DB_V1` | No | Do not set until the approved schema migration is complete |
+No web-application environment variables are currently required. `DATABASE_URL` and the former `MDRANK_EVIDENCE_DB_V1` switch cannot enable database publishing.
 
 ### Legacy scraper
 
@@ -106,7 +103,7 @@ npm run deploy
 
 **Empty rankings:** This is the expected safe state until evidence-approved records receive human publication approval.
 
-**Legacy rows appearing:** Confirm `MDRANK_EVIDENCE_DB_V1` is unset and redeploy. Do not load the inherited seed.
+**Legacy rows appearing:** Stop the deployment and inspect its commit. Current `main` has no legacy database read path and cannot publish those rows through an environment flag.
 
 **www.mdrank.org certificate error:** Add and verify the `www` domain in Vercel or configure a registrar redirect to the apex domain.
 
@@ -117,7 +114,7 @@ npm run deploy
 - [ ] `npm test`
 - [ ] `npm run build`
 - [ ] Bundled approved corpus is empty or contains only approved evidence-v1 records
-- [ ] `MDRANK_EVIDENCE_DB_V1` remains unset during quarantine
+- [ ] Legacy database read path remains absent
 - [ ] Domain `mdrank.org` added
 - [ ] `www.mdrank.org` certificate/redirect corrected
 - [ ] Production deploy succeeds
