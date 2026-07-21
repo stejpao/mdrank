@@ -43,7 +43,7 @@ test('GA4 is centrally wired with consent mode, route pageviews, and privacy con
 test('production dependency lock and runtime stay on validated releases',()=>{
   const pkg=readJson('web/package.json');
   const lock=readJson('web/package-lock.json');
-  assert.equal(pkg.engines?.node,'20.x');
+  assert.equal(pkg.engines?.node,'24.x');
   assert.equal(pkg.overrides?.sharp,'0.35.3');
   assert.equal(pkg.overrides?.postcss,'$postcss');
   assert.equal(pkg.devDependencies?.postcss,'8.5.21');
