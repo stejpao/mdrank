@@ -10,14 +10,34 @@ test('public fallback contains no inherited synthetic rankings',()=>{
   assert.doesNotMatch(JSON.stringify(fallback),/hands-on|independent testing|score 9[89]/i);
 });
 
-test('legacy database is fail-closed behind evidence-v1 opt-in',()=>{
+test('legacy database cannot be re-enabled by an environment flag',()=>{
   const source=fs.readFileSync('web/src/lib/db.ts','utf8');
-  assert.match(source,/MDRANK_EVIDENCE_DB_V1 === "enabled"/);
+  assert.doesNotMatch(source,/new Pool|MDRANK_EVIDENCE_DB_V1|FROM devices|FROM site_pages/i);
   for (const seed of ['database/seed/mdrank.sql','database/seed/bp_monitors.sql']) {
     const sql=fs.readFileSync(seed,'utf8');
     assert.match(sql,/BLOCKED: quarantined legacy/i);
     assert.match(sql,/\\quit/);
   }
+});
+
+test('GA4 is centrally wired with consent mode, route pageviews, and privacy controls',()=>{
+  const componentPath='web/src/components/GoogleAnalytics.tsx';
+  assert.equal(fs.existsSync(componentPath),true);
+  const component=fs.readFileSync(componentPath,'utf8');
+  const analytics=fs.readFileSync('web/src/lib/analytics.ts','utf8');
+  const layout=fs.readFileSync('web/src/app/layout.tsx','utf8');
+  const privacy=fs.readFileSync('web/src/app/privacy/page.tsx','utf8');
+  const measurement=readJson('data/measurement/mdrank-measurement-plan.json');
+  assert.match(analytics,/G-KEB95QJD5F/);
+  assert.match(analytics,/analytics_storage["']?\s*:\s*["']denied/i);
+  assert.match(layout,/GA_CONSENT_BOOTSTRAP/);
+  assert.ok(layout.indexOf('<head>') < layout.indexOf('<body'));
+  assert.match(component,/page_view/);
+  assert.match(component,/\/privacy/);
+  assert.match(layout,/GoogleAnalytics/);
+  assert.match(privacy,/Google Analytics|GA4/i);
+  assert.equal(measurement.analytics.ga4.measurementId,'G-KEB95QJD5F');
+  assert.equal(measurement.analytics.ga4.status,'configured');
 });
 
 test('90-day calendar is contiguous, private, and 80–90 percent blood-pressure',()=>{

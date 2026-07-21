@@ -6,7 +6,7 @@
     "bingWebmasterTools": {"status":"owner-credential-dependent","metrics":["indexation","bingAiPerformanceWhenAvailable"]}
   },
   "analytics": {
-    "ga4": {"status":"not-detected-in-repository","requiredEvents":["affiliate_outbound_click","approval_packet_created","public_dossier_published","public_dossier_refreshed"]},
+    "ga4": {"status":"configured","measurementId":"G-KEB95QJD5F","consentMode":"analytics-denied-by-default","requiredEvents":["page_view","affiliate_outbound_click","approval_packet_created","public_dossier_published","public_dossier_refreshed"]},
     "aiReferrers": ["chatgpt.com","chat.openai.com","copilot.microsoft.com","perplexity.ai","claude.ai","gemini.google.com"],
     "affiliateDataset": "isolated-from-mdrank-scoring"
   },

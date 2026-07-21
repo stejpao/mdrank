@@ -13,6 +13,7 @@ export function Footer() {
           <ul className="mt-2 space-y-2 text-sm text-slate-600">
             <li><Link href="/methodology" className="hover:text-indigo-700">Methodology</Link></li>
             <li><Link href="/evidence-status" className="hover:text-indigo-700">Evidence-system status</Link></li>
+            <li><Link href="/privacy" className="hover:text-indigo-700">Privacy notice</Link></li>
             <li><Link href="/llms.txt" className="hover:text-indigo-700">Neutral resource directory</Link></li>
           </ul>
         </div>

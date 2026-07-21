@@ -6,5 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://mdrank.org/", lastModified, changeFrequency: "weekly", priority: 1 },
     { url: "https://mdrank.org/methodology", lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: "https://mdrank.org/evidence-status", lastModified, changeFrequency: "weekly", priority: 0.8 },
+    { url: "https://mdrank.org/privacy", lastModified, changeFrequency: "yearly", priority: 0.3 },
   ];
 }
