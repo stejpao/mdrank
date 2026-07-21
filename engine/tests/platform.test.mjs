@@ -40,11 +40,14 @@ test('GA4 is centrally wired with consent mode, route pageviews, and privacy con
   assert.equal(measurement.analytics.ga4.status,'configured');
 });
 
-test('runtime and dependency overrides keep the production image stack patched',()=>{
+test('production dependency lock and runtime stay on validated releases',()=>{
   const pkg=readJson('web/package.json');
-  assert.equal(pkg.engines?.node,'>=20.9.0');
-  assert.equal(pkg.overrides?.next?.sharp,'0.35.3');
-  assert.equal(pkg.overrides?.next?.postcss,'8.5.21');
+  const lock=readJson('web/package-lock.json');
+  assert.equal(pkg.engines?.node,'20.x');
+  assert.equal(pkg.overrides?.sharp,'0.35.3');
+  assert.equal(pkg.overrides?.postcss,'$postcss');
+  assert.equal(pkg.devDependencies?.postcss,'8.5.21');
+  assert.equal(lock.packages?.['node_modules/next']?.version,'15.5.21');
 });
 
 test('90-day calendar is contiguous, private, and 80–90 percent blood-pressure',()=>{
