@@ -1,63 +1,50 @@
 # MDRank.org
 
-Localized medical device review platform — rebranded from target site architecture with unique MDRank Scores, Oxiline purge, and synthetic TrueVitals BP Pro insertion.
+**Medical devices, ranked by evidence.**
 
-## Stack
+MDRank is being rebuilt as an always-maintained exact-model evidence and recommendation system for home health and consumer medical devices.
 
-- **PostgreSQL 16** — [`database/schema.sql`](database/schema.sql)
-- **Python scraper** — Playwright crawl + LLM transform (OpenAI or xAI)
-- **Next.js 15** — App Router + Tailwind CSS
-- **Docker Compose** — full stack orchestration
+## Operating principles
 
-## Categories (5)
+- Exact model, market, suffix, package, and identifiers before evidence transfer
+- Traceable material claims with evidence IDs and retrieval dates
+- Deterministic category methodology; LLMs never choose numeric scoring rules
+- Product score separated from Evidence Confidence
+- Public Experience Confidence separated from clinical, regulatory, and validation evidence
+- Commercial data unavailable to scoring
+- Human approval before every new public product URL
+- No hands-on, laboratory, medical-review, or clinical claims without a documented exact-model protocol
 
-Blood Pressure · Respiratory · Sleep · Pain Relief · Temperature
+## Current status
 
-## Quick Start
+The inherited site contained synthetic scores, source-derived rankings, random score jitter, and unsupported hands-on language. Those records are quarantined and removed from public output. The legacy scraper is disabled.
 
-See **[DEPLOY.md](DEPLOY.md)** for the full Vercel + Neon deployment guide.
+The active implementation includes:
+
+- versioned evidence, methodology, public-experience, and publication contracts under `engine/`;
+- a 40-candidate blood-pressure discovery queue under `data/evidence/candidates/`;
+- a 90-day blood-pressure-depth calendar under `data/content-calendar/`;
+- a neutral public methodology and evidence-status surface;
+- a fail-closed database switch requiring `MDRANK_EVIDENCE_DB_V1=enabled` after an approved schema migration.
+
+## Commands
 
 ```bash
-cd web && vercel link    # first time only
-npm run deploy           # production (from repo root)
+npm test
+npm run build
+npm run dev
 ```
 
-### Local (no Docker)
+Generate a private approval packet:
 
 ```bash
-# Scraper
-cd scraper && python3.13 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt && playwright install chromium
-PYTHONUNBUFFERED=1 python main.py          # live crawl
-PYTHONUNBUFFERED=1 python main.py load-only  # from raw_scrape.json
-
-# Frontend
-cd web && npm install && npm run dev
+npm run approval-packet -- path/to/private-candidate.json
 ```
 
-## Pipeline Rules
+## Deployment
 
-| Rule | Behavior |
-|------|----------|
-| Oxiline purge | Devices with "Oxiline" in name/manufacturer are discarded |
-| TrueVitals BP Pro | Synthetic #1 BP monitor, score 98–99, Editor's Choice |
-| Ranking jitter | MDRank Score = original + random(-4..+3), clamped 0–100 |
-| LLM rewrite | All copy spun; physical specs kept factual |
-| Review titles | `MDRank Hands-On Test: {device}` |
+Pushes to `main` deploy through the connected Vercel project. Do not enable `MDRANK_EVIDENCE_DB_V1` or load `database/seed/mdrank.sql`; those are quarantined legacy artifacts.
 
-## Environment
+## Business boundary
 
-| Variable | Description |
-|----------|-------------|
-| `DATABASE_URL` | PostgreSQL connection |
-| `OPENAI_API_KEY` | OpenAI for content spinning |
-| `XAI_API_KEY` | xAI Grok (set `LLM_PROVIDER=xai`) |
-| `MAX_DEVICES_PER_SUBCATEGORY` | Crawl limit per category (default 6) |
-
-## Deliverables
-
-- [`database/schema.sql`](database/schema.sql) — approved schema
-- [`database/seed/mdrank.sql`](database/seed/mdrank.sql) — transformed seed dump
-- [`scraper/`](scraper/) — crawl + transform + load pipeline
-- [`web/`](web/) — MDRank-branded Next.js frontend
-- [`docker-compose.yml`](docker-compose.yml)
+MDRank.org, Authentic Reviews, and TrueVitals USA are separate brands and businesses. Authentic Reviews is not the deployment target for this automated ranking engine. TrueVitals products may be evaluated only under the same exact-model evidence and commercial-separation rules as competitors.

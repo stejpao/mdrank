@@ -1,0 +1,175 @@
+{
+  "schemaVersion": "0.1.0",
+  "product": {
+    "id": "omron-evolv-bp7000",
+    "brand": "OMRON",
+    "name": "OMRON Evolv Wireless Upper Arm Blood Pressure Monitor",
+    "model": "BP7000",
+    "upc": "073796270001",
+    "alternateModelReferences": ["HEM-7600T-Z", "HEM-7600T"],
+    "market": "US",
+    "relationship": "independent-editorial",
+    "sponsorshipStatus": "not-sponsored",
+    "canonicalProductUrl": "https://omronhealthcare.com/products/evolv-wireless-upper-arm-blood-pressure-monitor-bp7000",
+    "testingStatus": "public-evidence-only",
+    "hsaFsaStatus": "not-verified-for-this-product",
+    "pilotSummary": {
+      "bestFor": "People who want a compact one-piece upper-arm monitor with an attached cuff, optional app syncing, and documented 22 to 42 cm arm fit",
+      "verdict": "The OMRON Evolv BP7000 is a well-documented one-piece upper-arm monitor with FDA clearance, a current official US product page, a five-year warranty, and model-family validation evidence. It is not a true fixed-opening arm-in monitor, and the STRIDE BP listing uses HEM-7600T while the US manual pairs BP7000 with HEM-7600T-Z, so the suffix mapping remains a material caveat."
+    }
+  },
+  "identityResolution": {
+    "status": "resolved-with-model-family-caveat",
+    "notes": [
+      "FDA K162092 identifies the US trade/device name as Evolv Model BP7000 Upper Arm Blood Pressure Monitor.",
+      "The official US manual lists BP7000 and HEM-7600T-Z together in its specifications table.",
+      "STRIDE BP lists HEM-7600T without the Z suffix. Treat the validation listing as strong model-family evidence, not a fully resolved suffix-level identity match."
+    ]
+  },
+  "gates": {
+    "identityVerified": true,
+    "officialDocumentation": true,
+    "availabilityVerified": true,
+    "safetyChecked": true,
+    "notes": [
+      "The official US product page displayed MSRP, specifications, warranty, and retailer links on 2026-07-21.",
+      "Exact BP7000 and OMRON Evolv openFDA recall/enforcement queries returned no matches on 2026-07-21. No-match queries do not prove that no recall, correction, alternate-name record, or non-US action exists."
+    ]
+  },
+  "facts": [
+    {
+      "id": "identity-and-clearance",
+      "normalizedFact": "FDA 510(k) K162092 identifies the Evolv Model BP7000 Upper Arm Blood Pressure Monitor as a Class II noninvasive blood pressure measurement system under product code DXN.",
+      "sourceIds": ["fda-k162092"],
+      "confidence": "high",
+      "materiality": "high"
+    },
+    {
+      "id": "model-family-mapping",
+      "normalizedFact": "The official OMRON US instruction manual lists BP7000 and HEM-7600T-Z in the same specifications table; STRIDE BP separately lists HEM-7600T, without the Z suffix.",
+      "sourceIds": ["omron-bp7000-manual", "stride-hem-7600t"],
+      "confidence": "medium",
+      "materiality": "high"
+    },
+    {
+      "id": "device-format",
+      "normalizedFact": "OMRON describes the Evolv BP7000 as a one-piece upper-arm monitor with an attached ComFit cuff and no separate hoses or desk display; it still wraps around the arm and is not a fixed arm-opening device.",
+      "sourceIds": ["omron-bp7000-product", "fda-k162092"],
+      "confidence": "high",
+      "materiality": "high"
+    },
+    {
+      "id": "fit-range",
+      "normalizedFact": "The official manual specifies an arm-circumference range of 22 to 42 cm, which the US product page presents as approximately 9 to 17 inches.",
+      "sourceIds": ["omron-bp7000-manual", "omron-bp7000-product"],
+      "confidence": "high",
+      "materiality": "high"
+    },
+    {
+      "id": "integrated-cuff-replacement",
+      "normalizedFact": "The FDA 510(k) summary states that the BP7000 cuff is not replaceable.",
+      "sourceIds": ["fda-k162092"],
+      "confidence": "high",
+      "materiality": "high"
+    },
+    {
+      "id": "measurement-documentation",
+      "normalizedFact": "The official manual states a pressure accuracy specification of plus or minus 3 mmHg and says the monitor was clinically investigated according to ISO 81060-2:2013; FDA K162092 includes nonclinical and clinical testing summaries for BP7000.",
+      "sourceIds": ["omron-bp7000-manual", "fda-k162092"],
+      "confidence": "high",
+      "materiality": "high"
+    },
+    {
+      "id": "stride-validation",
+      "normalizedFact": "STRIDE BP lists OMRON HEM-7600T as an available preferred home upper-arm device for adults, with validated cuff sizes of 22 to 42 cm and an ANSI/AAMI/ISO 2013 validation study published in 2021.",
+      "sourceIds": ["stride-hem-7600t"],
+      "confidence": "medium",
+      "materiality": "high"
+    },
+    {
+      "id": "memory-and-app",
+      "normalizedFact": "The manual states that the monitor can store up to 100 measurements internally, but prior stored readings cannot be viewed on the monitor without transferring them to a smart device; OMRON says current measurements can be taken without a smart device.",
+      "sourceIds": ["omron-bp7000-manual", "omron-bp7000-product"],
+      "confidence": "high",
+      "materiality": "medium"
+    },
+    {
+      "id": "current-offer-and-support",
+      "normalizedFact": "The official US page displayed a $119.99 MSRP and a five-year limited warranty on 2026-07-21; the manual states that the five-year warranty applies to the original retail purchaser when bought from an authorized OMRON seller, subject to its terms.",
+      "sourceIds": ["omron-bp7000-product", "omron-bp7000-manual"],
+      "confidence": "high",
+      "materiality": "medium",
+      "freshnessDays": 7
+    },
+    {
+      "id": "openfda-recall-check",
+      "normalizedFact": "Exact BP7000 and OMRON Evolv openFDA device recall/enforcement queries returned no matching records on 2026-07-21; this limited no-match result is not proof that no recall, correction, differently named record, or non-US action exists.",
+      "sourceIds": ["openfda-bp7000-query"],
+      "confidence": "medium",
+      "materiality": "high",
+      "freshnessDays": 30
+    }
+  ],
+  "limitations": [
+    "MDRank did not perform hands-on or laboratory testing for this dossier.",
+    "The Evolv BP7000 is one-piece and tubeless, but it is not a true fixed-opening arm-in or barrel-style monitor.",
+    "The FDA summary states that the integrated cuff is not replaceable, which may matter for long-term ownership and damage outside warranty coverage.",
+    "The STRIDE BP listing is HEM-7600T while the current US manual lists HEM-7600T-Z alongside BP7000; the exact significance of the suffix requires confirmation before treating the registry entry as an exact US-package match.",
+    "Manufacturer ease-of-use, portability, movement-interference, and clinically accurate wording remains manufacturer-attributed unless independently supported.",
+    "The app is optional for taking a current reading, but the manual says a smart device is required to view prior stored readings.",
+    "HSA/FSA eligibility has not been verified for the exact current offer and should not be claimed.",
+    "MSRP, retailer availability, app behavior, and support terms can change and require refreshes."
+  ],
+  "sources": [
+    {
+      "id": "fda-k162092",
+      "title": "FDA 510(k) K162092 and 510(k) Summary",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf16/K162092.pdf",
+      "sourceTier": "A",
+      "sourceClass": "government-regulatory",
+      "retrievedAt": "2026-07-21",
+      "acquisitionMode": "public-document",
+      "permittedUse": "facts-and-citation"
+    },
+    {
+      "id": "stride-hem-7600t",
+      "title": "STRIDE BP device listing for OMRON HEM-7600T",
+      "url": "https://www.stridebp.org/device/omron-hem-7600t/",
+      "sourceTier": "A",
+      "sourceClass": "recognized-validation-registry",
+      "retrievedAt": "2026-07-21",
+      "acquisitionMode": "public-page",
+      "permittedUse": "facts-and-citation"
+    },
+    {
+      "id": "omron-bp7000-manual",
+      "title": "OMRON Evolv BP7000 Instruction Manual",
+      "url": "https://omronhealthcare.com/storage/pdfs/evolv-wireless-upper-arm-blood-pressure-monitor-bp7000-im-en03022020.pdf",
+      "sourceTier": "C",
+      "sourceClass": "manufacturer-manual",
+      "retrievedAt": "2026-07-21",
+      "acquisitionMode": "public-document",
+      "permittedUse": "attributed-specifications-and-instructions"
+    },
+    {
+      "id": "omron-bp7000-product",
+      "title": "OMRON Evolv Wireless Upper Arm Blood Pressure Monitor BP7000 product page",
+      "url": "https://omronhealthcare.com/products/evolv-wireless-upper-arm-blood-pressure-monitor-bp7000",
+      "sourceTier": "C",
+      "sourceClass": "manufacturer-seller",
+      "retrievedAt": "2026-07-21",
+      "acquisitionMode": "public-page",
+      "permittedUse": "attributed-specifications-and-current-offer"
+    },
+    {
+      "id": "openfda-bp7000-query",
+      "title": "openFDA exact BP7000 and OMRON Evolv recall/enforcement queries",
+      "url": "https://api.fda.gov/device/enforcement.json?search=product_description:%22BP7000%22&limit=10",
+      "sourceTier": "A",
+      "sourceClass": "government-regulatory-api",
+      "retrievedAt": "2026-07-21",
+      "acquisitionMode": "official-api",
+      "permittedUse": "query-result-summary"
+    }
+  ]
+}

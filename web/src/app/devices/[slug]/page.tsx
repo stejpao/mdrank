@@ -69,11 +69,11 @@ export default async function DevicePage({ params }: PageProps) {
 
           {review?.excerpt && (
             <section className="mt-8 rounded-xl border border-slate-200 bg-white p-6">
-              <h2 className="text-lg font-semibold">Hands-On Summary</h2>
+              <h2 className="text-lg font-semibold">Evidence Summary</h2>
               <p className="mt-3 italic text-slate-700">&ldquo;{review.excerpt}&rdquo;</p>
               {review.slug && (
                 <Link href={`/reviews/${review.slug}`} className="mt-4 inline-block text-sm font-semibold text-indigo-700 hover:underline">
-                  Read Full MDRank Test →
+                  Read the full evidence dossier →
                 </Link>
               )}
             </section>

@@ -58,7 +58,10 @@ const CATEGORIES: Category[] = [
   },
 ];
 
-const pool = process.env.DATABASE_URL
+// Legacy database rows are quarantined because the inherited dataset contains synthetic
+// scores and unsupported testing claims. A migrated evidence-v1 database must be
+// explicitly enabled after its approval fields and validators are deployed.
+const pool = process.env.MDRANK_EVIDENCE_DB_V1 === "enabled" && process.env.DATABASE_URL
   ? new Pool({ connectionString: process.env.DATABASE_URL })
   : null;
 
@@ -155,8 +158,8 @@ export async function getLandingCopy(): Promise<LandingCopy> {
     }
   }
   return fromFallback().landing ?? {
-    hero_title: "MDRank — Data-Driven Device Rankings",
-    hero_body: "Independent hands-on evaluations across five health device categories.",
+    hero_title: "MDRank — Medical devices, ranked by evidence",
+    hero_body: "Exact-model records, traceable sources, deterministic methods, and human-approved publication.",
   };
 }
 

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "scoringIsolation": true,
+  "searchPlatforms": {
+    "googleSearchConsole": {"status":"owner-credential-dependent","metrics":["nonBrandImpressions","nonBrandClicks","indexation","generativeAiVisibilityWhenAvailable"]},
+    "bingWebmasterTools": {"status":"owner-credential-dependent","metrics":["indexation","bingAiPerformanceWhenAvailable"]}
+  },
+  "analytics": {
+    "ga4": {"status":"not-detected-in-repository","requiredEvents":["affiliate_outbound_click","approval_packet_created","public_dossier_published","public_dossier_refreshed"]},
+    "aiReferrers": ["chatgpt.com","chat.openai.com","copilot.microsoft.com","perplexity.ai","claude.ai","gemini.google.com"],
+    "affiliateDataset": "isolated-from-mdrank-scoring"
+  },
+  "crawlerLogs": {
+    "requiredBots":["Googlebot","Bingbot","OAI-SearchBot"],
+    "status":"hosting-log-access-dependent"
+  },
+  "weeklyReportFields":["newCandidatesDiscovered","exactModelsAccepted","exactModelsRejected","evidenceConfidenceDistribution","newPublicPages","refreshedPublicPages","pagesAwaitingApproval","indexationStatus","nonBrandImpressions","nonBrandClicks","aiCitations","aiReferrals","referringDomains","affiliateOutboundClicks","affiliateConversions","sourceFailures","corrections","materialExceptions","nextHighestLeverageTask"]
+}

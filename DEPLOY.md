@@ -33,41 +33,11 @@ Or from `web/`:
 vercel
 ```
 
-### 3. Add Neon Postgres (recommended for production)
+### 3. Database safety
 
-**Dashboard:** Project → **Storage** → **Create Database** → **Neon** → Connect to this project.
+The inherited PostgreSQL seed contains synthetic scores and unsupported testing claims. It is quarantined and must not be loaded. Production intentionally ignores `DATABASE_URL` unless `MDRANK_EVIDENCE_DB_V1=enabled` is also present.
 
-**CLI:**
-
-```bash
-vercel integration add neon
-```
-
-Neon injects a connection string (often `POSTGRES_URL`). In **Project → Settings → Environment Variables**, add:
-
-| Variable | Value | Environments |
-|----------|-------|--------------|
-| `DATABASE_URL` | Paste Neon **pooled** connection string | Production, Preview, Development |
-
-Use the **Pooled** URL from Neon (not the direct connection) for serverless.
-
-Pull env vars locally:
-
-```bash
-cd web
-vercel env pull .env.local
-```
-
-### 4. Load the database
-
-From your machine (requires `psql`):
-
-```bash
-psql "$DATABASE_URL" -f database/schema.sql
-psql "$DATABASE_URL" -f database/seed/mdrank.sql
-```
-
-Run against the **Production** `DATABASE_URL` from Vercel/Neon.
+Do not set that flag until the evidence-v1 schema, migrated records, approval fields, and validators have passed review. The current safe deployment uses the bundled empty approved corpus.
 
 ### 5. Add custom domain
 
@@ -108,27 +78,12 @@ npx vercel --prod
 
 | Variable | Required | Notes |
 |----------|----------|-------|
-| `DATABASE_URL` | Production | Neon pooled Postgres URL |
+| `DATABASE_URL` | No, during quarantine | Ignored unless the evidence-v1 opt-in is enabled |
+| `MDRANK_EVIDENCE_DB_V1` | No | Do not set until the approved schema migration is complete |
 
-### Local scraper only (not on Vercel)
+### Legacy scraper
 
-| Variable | Required | Notes |
-|----------|----------|-------|
-| `DATABASE_URL` | For DB load | Same Neon URL |
-| `XAI_API_KEY` | Optional | Unique LLM copy (`LLM_PROVIDER=xai`) |
-| `OPENAI_API_KEY` | Optional | Alternative to xAI |
-| `MAX_DEVICES_PER_SUBCATEGORY` | Optional | Default `6` |
-
-The scraper runs **locally**, not on Vercel:
-
-```bash
-cd scraper
-source .venv/bin/activate
-vercel env pull ../web/.env.local   # get DATABASE_URL
-export $(grep DATABASE_URL ../web/.env.local | xargs)
-PYTHONUNBUFFERED=1 python main.py
-psql "$DATABASE_URL" -f ../database/seed/mdrank.sql
-```
+The legacy crawler, copy rewriter, synthetic insertion, and score-jitter pipeline is disabled. Do not run or restore it. New intake must use permitted sources, exact-model contracts, deterministic scoring manifests, and the private publication gate.
 
 ---
 
@@ -149,19 +104,21 @@ npm run deploy
 
 **Build fails:** Run `cd web && npm run build` locally first.
 
-**Empty rankings:** Check `DATABASE_URL` in Vercel env vars and that seed SQL was applied.
+**Empty rankings:** This is the expected safe state until evidence-approved records receive human publication approval.
 
-**DB connection errors on Vercel:** Use Neon’s **pooled** connection string. Add `?sslmode=require` if needed.
+**Legacy rows appearing:** Confirm `MDRANK_EVIDENCE_DB_V1` is unset and redeploy. Do not load the inherited seed.
 
-**Still shows old MedGrade branding:** Redeploy after pulling latest `main`.
+**www.mdrank.org certificate error:** Add and verify the `www` domain in Vercel or configure a registrar redirect to the apex domain.
 
 ---
 
 ## Checklist
 
-- [ ] `vercel link` in `web/`
-- [ ] Preview deploy works
-- [ ] Neon connected, `DATABASE_URL` set
-- [ ] `schema.sql` + `mdrank.sql` applied
+- [ ] `npm test`
+- [ ] `npm run build`
+- [ ] Bundled approved corpus is empty or contains only approved evidence-v1 records
+- [ ] `MDRANK_EVIDENCE_DB_V1` remains unset during quarantine
 - [ ] Domain `mdrank.org` added
-- [ ] `npm run deploy` (production)
+- [ ] `www.mdrank.org` certificate/redirect corrected
+- [ ] Production deploy succeeds
+- [ ] Home, methodology, status, robots, sitemap, and llms routes verified live

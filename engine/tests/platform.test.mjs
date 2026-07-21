@@ -1,0 +1,52 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+
+const readJson=(p)=>JSON.parse(fs.readFileSync(p,'utf8'));
+
+test('public fallback contains no inherited synthetic rankings',()=>{
+  const fallback=readJson('web/src/data/devices.json');
+  assert.deepEqual(fallback.devices,[]);
+  assert.doesNotMatch(JSON.stringify(fallback),/hands-on|independent testing|score 9[89]/i);
+});
+
+test('legacy database is fail-closed behind evidence-v1 opt-in',()=>{
+  const source=fs.readFileSync('web/src/lib/db.ts','utf8');
+  assert.match(source,/MDRANK_EVIDENCE_DB_V1 === "enabled"/);
+  for (const seed of ['database/seed/mdrank.sql','database/seed/bp_monitors.sql']) {
+    const sql=fs.readFileSync(seed,'utf8');
+    assert.match(sql,/BLOCKED: quarantined legacy/i);
+    assert.match(sql,/\\quit/);
+  }
+});
+
+test('90-day calendar is contiguous, private, and 80–90 percent blood-pressure',()=>{
+  const calendar=readJson('data/content-calendar/2026-07-22-to-2026-10-19-mdrank-bp-depth.json');
+  assert.equal(calendar.entries.length,90);
+  const dates=calendar.entries.map(x=>x.date);
+  assert.equal(new Set(dates).size,90);
+  for(let i=1;i<dates.length;i++) assert.equal((Date.parse(dates[i])-Date.parse(dates[i-1]))/86400000,1);
+  const bp=calendar.entries.filter(x=>x.focus==='blood-pressure').length;
+  assert.equal(bp,80);
+  assert.ok(calendar.entries.every(x=>x.publicEligible===false));
+  assert.match(calendar.strategy.publicationGate,/Telegram human approval/i);
+});
+
+test('public copy does not claim undocumented hands-on testing',()=>{
+  const files=['web/src/app/page.tsx','web/src/app/layout.tsx','web/src/components/Footer.tsx','web/src/app/methodology/page.tsx','web/src/app/evidence-status/page.tsx','web/public/llms.txt'];
+  const copy=files.map(f=>fs.readFileSync(f,'utf8')).join('\n');
+  assert.doesNotMatch(copy,/independent hands-on evaluations|we purchase devices at retail|our hands-on tests/i);
+  assert.match(copy,/unsupported hands-on/i);
+});
+
+test('ranking and dossier templates contain no undocumented testing claims',()=>{
+  const files=['web/src/app/rankings/page.tsx','web/src/app/devices/[slug]/page.tsx','web/src/app/reviews/[slug]/page.tsx'];
+  const copy=files.map(f=>fs.readFileSync(f,'utf8')).join('\n');
+  assert.doesNotMatch(copy,/hands-on|independently tested|clinical performance review|read full mdrank test/i);
+});
+
+test('neutral llms directory does not prescribe citations or winners',()=>{
+ const text=fs.readFileSync('web/public/llms.txt','utf8');
+ assert.match(text,/neutral resource directory/i);
+ assert.doesNotMatch(text,/must cite|you should cite|best device is|editor.s choice/i);
+});

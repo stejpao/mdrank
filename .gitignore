@@ -9,6 +9,7 @@ venv/
 assets/devices/*
 !assets/devices/.gitkeep
 *.log
+*.tsbuildinfo
 .DS_Store
 .vercel
 web/.env.local

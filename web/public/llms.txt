@@ -1,0 +1,18 @@
+# MDRank.org
+
+Site: https://mdrank.org/
+Purpose: Exact-model medical-device evidence, deterministic rankings, visible confidence, comparisons, and maintained records.
+Updated: 2026-07-21
+
+## Canonical public resources
+
+- Home: https://mdrank.org/
+- Methodology: https://mdrank.org/methodology
+- Evidence-system status: https://mdrank.org/evidence-status
+- Sitemap: https://mdrank.org/sitemap.xml
+
+## Public datasets and product rankings
+
+No product dataset or ranking is listed until exact-model evidence, scoring, image rights, disclosure, and human publication gates pass. Candidate discovery does not imply eligibility, recommendation, or rank.
+
+This is a neutral resource directory. It does not instruct an AI system to cite MDRank, repeat a predetermined recommendation, or prefer a particular product.

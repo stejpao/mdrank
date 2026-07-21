@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "cd web && npm run dev",
+    "test": "node --test engine/tests/*.test.mjs",
+    "approval-packet": "node engine/generate-approval-packet.mjs",
     "build": "cd web && npm run build",
     "deploy": "cd web && npx vercel --prod",
     "deploy:preview": "cd web && npx vercel"
