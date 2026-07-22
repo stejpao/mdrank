@@ -11,6 +11,7 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold text-slate-800">Transparency</h4>
           <ul className="mt-2 space-y-2 text-sm text-slate-600">
+            <li><Link href="/devices" className="hover:text-indigo-700">Evidence dossiers</Link></li>
             <li><Link href="/methodology" className="hover:text-indigo-700">Methodology</Link></li>
             <li><Link href="/evidence-status" className="hover:text-indigo-700">Evidence-system status</Link></li>
             <li><Link href="/privacy" className="hover:text-indigo-700">Privacy notice</Link></li>

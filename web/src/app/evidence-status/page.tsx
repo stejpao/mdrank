@@ -22,7 +22,7 @@ const milestone = [
 export default function EvidenceStatusPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
-      <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Updated July 21, 2026</p>
+      <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Updated July 22, 2026</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">MDRank evidence-system status</h1>
       <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-6 text-amber-950">
         <strong>Public rankings are temporarily withheld.</strong>
@@ -33,6 +33,7 @@ export default function EvidenceStatusPage() {
         <h2 className="text-2xl font-bold text-slate-950">Current verified implementation</h2>
         <ul className="mt-4 space-y-3 text-slate-700">
           <li>• Versioned exact-model, methodology, public-experience, and publication-gate contracts.</li>
+          <li>• Two human-approved, unranked public blood-pressure-monitor evidence dossiers with score, rank, testing status, confidence, sources, and limitations shown separately.</li>
           <li>• Forty discovered blood-pressure candidates awaiting exact-model screening. Discovery is not approval.</li>
           <li>• A 90-day calendar allocating 80 of 90 days to blood-pressure depth.</li>
           <li>• Human approval required before every new public product URL.</li>
@@ -49,7 +50,7 @@ export default function EvidenceStatusPage() {
 
       <section className="mt-10">
         <h2 className="text-2xl font-bold text-slate-950">What is not live</h2>
-        <p className="mt-3 leading-relaxed text-slate-700">There is no production-grade public scoring corpus, licensed public-review connector, complete validation directory, automated public ranking, or documented hands-on testing program yet. MDRank will not represent planned capability as operational.</p>
+        <p className="mt-3 leading-relaxed text-slate-700">There is no production-grade public scoring corpus, licensed public-review connector, complete validation directory, automated public ranking, or documented hands-on testing program yet. Accepted evidence dossiers may be public with score and rank withheld; MDRank will not represent planned capability as operational.</p>
       </section>
     </div>
   );

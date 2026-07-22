@@ -1,10 +1,11 @@
 import Link from "next/link";
 
-import { CATEGORIES, getDevices, getLandingCopy } from "@/lib/db";
+import { CATEGORIES, getLandingCopy } from "@/lib/db";
+import { publishedDossiers } from "@/data/publishedDossiers";
 
 export default async function HomePage() {
-  const [landing, devices] = await Promise.all([getLandingCopy(), getDevices()]);
-  const approvedCount = devices.length;
+  const landing = await getLandingCopy();
+  const approvedCount = publishedDossiers.length;
 
   return (
     <div>
@@ -19,6 +20,7 @@ export default async function HomePage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/methodology" className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-indigo-950 hover:bg-indigo-50">Read the methodology</Link>
+            <Link href="/devices" className="rounded-lg border border-white/30 px-5 py-3 text-sm font-semibold hover:bg-white/10">Read evidence dossiers</Link>
             <Link href="/evidence-status" className="rounded-lg border border-white/30 px-5 py-3 text-sm font-semibold hover:bg-white/10">Evidence-system status</Link>
           </div>
         </div>
@@ -47,6 +49,32 @@ export default async function HomePage() {
             <h2 className="mt-3 text-xl font-bold text-slate-950">Evidence plus human approval</h2>
             <p className="mt-2 text-sm text-slate-600">Automation can research, validate, score, and build a preview. A human must approve every new public product URL.</p>
           </article>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">First public records</p>
+            <h2 className="mt-2 text-2xl font-bold text-slate-950">Accepted evidence dossiers</h2>
+            <p className="mt-2 max-w-3xl text-slate-600">These products passed evidence and human publication review. Score and rank remain explicitly withheld until deterministic scoring and category-comparison gates pass.</p>
+          </div>
+          <Link href="/devices" className="text-sm font-semibold text-indigo-700 hover:underline">View all dossiers →</Link>
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          {publishedDossiers.map((dossier) => (
+            <article key={dossier.slug} className="rounded-2xl border border-slate-200 bg-white p-6">
+              <p className="text-xs font-bold uppercase tracking-wide text-indigo-700">{dossier.model}</p>
+              <h3 className="mt-2 text-xl font-bold text-slate-950">{dossier.name}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-700">{dossier.directAnswer}</p>
+              <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
+                <span className="rounded bg-slate-100 px-2 py-1">Score withheld</span>
+                <span className="rounded bg-slate-100 px-2 py-1">Rank withheld</span>
+                <span className="rounded bg-indigo-50 px-2 py-1 text-indigo-800">Evidence Confidence: {dossier.evidenceConfidence}</span>
+              </div>
+              <Link href={`/devices/${dossier.slug}`} className="mt-5 inline-block text-sm font-semibold text-indigo-700 hover:underline">Read dossier →</Link>
+            </article>
+          ))}
         </div>
       </section>
 

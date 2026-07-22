@@ -12,6 +12,7 @@ export function Header() {
           </div>
         </Link>
         <nav className="flex items-center gap-4">
+          <Link href="/devices" className="text-sm font-medium text-slate-700 hover:text-indigo-700">Dossiers</Link>
           <Link href="/methodology" className="text-sm font-medium text-slate-700 hover:text-indigo-700">Methodology</Link>
           <Link href="/evidence-status" className="text-sm font-medium text-slate-700 hover:text-indigo-700">System status</Link>
         </nav>

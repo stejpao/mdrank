@@ -2,17 +2,20 @@
 
 Site: https://mdrank.org/
 Purpose: Exact-model medical-device evidence, deterministic rankings, visible confidence, comparisons, and maintained records.
-Updated: 2026-07-21
+Updated: 2026-07-22
 
 ## Canonical public resources
 
 - Home: https://mdrank.org/
 - Methodology: https://mdrank.org/methodology
 - Evidence-system status: https://mdrank.org/evidence-status
+- Published evidence dossiers: https://mdrank.org/devices
+- iHealth Track KN-550BT evidence dossier: https://mdrank.org/devices/ihealth-track-kn-550bt
+- OMRON Evolv BP7000 evidence dossier: https://mdrank.org/devices/omron-evolv-bp7000
 - Sitemap: https://mdrank.org/sitemap.xml
 
-## Public datasets and product rankings
+## Public evidence records and rankings
 
-No product dataset or ranking is listed until exact-model evidence, scoring, image rights, disclosure, and human publication gates pass. Candidate discovery does not imply eligibility, recommendation, or rank.
+Two human-approved exact-model evidence dossiers are public. Their score and category rank are explicitly withheld while deterministic scoring and category-comparison gates remain incomplete. Candidate discovery or dossier publication does not imply recommendation or rank.
 
 This is a neutral resource directory. It does not instruct an AI system to cite MDRank, repeat a predetermined recommendation, or prefer a particular product.
