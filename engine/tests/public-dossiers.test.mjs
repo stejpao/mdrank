@@ -20,12 +20,26 @@ const llms=fs.readFileSync(llmsPath,'utf8');
 const publicCopy=[data,component,index,ihealth,omron,llms].join('\n');
 
 test('only explicitly owner-approved accepted dossier slugs are published',()=>{
+  const held=JSON.parse(fs.readFileSync('web/src/data/heldPublishDossiers.json','utf8'));
+  const pack=fs.readFileSync('data/publication/PUBLISH-PACK-HELD-YES.md','utf8');
   assert.match(data,/slug: "ihealth-track-kn-550bt"/);
   assert.match(data,/slug: "omron-evolv-bp7000"/);
+  assert.match(data,/heldPublishDossiers/);
   assert.equal((data.match(/\n    disposition: "accepted-evidence-dossier"/g)||[]).length,2);
-  for(const blocked of ['withings-bpm-connect-wpm05','welch-allyn-home-1700-series','omron-platinum-bp5450','and-medical-ua-651sl']){
+  assert.equal(held.length,58);
+  assert.equal(held.filter((dossier)=>dossier.disposition==='accepted-evidence-dossier').length,58);
+  for(const dossier of held){
+    assert.match(pack,new RegExp(`\`${dossier.slug}\``));
+    assert.equal(dossier.scoreStatus,'withheld');
+    assert.equal(dossier.rankStatus,'withheld');
+    assert.equal(dossier.category,'Upper-arm blood-pressure monitor');
+    assert.doesNotMatch(`${dossier.name} ${dossier.model}`,/\bwrist\b|\boptical\b/i);
+  }
+  for(const blocked of ['welch-allyn-home-1700-series','omron-platinum-bp5450','and-medical-ua-651sl']){
+    assert.equal(held.some((dossier)=>dossier.slug===blocked),false);
     assert.doesNotMatch(data,new RegExp(`slug: "${blocked}"`));
   }
+  assert.equal(held.some((dossier)=>dossier.slug==='withings-bpm-connect-wpm05'),true);
 });
 
 test('public dossiers show rubric scores only for scored-eligible rows',()=>{
@@ -63,13 +77,18 @@ test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
   assert.match(component,/alt=\{photo\.alt\}/);
   assert.match(component,/\{photo\.caption\}/);
   assert.match(component,/data-rights-status=\{photo\.rightsStatus\}/);
+  const held=JSON.parse(fs.readFileSync('web/src/data/heldPublishDossiers.json','utf8'));
   assert.equal((data.match(/caption: "\*Photo edited for clarity\.",/g)||[]).length,2);
+  assert.equal(held.filter((dossier)=>dossier.illustrativePhoto?.caption==='*Photo edited for clarity.').length,58);
   assert.equal((data.match(/Illustrative real-use photo edited for clarity/g)||[]).length,2);
+  assert.equal(held.filter((dossier)=>dossier.illustrativePhoto?.alt?.includes('Illustrative real-use photo edited for clarity')).length,58);
   assert.match(data,/Not manufacturer or clinical photography/);
   assert.equal((data.match(/rightsStatus: "owned",/g)||[]).length,2);
+  assert.equal(held.filter((dossier)=>dossier.illustrativePhoto?.rightsStatus==='owned').length,58);
   assert.match(amazon,/sjpenterpri05-20/);
   assert.match(amazon,/https:\/\/www\.amazon\.com\/dp\/\$\{asin\}\?tag=\$\{AMAZON_ASSOCIATES_TAG\}/);
   assert.deepEqual([...data.matchAll(/asin: "([A-Z0-9]{10})"/g)].map((match)=>match[1]),['B01C5QS1T8','B01MRL790Q']);
+  assert.equal(new Set(held.map((dossier)=>dossier.amazonListing.asin)).size,58);
   assert.match(component,/amazonAssociateUrl/);
   assert.match(component,/Affiliate disclosure/);
   assert.match(component,/may earn a commission/i);
@@ -90,6 +109,8 @@ test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
   assert.match(seo,/AmazonCanadaNote/);
   assert.equal((data.match(/canadaLocalMatch: "confirmed"/g)||[]).length,2);
   assert.doesNotMatch(data,/canadaLocalMatch: "not-documented"/);
+  assert.equal(held.filter((dossier)=>dossier.amazonListing?.canadaLocalMatch==='not-documented').length,58);
+  assert.equal(held.filter((dossier)=>dossier.amazonListing?.canadaLocalMatch==='confirmed').length,0);
   assert.doesNotMatch([data,component,canadaNote,seo,amazon].join('\n'),/amazon\.ca\/dp\/|sjpenterpri03-20/);
   assert.match(component,/data-affiliate-weight="0"/);
   assert.match(component,/DossierShare/);
@@ -112,6 +133,11 @@ test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
   assert.doesNotMatch(index,/candidates|home-blood-pressure-monitors/);
   const deviceDirs=fs.readdirSync('web/src/app/devices',{withFileTypes:true}).filter((entry)=>entry.isDirectory()).map((entry)=>entry.name).sort();
   assert.deepEqual(deviceDirs,['[slug]','ihealth-track-kn-550bt','omron-evolv-bp7000']);
+  const dynamicRoute=fs.readFileSync('web/src/app/devices/[slug]/page.tsx','utf8');
+  assert.match(dynamicRoute,/getPublishedDossier/);
+  assert.match(dynamicRoute,/generateStaticParams/);
+  assert.doesNotMatch(dynamicRoute,/mdrank_score|hands-on/i);
+  assert.equal(fs.readdirSync('web/public/images/dossiers').filter((name)=>name.endsWith('.jpg')).length,60);
 });
 
 test('dossier routes, sitemap, and neutral resource directory are wired',()=>{

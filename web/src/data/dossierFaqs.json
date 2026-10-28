@@ -34,5 +34,817 @@
       "question": "Can earlier readings be reviewed on the monitor without a smartphone?",
       "answer": "Current readings work without a phone, but prior stored readings require transfer to a smart device for viewing. No two-user mode was established in the reviewed official evidence."
     }
+  ],
+  "and-ua-1020": [
+    {
+      "question": "Is the A&D Medical UA-1020 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K111686 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the A&D Medical UA-1020?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the A&D Medical UA-1020?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "and-ua-660": [
+    {
+      "question": "Is the A&D Medical UA-660 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K141160 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the A&D Medical UA-660?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the A&D Medical UA-660?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "and-ua-767f": [
+    {
+      "question": "Is the A&D Medical UA-767F FDA cleared?",
+      "answer": "The published packet records FDA-cleared K141201 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the A&D Medical UA-767F?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the A&D Medical UA-767F?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "and-ua-789ac": [
+    {
+      "question": "Is the A&D Medical UA-789AC FDA cleared?",
+      "answer": "The published packet records FDA-cleared K062027 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the A&D Medical UA-789AC?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the A&D Medical UA-789AC?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "adking-a01-bl": [
+    {
+      "question": "Is the ADKING A01-BL FDA cleared?",
+      "answer": "The published packet records FDA-cleared K241129 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the ADKING A01-BL?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the ADKING A01-BL?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "adking-a02-se": [
+    {
+      "question": "Is the ADKING A02-SE FDA cleared?",
+      "answer": "The published packet records FDA-cleared K241129 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the ADKING A02-SE?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the ADKING A02-SE?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "adc-advantage-6024n": [
+    {
+      "question": "Is the Advantage (ADC) 6024N FDA cleared?",
+      "answer": "The published packet records FDA-cleared K230075 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Advantage (ADC) 6024N?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Advantage (ADC) 6024N?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "alcedo-ae176": [
+    {
+      "question": "Is the Alcedo AE176 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K200437 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Alcedo AE176?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Alcedo AE176?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "alcedo-b21": [
+    {
+      "question": "Is the Alcedo B21 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K200437 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Alcedo B21?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Alcedo B21?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "beat-f1701t": [
+    {
+      "question": "Is the Beat (Lexington Wellness) F1701T FDA cleared?",
+      "answer": "The published packet records FDA-cleared K220886 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Beat (Lexington Wellness) F1701T?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Beat (Lexington Wellness) F1701T?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "chani-a01": [
+    {
+      "question": "Is the CHANI A01 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K241129 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the CHANI A01?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the CHANI A01?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "ease-b21ht": [
+    {
+      "question": "Is the Ease Healthcare B21HT FDA cleared?",
+      "answer": "The published packet records FDA-cleared K233146 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Ease Healthcare B21HT?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Ease Healthcare B21HT?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "easyhome-ebp-703": [
+    {
+      "question": "Is the Easy@Home EBP-703 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K233146 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Easy@Home EBP-703?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Easy@Home EBP-703?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "easyhome-ebp-703t": [
+    {
+      "question": "Is the Easy@Home EBP-703T FDA cleared?",
+      "answer": "The published packet records FDA-cleared K233146 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Easy@Home EBP-703T?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Easy@Home EBP-703T?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "easyhome-ebp-96b": [
+    {
+      "question": "Is the Easy@Home EBP-96B FDA cleared?",
+      "answer": "The published packet records FDA-cleared K240254 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Easy@Home EBP-96B?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Easy@Home EBP-96B?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "greater-goods-0604": [
+    {
+      "question": "Is the Greater Goods 0604 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K131395 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Greater Goods 0604?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Greater Goods 0604?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "greater-goods-0634": [
+    {
+      "question": "Is the Greater Goods 0634 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K131395 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Greater Goods 0634?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Greater Goods 0634?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "homedics-bpa-800-wt": [
+    {
+      "question": "Is the HoMedics BPA-800-WT FDA cleared?",
+      "answer": "The published packet records FDA-cleared K191673 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the HoMedics BPA-800-WT?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the HoMedics BPA-800-WT?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "ihealth-accu-kd-5811bt": [
+    {
+      "question": "Is the iHealth Accu KD-5811BT FDA cleared?",
+      "answer": "The published packet records FDA-cleared K234041 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the iHealth Accu KD-5811BT?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the iHealth Accu KD-5811BT?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "ihealth-jurni-bp-300cl": [
+    {
+      "question": "Is the iHealth Jurni BP-300CL FDA cleared?",
+      "answer": "The published packet records FDA-cleared K251113 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the iHealth Jurni BP-300CL?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the iHealth Jurni BP-300CL?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "ihealth-neo-bp5s": [
+    {
+      "question": "Is the iHealth Neo BP5S FDA cleared?",
+      "answer": "The published packet records FDA-cleared K171062 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the iHealth Neo BP5S?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the iHealth Neo BP5S?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "ihealth-track-pro-kn-550lt": [
+    {
+      "question": "Is the iHealth Track Pro KN-550LT FDA cleared?",
+      "answer": "The published packet records FDA-cleared K251113 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the iHealth Track Pro KN-550LT?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the iHealth Track Pro KN-550LT?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "lovia-b66t": [
+    {
+      "question": "Is the LOVIA B66T FDA cleared?",
+      "answer": "The published packet records FDA-cleared K172171 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the LOVIA B66T?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the LOVIA B66T?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "microlife-bp3gx1-5x": [
+    {
+      "question": "Is the Microlife BP3GX1-5X FDA cleared?",
+      "answer": "The published packet records FDA-cleared K183469 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Microlife BP3GX1-5X?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Microlife BP3GX1-5X?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "microlife-watchbp-home-a": [
+    {
+      "question": "Is the Microlife WatchBP Home A FDA cleared?",
+      "answer": "The published packet records FDA-cleared K200738 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Microlife WatchBP Home A?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Microlife WatchBP Home A?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "oklar-b19t": [
+    {
+      "question": "Is the Oklar B19T FDA cleared?",
+      "answer": "The published packet records FDA-cleared K233146 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Oklar B19T?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Oklar B19T?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "oklar-c02t": [
+    {
+      "question": "Is the Oklar C02T FDA cleared?",
+      "answer": "The published packet records FDA-cleared K220886 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Oklar C02T?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Oklar C02T?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "oklar-c05t": [
+    {
+      "question": "Is the Oklar C05T FDA cleared?",
+      "answer": "The published packet records FDA-cleared K233146 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Oklar C05T?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Oklar C05T?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp5000": [
+    {
+      "question": "Is the OMRON BP5000 (Iron) FDA cleared?",
+      "answer": "The published packet records FDA-cleared K133379 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP5000 (Iron)?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP5000 (Iron)?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp5100": [
+    {
+      "question": "Is the OMRON BP5100 (Bronze) FDA cleared?",
+      "answer": "The published packet records FDA-cleared K133379 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP5100 (Bronze)?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP5100 (Bronze)?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp5150": [
+    {
+      "question": "Is the OMRON BP5150 (Bronze) FDA cleared?",
+      "answer": "The published packet records FDA-cleared K133379 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP5150 (Bronze)?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP5150 (Bronze)?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp5250": [
+    {
+      "question": "Is the OMRON BP5250 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K133383 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP5250?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP5250?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp5255": [
+    {
+      "question": "Is the OMRON BP5255 (Silver) FDA cleared?",
+      "answer": "The published packet records FDA-cleared K133383 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP5255 (Silver)?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP5255 (Silver)?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp5260": [
+    {
+      "question": "Is the OMRON BP5260 (Silver) FDA cleared?",
+      "answer": "The published packet records FDA-cleared (De Novo DEN230076) for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP5260 (Silver)?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP5260 (Silver)?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp5350": [
+    {
+      "question": "Is the OMRON BP5350 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K133379 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP5350?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP5350?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp5360": [
+    {
+      "question": "Is the OMRON BP5360 (Gold) FDA cleared?",
+      "answer": "The published packet records FDA-cleared (De Novo DEN230076) for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP5360 (Gold)?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP5360 (Gold)?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp5450": [
+    {
+      "question": "Is the OMRON BP5450 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K133379 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP5450?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP5450?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp5465": [
+    {
+      "question": "Is the OMRON BP5465 (Platinum) FDA cleared?",
+      "answer": "The published packet records FDA-cleared (De Novo DEN230076) for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP5465 (Platinum)?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP5465 (Platinum)?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp7350": [
+    {
+      "question": "Is the OMRON BP7350 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K133383 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP7350?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP7350?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp742n": [
+    {
+      "question": "Is the OMRON BP742N (5 Series) FDA cleared?",
+      "answer": "The published packet records FDA-cleared K133379 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP742N (5 Series)?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP742N (5 Series)?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp7450": [
+    {
+      "question": "Is the OMRON BP7450 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K133383 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP7450?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP7450?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp7465": [
+    {
+      "question": "Is the OMRON BP7465 (10 Series) FDA cleared?",
+      "answer": "The published packet records FDA-cleared (De Novo DEN230076) for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP7465 (10 Series)?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP7465 (10 Series)?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "omron-bp7900": [
+    {
+      "question": "Is the OMRON BP7900 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K182579 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the OMRON BP7900?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the OMRON BP7900?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "paramed-b22s": [
+    {
+      "question": "Is the Paramed B22S FDA cleared?",
+      "answer": "The published packet records FDA-cleared K200437 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Paramed B22S?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Paramed B22S?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "qardioarm-a100": [
+    {
+      "question": "Is the Qardio QardioArm A100 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K140067 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Qardio QardioArm A100?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Qardio QardioArm A100?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "qardioarm2-a200": [
+    {
+      "question": "Is the Qardio QardioArm2 A200 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K220106 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Qardio QardioArm2 A200?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Qardio QardioArm2 A200?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "saker-u90b": [
+    {
+      "question": "Is the SAKER U90B FDA cleared?",
+      "answer": "The published packet records FDA-cleared K241007 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the SAKER U90B?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the SAKER U90B?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "simplicare-aes-u382": [
+    {
+      "question": "Is the SimpliCare AES-U382 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K231050 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the SimpliCare AES-U382?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the SimpliCare AES-U382?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "spastacise-u90b-pro": [
+    {
+      "question": "Is the SPASTACISE U90B Pro FDA cleared?",
+      "answer": "The published packet records FDA-cleared K260273 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the SPASTACISE U90B Pro?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the SPASTACISE U90B Pro?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "trackstar-302-2110b": [
+    {
+      "question": "Is the Trackstar (Veridian) 302-2110B FDA cleared?",
+      "answer": "The published packet records FDA-cleared K241351 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Trackstar (Veridian) 302-2110B?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Trackstar (Veridian) 302-2110B?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "verismart-vsh-b550": [
+    {
+      "question": "Is the VeriSmart Health VSH-B550 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K222887 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the VeriSmart Health VSH-B550?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the VeriSmart Health VSH-B550?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "welch-allyn-home-1700": [
+    {
+      "question": "Is the Welch Allyn Home 1700 Series FDA cleared?",
+      "answer": "The published packet records FDA-cleared K161886 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Welch Allyn Home 1700 Series?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Welch Allyn Home 1700 Series?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "wellue-bp2a": [
+    {
+      "question": "Is the Wellue/Viatom BP2A FDA cleared?",
+      "answer": "The published packet records FDA-cleared K193348 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Wellue/Viatom BP2A?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Wellue/Viatom BP2A?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "weony-u83z": [
+    {
+      "question": "Is the WEONY U83Z FDA cleared?",
+      "answer": "The published packet records FDA-cleared K243115 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the WEONY U83Z?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the WEONY U83Z?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "weony-u86y": [
+    {
+      "question": "Is the WEONY U86Y FDA cleared?",
+      "answer": "The published packet records FDA-cleared K243115 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the WEONY U86Y?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the WEONY U86Y?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "withings-bpm-connect-wpm05": [
+    {
+      "question": "Is the Withings BPM Connect WPM05 FDA cleared?",
+      "answer": "The published packet records FDA-cleared K223374 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Withings BPM Connect WPM05?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Withings BPM Connect WPM05?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "yuwell-ye630cr": [
+    {
+      "question": "Is the Yuwell YE630CR FDA cleared?",
+      "answer": "The published packet records FDA-cleared K252779 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the Yuwell YE630CR?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the Yuwell YE630CR?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "zdeer-u90b-plus": [
+    {
+      "question": "Is the zdeer U90B Plus FDA cleared?",
+      "answer": "The published packet records FDA-cleared K260273 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the zdeer U90B Plus?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the zdeer U90B Plus?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
   ]
 }

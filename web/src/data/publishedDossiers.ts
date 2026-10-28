@@ -1,3 +1,5 @@
+import heldPublishDossiersJson from "./heldPublishDossiers.json";
+
 export type DossierSource = {
   label: string;
   url: string;
@@ -58,6 +60,8 @@ export type PublishedDossier = {
   market: string;
   category: string;
   evidenceCutoff: string;
+  /** ISO date for dossiers published after the July 22, 2026 seed pair. */
+  publishedOn?: string;
   directAnswer: string;
   disposition: "accepted-evidence-dossier";
   evidenceConfidence: string;
@@ -84,6 +88,8 @@ export type PublishedDossier = {
   sources: DossierSource[];
   changeLog: string[];
 };
+
+const heldPublishDossiers = heldPublishDossiersJson as PublishedDossier[];
 
 export const publishedDossiers: PublishedDossier[] = [
   {
@@ -327,6 +333,7 @@ export const publishedDossiers: PublishedDossier[] = [
         "Amazon.com product details for ASIN B01MRL790Q list model BP7000 and UPC 073796270001. That UPC matches reviewed DI 00073796270001. The listing describes an upper-arm monitor. Amazon marketing copy is not MDRank evidence.",
     },
   },
+  ...heldPublishDossiers,
 ];
 
 export function getPublishedDossier(slug: string): PublishedDossier | undefined {

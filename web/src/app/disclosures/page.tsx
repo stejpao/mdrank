@@ -65,7 +65,7 @@ export default function DisclosuresPage() {
                     Affiliate / commission links on public MDRank product pages
                   </th>
                   <td className="px-4 py-3 align-top">
-                    <strong>Amazon.com Associates.</strong> The two public upper-arm blood-pressure dossiers (iHealth Track KN-550BT and OMRON Evolv BP7000 / HEM-7600T-Z) each show a Buy on Amazon link using Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>, labeled with an ordinary affiliate-commission disclosure. No other affiliate program is authorized.
+                    <strong>Amazon.com Associates.</strong> Every public upper-arm blood-pressure dossier, including iHealth Track KN-550BT and OMRON Evolv BP7000 / HEM-7600T-Z, shows a Buy on Amazon link using Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>, labeled with an ordinary affiliate-commission disclosure. No other affiliate program is authorized.
                   </td>
                   <td className="px-4 py-3 align-top">
                     None. Affiliate, EPC, and conversion data remain unavailable to the scorer. Affiliate participation weight is zero.
@@ -119,8 +119,8 @@ export default function DisclosuresPage() {
           </p>
           <p className="mt-4">
             <strong>Current state:</strong> Amazon.com Associates is the only authorized affiliate relationship.
-            The two public upper-arm blood-pressure dossiers (iHealth Track KN-550BT and OMRON Evolv BP7000 /
-            HEM-7600T-Z) each show a Buy on Amazon link using Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>,
+            Every public upper-arm blood-pressure dossier, including iHealth Track KN-550BT and OMRON Evolv BP7000 /
+            HEM-7600T-Z, shows a Buy on Amazon link using Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>,
             with an ordinary affiliate-commission disclosure. Affiliate, EPC, and conversion data remain unavailable
             to the scorer (weight zero). No other affiliate program is authorized.
           </p>
@@ -284,7 +284,10 @@ export default function DisclosuresPage() {
           </p>
           <ul className="mt-4 list-disc space-y-3 pl-5">
             <li>
-              <strong>October 28, 2026.</strong> Amazon.com Associates is the affiliate relationship for MDRank buy links (Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>). The two public upper-arm dossiers show a Buy on Amazon link with an ordinary affiliate-commission disclosure. Affiliate, EPC, and conversion data remain unavailable to the scorer (weight zero). Paid placement remains not live. No other affiliate program is authorized. Rubric upper-arm-home-bp-v1.0.0 may publish an MDRank Score and category rank for a scored-eligible exact-model dossier. Incomplete exact-model evidence stays withheld.
+              <strong>October 28, 2026.</strong> Amazon.com Associates is the affiliate relationship for MDRank buy links (Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>). Public upper-arm dossiers, including iHealth Track KN-550BT and OMRON Evolv BP7000, show a Buy on Amazon link with an ordinary affiliate-commission disclosure. Affiliate, EPC, and conversion data remain unavailable to the scorer (weight zero). Paid placement remains not live. No other affiliate program is authorized. Rubric upper-arm-home-bp-v1.0.0 may publish an MDRank Score and category rank for a scored-eligible exact-model dossier. Incomplete exact-model evidence stays withheld.
+            </li>
+            <li>
+              <strong>October 28, 2026.</strong> Steven approved the held gatePass=yes pack of 58 upper-arm dossiers through the Chief of Staff. Each of those dossiers shows the same Buy on Amazon link and ordinary affiliate-commission disclosure. Affiliate weight remains zero. Score and rank stay withheld where exact-model evidence is insufficient.
             </li>
           </ul>
           <h3 className="mt-6 text-xl font-semibold text-slate-950">MDRank.org</h3>

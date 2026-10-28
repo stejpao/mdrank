@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { PublicPageJsonLd } from "@/components/PublicPageJsonLd";
-import { getPublicScore } from "@/lib/publicScore";
+import { publishedDossiers } from "@/data/publishedDossiers";
+import { getPublicScore, listPublicScores } from "@/lib/publicScore";
 import { socialMetadata } from "@/lib/pageMetadata";
 
 const description =
@@ -22,11 +23,12 @@ export const metadata: Metadata = {
 
 const ihealth = getPublicScore("ihealth-track-kn-550bt");
 const evolv = getPublicScore("omron-evolv-bp7000");
+const unrankedCount = listPublicScores().filter((row) => row.rankStatus !== "published").length;
 
 const published = [
-  "Two upper-arm blood-pressure monitor dossiers: iHealth Track KN-550BT (Evidence Confidence: High) and OMRON Evolv BP7000 (Evidence Confidence: Moderate).",
+  `${publishedDossiers.length} upper-arm blood-pressure monitor dossiers are public, including iHealth Track KN-550BT (Evidence Confidence: High) and OMRON Evolv BP7000 (Evidence Confidence: Moderate).`,
   `iHealth Track KN-550BT MDRank Score ${ihealth.scoreLabel} / 100 and category rank ${ihealth.rankLabel} under rubric ${ihealth.rubricVersion}.`,
-  "Exact-model identity, regulatory findings, validation findings, cuff and workflow notes, limitations, and cited sources.",
+  "Exact-model identity, regulatory findings, validation status, limitations, and cited sources. Pack dossiers added on October 28, 2026 record the approved brand, model, FDA clearance identifier, Amazon.com ASIN, and illustrative photo.",
   "Testing status on each dossier: public evidence only. MDRank has not performed hands-on or laboratory testing of these monitors.",
   "Public Experience Confidence: Insufficient. No permitted customer-review record is in use, so the public-input sprinkle stays neutral.",
   "Affiliate, sponsorship, margin, inventory, advertising, and conversion data are unavailable to scoring.",
@@ -35,6 +37,7 @@ const published = [
 
 const withheld = [
   `${evolv.clearanceLabel ?? "OMRON Evolv BP7000"} stays unranked: score ${evolv.scoreLabel}, rank ${evolv.rankLabel}, because validation is family-level rather than exact-model.`,
+  `${unrankedCount} public dossiers stay unranked. Family-level clearance crosswalks and packets without an exact-model measurement or validation record stay withheld under the same rubric.`,
   "Hands-on, laboratory, and independent testing claims. None are documented.",
   "Customer-review themes. No permitted customer-review record is in use.",
 ];
