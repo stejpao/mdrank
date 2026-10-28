@@ -12,9 +12,9 @@ export function AmazonCanadaNote({
   if (canadaLocalMatch === "confirmed") {
     return (
       <div id={id} className="mt-4 rounded-xl border border-amber-300 bg-amber-50 p-4" data-field="amazon-canada-local-match" role="note">
-        <p className="text-sm font-semibold text-amber-950">Canada shoppers: Amazon may substitute a different product</p>
+        <p className="text-sm font-semibold text-amber-950">Canada shoppers: check the product on Amazon</p>
         <p className="mt-2 text-sm leading-relaxed text-amber-950">
-          Canadian visitors may see an Amazon.ca &ldquo;Local match&rdquo; substitute product that is not the exact model on this dossier. This link stays the US amazon.com exact-model listing (ASIN {asin}). Amazon may substitute a different product for local shoppers. Check the title and model number on Amazon before buying.
+          This link is the US amazon.com exact-model ASIN {asin}. Amazon may show Canadian shoppers an Amazon.ca &ldquo;Local match&rdquo; similar product that is not this exact model. A Local match does not appear on every visit. Check the product title and model on Amazon before buying.
         </p>
       </div>
     );
@@ -23,7 +23,7 @@ export function AmazonCanadaNote({
   return (
     <div id={id} className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4" data-field="amazon-canada-local-match" role="note">
       <p className="text-sm leading-relaxed text-slate-800">
-        No Amazon.ca Local-match substitute is documented for this listing. This link stays the US amazon.com exact-model listing (ASIN {asin}). Check the title and model number on Amazon before buying.
+        No Amazon.ca Local-match substitute is documented for this listing. This link is the US amazon.com exact-model ASIN {asin}. Check the product title and model on Amazon before buying.
       </p>
     </div>
   );

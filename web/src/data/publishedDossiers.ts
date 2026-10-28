@@ -171,7 +171,7 @@ export const publishedDossiers: PublishedDossier[] = [
     changeLog: [
       "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
       "October 28, 2026: Owner-enabled rubric upper-arm-home-bp-v1.0.0. MDRank Score and category rank published for this exact model. Evidence Confidence remains High and separate. The disclosed Amazon Associates link stays weight zero. Evidence cutoff unchanged.",
-      "October 28, 2026: The amazon.com Buy link stays ASIN B01C5QS1T8. An on-page note warns that Amazon.ca Local match may substitute a different product for Canadian shoppers. Affiliate weight remains zero.",
+      "October 28, 2026: The amazon.com Buy link stays ASIN B01C5QS1T8. An on-page note says Amazon.ca Local match may show Canadian shoppers a similar product that is not this exact model. It does not appear on every visit. Affiliate weight remains zero.",
     ],
     handlingGlance: [
       { id: "cuff-fit", label: "Cuff fit", summary: "22–42 cm standard · 42–48 cm XL", fit: "Strong with the matching package", confidence: "High", meter: "strong" },
@@ -291,7 +291,7 @@ export const publishedDossiers: PublishedDossier[] = [
     changeLog: [
       "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
       "October 28, 2026: Owner-enabled rubric upper-arm-home-bp-v1.0.0. Score and rank remain withheld because validation is family-level. Evidence Confidence remains Moderate. The disclosed Amazon Associates link stays weight zero. Evidence cutoff unchanged.",
-      "October 28, 2026: The amazon.com Buy link stays ASIN B01MRL790Q. An on-page note warns that Amazon.ca Local match may substitute a different product for Canadian shoppers. Affiliate weight remains zero.",
+      "October 28, 2026: The amazon.com Buy link stays ASIN B01MRL790Q. An on-page note says Amazon.ca Local match may show Canadian shoppers a similar product that is not this exact model. It does not appear on every visit. Affiliate weight remains zero.",
     ],
     handlingGlance: [
       { id: "cuff-fit", label: "Cuff fit", summary: "22–42 cm integrated cuff", fit: "Strong", confidence: "High", meter: "strong" },

@@ -81,11 +81,12 @@ test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
   assert.match(component,/aria-describedby="amazon-canada-local-match"/);
   const canadaNote=fs.readFileSync('web/src/components/AmazonCanadaNote.tsx','utf8');
   const seo=fs.readFileSync('web/src/components/DossierSeo.tsx','utf8');
-  assert.match(canadaNote,/Amazon\.ca &ldquo;Local match&rdquo; substitute product that is not the exact model/);
-  assert.match(canadaNote,/US amazon\.com exact-model listing/);
-  assert.match(canadaNote,/Amazon may substitute a different product for local shoppers/);
-  assert.match(canadaNote,/Check the title and model number on Amazon before buying/);
+  assert.match(canadaNote,/This link is the US amazon\.com exact-model ASIN/);
+  assert.match(canadaNote,/Amazon may show Canadian shoppers an Amazon\.ca &ldquo;Local match&rdquo; similar product that is not this exact model/);
+  assert.match(canadaNote,/A Local match does not appear on every visit/);
+  assert.match(canadaNote,/Check the product title and model on Amazon before buying/);
   assert.match(canadaNote,/No Amazon\.ca Local-match substitute is documented for this listing/);
+  assert.doesNotMatch(canadaNote,/always appears|will substitute|always substitute/i);
   assert.match(seo,/AmazonCanadaNote/);
   assert.equal((data.match(/canadaLocalMatch: "confirmed"/g)||[]).length,2);
   assert.doesNotMatch(data,/canadaLocalMatch: "not-documented"/);
