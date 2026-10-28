@@ -3,6 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      keyframes: {
+        "catalog-rise": {
+          from: { opacity: "0", transform: "translateY(10px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "catalog-rise": "catalog-rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both",
+      },
       colors: {
         brand: {
           50: "#eff6ff",

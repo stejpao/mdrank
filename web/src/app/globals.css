@@ -45,3 +45,18 @@ body {
 .fda-unknown {
   @apply bg-slate-100 text-slate-600;
 }
+
+.catalog-card {
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.catalog-card:hover {
+  border-color: rgb(199 210 254);
+  box-shadow: 0 10px 24px rgb(15 23 42 / 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catalog-card {
+    transition: none;
+  }
+}
