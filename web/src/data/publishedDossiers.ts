@@ -26,6 +26,26 @@ export type AmazonListing = {
   listingNote: string;
 };
 
+export type HandlingMeter = "strong" | "mixed" | "limited" | "unsupported" | "documented";
+
+export type HandlingGlanceItem = {
+  id: string;
+  label: string;
+  summary: string;
+  fit: string;
+  confidence: string;
+  meter: HandlingMeter;
+};
+
+export type HandlingReportRow = {
+  id: string;
+  criterion: string;
+  finding: string;
+  confidence: string;
+  sourceClass: "A" | "C" | "D";
+  sourceLabel: string;
+};
+
 export type PublishedDossier = {
   slug: string;
   name: string;
@@ -44,6 +64,8 @@ export type PublishedDossier = {
   scoreReason: string;
   illustrativePhoto?: IllustrativePhoto;
   amazonListing?: AmazonListing;
+  handlingGlance: HandlingGlanceItem[];
+  handlingReport: HandlingReportRow[];
   exactIdentity: string[];
   regulatoryFindings: string[];
   validationFindings: string[];
@@ -146,6 +168,24 @@ export const publishedDossiers: PublishedDossier[] = [
       "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
       "October 28, 2026: Score and rank remain withheld until the comparison cohort is complete. An owner-supplied illustrative photograph edited for clarity and a disclosed Amazon Associates link were added. Evidence cutoff unchanged.",
     ],
+    handlingGlance: [
+      { id: "cuff-fit", label: "Cuff fit", summary: "22–42 cm standard · 42–48 cm XL", fit: "Strong with the matching package", confidence: "High", meter: "strong" },
+      { id: "memory", label: "Memory", summary: "60 readings on the device", fit: "Documented specification", confidence: "Stated in cited specifications", meter: "documented" },
+      { id: "app-dependence", label: "App dependence", summary: "Readings available without routine app use", fit: "Strong", confidence: "High", meter: "strong" },
+      { id: "multi-user", label: "Multi-user", summary: "Separate on-device user banks not documented", fit: "Weak or unresolved", confidence: "Moderate", meter: "limited" },
+      { id: "power", label: "Power", summary: "Four 1.5V AAA batteries", fit: "Documented specification", confidence: "Stated in cited specifications", meter: "documented" },
+      { id: "connectivity", label: "Connectivity", summary: "Bluetooth with iHealth MyVitals", fit: "Documented specification", confidence: "Stated in cited specifications", meter: "documented" },
+    ],
+    handlingReport: [
+      { id: "cuff-standard", criterion: "Cuff fit, 22–42 cm", finding: "Strong with standard package. Standard package cuff: 22–42 cm (8.66–16.5 in).", confidence: "High", sourceClass: "C", sourceLabel: "Current iHealth Track manufacturer offer" },
+      { id: "cuff-xl", criterion: "Cuff fit, 42–48 cm", finding: "Strong with XL package. XL package cuff: 42–48 cm (16.5–18.9 in).", confidence: "High", sourceClass: "C", sourceLabel: "Current iHealth Track manufacturer offer" },
+      { id: "cuff-outside", criterion: "Cuff fit outside reviewed packages", finding: "Not supported by reviewed packages. Current standard and XL package ranges together cover 22–48 cm.", confidence: "High", sourceClass: "C", sourceLabel: "Current iHealth Track manufacturer offer" },
+      { id: "memory", criterion: "On-device memory", finding: "60 readings per reviewed exact-model support specification.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "iHealth KN-550BT memory and synchronization support" },
+      { id: "app-dependence", criterion: "App dependence", finding: "Strong. LCD and 60-reading on-device memory are documented; Bluetooth is used for synchronization.", confidence: "High", sourceClass: "C", sourceLabel: "iHealth KN-550BT specifications and display symbols" },
+      { id: "multi-user", criterion: "Multi-user", finding: "Weak or unresolved. Reviewed exact sources document 60-reading memory but not separate two-user banks.", confidence: "Moderate", sourceClass: "C", sourceLabel: "iHealth KN-550BT memory and synchronization support" },
+      { id: "power", criterion: "Power", finding: "Four 1.5V AAA batteries.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "iHealth KN-550BT specifications and display symbols" },
+      { id: "connectivity", criterion: "Connectivity", finding: "Bluetooth with iHealth MyVitals synchronization.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "iHealth KN-550BT memory and synchronization support" },
+    ],
     illustrativePhoto: {
       src: "/images/dossiers/ihealth-kn-550bt-real-use.jpg",
       width: 1152,
@@ -245,6 +285,24 @@ export const publishedDossiers: PublishedDossier[] = [
     changeLog: [
       "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
       "October 28, 2026: Score and rank remain withheld until the comparison cohort is complete. An owner-supplied illustrative photograph edited for clarity and a disclosed Amazon Associates link were added. Evidence cutoff unchanged.",
+    ],
+    handlingGlance: [
+      { id: "cuff-fit", label: "Cuff fit", summary: "22–42 cm integrated cuff", fit: "Strong", confidence: "High", meter: "strong" },
+      { id: "replaceable-cuff", label: "Replaceable cuff", summary: "Integrated cuff is not replaceable", fit: "Poor", confidence: "High", meter: "limited" },
+      { id: "memory", label: "Memory", summary: "Up to 100 readings; history needs a phone", fit: "Mixed", confidence: "High", meter: "mixed" },
+      { id: "app-dependence", label: "App dependence", summary: "Current reading works without a phone", fit: "Mixed", confidence: "High", meter: "mixed" },
+      { id: "multi-user", label: "Multi-user", summary: "Separate on-device profiles not established", fit: "Poor or unverified", confidence: "Moderate", meter: "limited" },
+      { id: "power", label: "Power", summary: "Four AAA batteries", fit: "Documented specification", confidence: "Stated in cited specifications", meter: "documented" },
+      { id: "connectivity", label: "Connectivity", summary: "Bluetooth Low Energy, OMRON connect", fit: "Documented specification", confidence: "Stated in cited specifications", meter: "documented" },
+    ],
+    handlingReport: [
+      { id: "cuff-fit", criterion: "Cuff fit", finding: "Strong for a compact one-piece upper-arm format. Integrated cuff range: 22–42 cm (9–17 in).", confidence: "High", sourceClass: "C", sourceLabel: "OMRON Evolv BP7000 instruction manual" },
+      { id: "replaceable-cuff", criterion: "Replaceable cuff", finding: "Poor. The FDA summary states the integrated cuff is not replaceable.", confidence: "High", sourceClass: "A", sourceLabel: "FDA 510(k) K162092 summary" },
+      { id: "memory", criterion: "On-device memory", finding: "Up to 100 measurements; prior stored readings require transfer to a smart device for viewing.", confidence: "High", sourceClass: "C", sourceLabel: "OMRON Evolv BP7000 instruction manual" },
+      { id: "app-dependence", criterion: "App dependence", finding: "Mixed. Current readings work without a phone, but historical readings cannot be reviewed on the monitor.", confidence: "High", sourceClass: "C", sourceLabel: "OMRON Evolv BP7000 instruction manual" },
+      { id: "multi-user", criterion: "Multi-user", finding: "Poor or unverified. No two-user mode was established in the reviewed official evidence.", confidence: "Moderate", sourceClass: "C", sourceLabel: "OMRON Evolv BP7000 instruction manual" },
+      { id: "power", criterion: "Power", finding: "Four AAA batteries.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "OMRON Evolv BP7000 instruction manual" },
+      { id: "connectivity", criterion: "Connectivity", finding: "Bluetooth Low Energy with OMRON connect.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "OMRON US BP7000 product page" },
     ],
     illustrativePhoto: {
       src: "/images/dossiers/omron-evolv-bp7000-real-use.jpg",

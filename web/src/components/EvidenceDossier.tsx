@@ -1,8 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import type { PublishedDossier } from "@/data/publishedDossiers";
+import { DossierShare } from "@/components/DossierShare";
+import type { HandlingMeter, PublishedDossier } from "@/data/publishedDossiers";
 import { amazonAssociateUrl } from "@/lib/amazon";
+
+const METER_FILL: Record<HandlingMeter, number> = {
+  documented: 0,
+  unsupported: 0,
+  limited: 1,
+  mixed: 2,
+  strong: 4,
+};
+
+function FitMeter({ meter, fit }: { meter: HandlingMeter; fit: string }) {
+  if (meter === "documented") {
+    return <p className="text-xs text-slate-500">Specification. Not a product score.</p>;
+  }
+  const filled = METER_FILL[meter];
+  return (
+    <div className="mt-2" data-meter={meter}>
+      <p className="text-sm font-semibold text-slate-900">{fit}</p>
+      <div className="mt-2 flex gap-1" aria-hidden="true">
+        {[0, 1, 2, 3].map((index) => (
+          <span key={index} className={`h-1.5 flex-1 rounded-sm ${index < filled ? "bg-slate-900" : "bg-slate-200"}`} />
+        ))}
+      </div>
+      <p className="sr-only">{fit}. Qualitative fit from the dossier. Not a product score.</p>
+    </div>
+  );
+}
 
 function StatusCard({ label, value, detail }: { label: string; value: string; detail?: string }) {
   return (
@@ -46,7 +73,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
   };
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-5xl px-4 pb-24 pt-8 sm:px-6 md:pb-10 md:pt-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
@@ -59,29 +86,36 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
       </nav>
 
       <header className="mt-6 border-b border-slate-200 pb-8">
-        <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Published evidence dossier</p>
-        <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">{dossier.name}</h1>
-        <p className="mt-3 text-lg text-slate-600">Exact model: <strong>{dossier.model}</strong> · {dossier.market}</p>
-        <div className="mt-6 rounded-2xl border border-indigo-200 bg-indigo-50 p-6">
-          <h2 className="text-sm font-bold uppercase tracking-wide text-indigo-900">Direct answer</h2>
-          <p className="mt-3 leading-relaxed text-indigo-950">{dossier.directAnswer}</p>
+        {photo ? (
+          <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              priority
+              sizes="(min-width: 768px) 720px, 100vw"
+              data-rights-status={photo.rightsStatus}
+              className="h-auto w-full bg-slate-100"
+            />
+            <figcaption className="border-t border-slate-100 px-4 py-3 text-sm text-slate-600">{photo.caption}</figcaption>
+            <p className="px-4 pb-4 text-xs leading-relaxed text-slate-500">{photo.rightsNote}</p>
+          </figure>
+        ) : null}
+        <div className="mt-6 flex flex-wrap items-start justify-between gap-3">
+          <div className="min-w-0 flex-1">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Published evidence dossier</p>
+            <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">{dossier.name}</h1>
+            <p className="mt-3 text-lg text-slate-600">Exact model: <strong>{dossier.model}</strong> · {dossier.market}</p>
+          </div>
+          <DossierShare name={dossier.name} model={dossier.model} />
+        </div>
+        <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+          <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">Direct answer</h2>
+          <p className="mt-3 leading-relaxed text-slate-800">{dossier.directAnswer}</p>
         </div>
       </header>
-
-      {photo ? (
-        <figure className="motion-safe:animate-catalog-rise mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white">
-          <Image
-            src={photo.src}
-            alt={photo.alt}
-            width={photo.width}
-            height={photo.height}
-            data-rights-status={photo.rightsStatus}
-            className="h-auto w-full bg-slate-100"
-          />
-          <figcaption className="border-t border-slate-100 px-5 py-3 text-sm text-slate-600">{photo.caption}</figcaption>
-          <p className="px-5 pb-4 text-xs leading-relaxed text-slate-500">{photo.rightsNote}</p>
-        </figure>
-      ) : null}
+      <DossierShare name={dossier.name} model={dossier.model} variant="dock" />
 
       <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-label="Dossier status">
         <StatusCard label="Product score" value="Withheld" detail="No editor-assigned substitute" />
@@ -96,23 +130,83 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         <p className="mt-3 text-sm"><strong>Testing status:</strong> {dossier.testingStatus}</p>
       </section>
 
+      <section className="mt-8" aria-labelledby="handling-glance-heading" data-section="handling-glance" data-affiliate-weight="0">
+        <h2 id="handling-glance-heading" className="text-2xl font-bold text-slate-950">Handling snapshot</h2>
+        <p className="mt-2 text-sm text-slate-600">Qualitative ownership notes from the published specifications and persona-fit record. Not a product score or rank.</p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {dossier.handlingGlance.map((item) => (
+            <article key={item.id} className="rounded-2xl border border-slate-200 bg-white p-4" data-criterion={item.id}>
+              <h3 className="text-sm font-semibold text-slate-500">{item.label}</h3>
+              <p className="mt-1 font-semibold text-slate-950">{item.summary}</p>
+              <FitMeter meter={item.meter} fit={item.fit} />
+              <p className="mt-2 text-xs text-slate-500">Confidence: {item.confidence}</p>
+            </article>
+          ))}
+        </div>
+        <details className="mt-4 rounded-2xl border border-slate-200 bg-white p-4">
+          <summary className="cursor-pointer text-base font-bold text-slate-950">Detailed handling report</summary>
+          <div className="mt-4 space-y-4" data-section="handling-report">
+            {dossier.handlingReport.map((row) => (
+              <article key={row.id} data-criterion={row.id} className="border-t border-slate-100 pt-4">
+                <h3 className="font-semibold text-slate-950">{row.criterion}</h3>
+                <dl className="mt-2 grid gap-2 text-sm">
+                  <div>
+                    <dt className="font-semibold text-slate-500">Finding</dt>
+                    <dd data-field="finding">{row.finding}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-semibold text-slate-500">Confidence</dt>
+                    <dd data-field="confidence">{row.confidence}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-semibold text-slate-500">Source class</dt>
+                    <dd data-field="source-class">{row.sourceClass}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-semibold text-slate-500">Source</dt>
+                    <dd data-field="source-label">{row.sourceLabel}</dd>
+                  </div>
+                </dl>
+              </article>
+            ))}
+          </div>
+        </details>
+      </section>
+
       {amazonUrl && dossier.amazonListing ? (
-        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6" aria-labelledby="retail-listing-heading">
-          <h2 id="retail-listing-heading" className="text-xl font-bold text-slate-950">Retail listing</h2>
-          <p className="mt-3 leading-relaxed text-slate-700">
-            Disclosed Amazon Associates link for a current Amazon.com listing whose product details match this exact model. The listing is commercially isolated from scoring.
+        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6" aria-labelledby="where-to-buy-heading" data-section="where-to-buy" data-affiliate-weight="0">
+          <h2 id="where-to-buy-heading" className="text-xl font-bold text-slate-950">Where to buy</h2>
+          <p className="mt-3 leading-relaxed text-slate-800" data-field="where-to-buy-answer">
+            Where to buy: the Amazon.com listing for {dossier.name} ({dossier.model}, ASIN {dossier.amazonListing.asin}) is {amazonUrl}. The link has zero weight on the withheld product score and category rank.
           </p>
+          <dl className="mt-4 grid gap-2 text-sm sm:grid-cols-3">
+            <div>
+              <dt className="font-semibold text-slate-500">purchase_url</dt>
+              <dd className="break-all" data-field="purchase_url">{amazonUrl}</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-slate-500">asin</dt>
+              <dd data-field="asin">{dossier.amazonListing.asin}</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-slate-500">merchant</dt>
+              <dd data-field="merchant">Amazon</dd>
+            </div>
+          </dl>
           <a
             href={amazonUrl}
             rel="sponsored nofollow noopener noreferrer"
             target="_blank"
-            className="mt-4 inline-flex rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-indigo-300 hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700"
+            data-affiliate="amazon-associates"
+            data-asin={dossier.amazonListing.asin}
+            data-merchant="Amazon"
+            className="mt-4 inline-flex min-h-11 items-center rounded-lg bg-slate-950 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
           >
-            View on Amazon
+            Buy on Amazon
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
           <p className="mt-3 text-sm leading-relaxed text-slate-700">
-            <strong>Affiliate disclosure:</strong> MDRank may earn a commission if you buy through this Amazon link. Affiliate, sponsorship, and advertising relationships stay out of scoring and leave the withheld score and rank unchanged.
+            <strong>Affiliate disclosure:</strong> MDRank may earn a commission if you buy through this Amazon link. As an Amazon Associate, MDRank earns from qualifying purchases. Affiliate relationships have zero weight on the product score and category rank, which stay withheld.
           </p>
           <p className="mt-3 text-sm leading-relaxed text-slate-600">{dossier.amazonListing.listingNote}</p>
         </section>
@@ -162,20 +256,18 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         </dl>
       </section>
 
-      <section className="mt-10">
-        <h2 className="text-2xl font-bold text-slate-950">Persona Fit Matrix</h2>
+      <section className="mt-10" aria-labelledby="persona-fit-heading">
+        <h2 id="persona-fit-heading" className="text-2xl font-bold text-slate-950">Persona fit</h2>
         <p className="mt-2 text-sm text-slate-600">Fit statements describe documented cuff and workflow requirements. They are not medical-suitability determinations.</p>
-        <div className="mt-5 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
-          <table className="w-full min-w-[720px] text-left text-sm">
-            <thead className="bg-slate-50 text-slate-700">
-              <tr><th className="px-4 py-3">Persona</th><th className="px-4 py-3">Fit</th><th className="px-4 py-3">Confidence</th><th className="px-4 py-3">Basis</th></tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {dossier.personaFit.map((row) => (
-                <tr key={row.persona}><td className="px-4 py-3 font-medium text-slate-900">{row.persona}</td><td className="px-4 py-3">{row.fit}</td><td className="px-4 py-3">{row.confidence}</td><td className="px-4 py-3 text-slate-600">{row.basis}</td></tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="mt-4 grid gap-3">
+          {dossier.personaFit.map((row) => (
+            <article key={row.persona} className="rounded-2xl border border-slate-200 bg-white p-4" data-persona={row.persona}>
+              <h3 className="font-semibold text-slate-950">{row.persona}</h3>
+              <p className="mt-2 text-sm font-semibold text-slate-800" data-field="fit">{row.fit}</p>
+              <p className="mt-1 text-sm text-slate-600" data-field="confidence">Confidence: {row.confidence}</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-700" data-field="basis">{row.basis}</p>
+            </article>
+          ))}
         </div>
       </section>
 

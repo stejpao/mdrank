@@ -65,6 +65,15 @@ test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
   assert.match(component,/amazonAssociateUrl/);
   assert.match(component,/Affiliate disclosure/);
   assert.match(component,/may earn a commission/i);
+  assert.match(component,/Buy on Amazon/);
+  assert.match(component,/data-affiliate="amazon-associates"/);
+  assert.match(component,/data-merchant="Amazon"/);
+  assert.match(component,/data-field="purchase_url"/);
+  assert.match(component,/data-affiliate-weight="0"/);
+  assert.match(component,/DossierShare/);
+  assert.match(component,/data-section="handling-report"/);
+  assert.match(component,/Persona fit/);
+  assert.doesNotMatch(component,/min-w-\[720px\]/);
   assert.match(component,/No price, offer schema, rating schema, or editor-assigned score appears on this dossier/);
   assert.doesNotMatch(component,/"@type": "Offer"|aggregateRating|offers:/i);
   assert.doesNotMatch([publicCopy,catalog,amazon].join('\n'),/AggregateRating|retail_price|Check Price|Buy Now|href=\{?['"]?\/go\/|FDA approved/i);
