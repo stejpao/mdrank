@@ -44,8 +44,8 @@ export default function PrivacyPage() {
           <p className="mt-3">
             Analytics may process page URLs, page titles, approximate location derived from an
             IP address, device and browser information, referral source, and interaction timing.
-            MDRank does not ask visitors to enter medical readings or health records into the
-            current public website, and no such information is intentionally sent to GA4.
+            MDRank does not ask visitors to enter medical readings or health records on this
+            website, and no such information is intentionally sent to GA4.
           </p>
         </section>
 
@@ -61,8 +61,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-2xl font-semibold text-slate-950">Changes</h2>
           <p className="mt-3">
-            This notice will be updated when MDRank adds accounts, forms, newsletters, commerce,
-            or other data-processing features. Material changes will be dated on this page.
+            Material changes to how MDRank processes personal information are dated on this page.
           </p>
         </section>
       </div>

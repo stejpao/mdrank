@@ -116,7 +116,7 @@ function applyFilters(items: DeviceWithReview[], filters: DeviceFilters): Device
 export async function getLandingCopy(): Promise<LandingCopy> {
   return fromFallback().landing ?? {
     hero_title: "MDRank — Medical devices, ranked by evidence",
-    hero_body: "Exact-model records, traceable sources, deterministic methods, and human-approved publication.",
+    hero_body: "Exact-model evidence for home medical devices, with Evidence Confidence kept separate from score and rank.",
   };
 }
 

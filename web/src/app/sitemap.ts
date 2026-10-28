@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-07-22T00:00:00Z");
+  const lastModified = new Date("2026-10-28T00:00:00Z");
   return [
     { url: "https://mdrank.org/", lastModified, changeFrequency: "weekly", priority: 1 },
     { url: "https://mdrank.org/methodology", lastModified, changeFrequency: "monthly", priority: 0.8 },

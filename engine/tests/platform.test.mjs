@@ -69,6 +69,29 @@ test('public copy does not claim undocumented hands-on testing',()=>{
   assert.match(copy,/unsupported hands-on/i);
 });
 
+test('public pages use a finished voice and keep rank withholding',()=>{
+  const files=[
+    'web/src/app/page.tsx',
+    'web/src/app/layout.tsx',
+    'web/src/app/methodology/page.tsx',
+    'web/src/app/evidence-status/page.tsx',
+    'web/src/app/privacy/page.tsx',
+    'web/src/app/devices/page.tsx',
+    'web/src/app/rankings/page.tsx',
+    'web/src/components/Header.tsx',
+    'web/src/components/Footer.tsx',
+    'web/src/components/EvidenceDossier.tsx',
+    'web/src/data/publishedDossiers.ts',
+    'web/src/data/devices.json',
+    'web/public/llms.txt',
+  ];
+  const copy=files.map(f=>fs.readFileSync(f,'utf8')).join('\n');
+  assert.doesNotMatch(copy,/integrity reset|pre-release|rebuilding|under construction|temporarily withheld|coming soon|what is not live|scaffolding|work in progress|\bWIP\b|launch policy|not yet validated|first 90 days/i);
+  assert.match(copy,/withheld until the comparison cohort is complete/i);
+  assert.match(copy,/Evidence Confidence/);
+  assert.match(copy,/FDA clearance is not FDA approval/i);
+});
+
 test('ranking and dossier templates contain no undocumented testing claims',()=>{
   const files=['web/src/app/rankings/page.tsx','web/src/app/devices/[slug]/page.tsx','web/src/app/reviews/[slug]/page.tsx'];
   const copy=files.map(f=>fs.readFileSync(f,'utf8')).join('\n');
