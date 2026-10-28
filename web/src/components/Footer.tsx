@@ -14,6 +14,7 @@ export function Footer() {
             <li><Link href="/devices" className="hover:text-indigo-700">Evidence dossiers</Link></li>
             <li><Link href="/methodology" className="hover:text-indigo-700">Methodology</Link></li>
             <li><Link href="/evidence-status" className="hover:text-indigo-700">Evidence status</Link></li>
+            <li><Link href="/disclosures" className="hover:text-indigo-700">Disclosures</Link></li>
             <li><Link href="/privacy" className="hover:text-indigo-700">Privacy notice</Link></li>
             <li><Link href="/llms.txt" className="hover:text-indigo-700">Neutral resource directory</Link></li>
           </ul>

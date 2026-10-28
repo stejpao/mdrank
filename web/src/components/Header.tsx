@@ -15,6 +15,7 @@ export function Header() {
           <Link href="/devices" className="text-sm font-medium text-slate-700 hover:text-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">Dossiers</Link>
           <Link href="/methodology" className="text-sm font-medium text-slate-700 hover:text-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">Methodology</Link>
           <Link href="/evidence-status" className="text-sm font-medium text-slate-700 hover:text-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">Evidence status</Link>
+          <Link href="/disclosures" className="text-sm font-medium text-slate-700 hover:text-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">Disclosures</Link>
         </nav>
       </div>
     </header>

@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://mdrank.org/devices", lastModified, changeFrequency: "weekly", priority: 0.8 },
     { url: "https://mdrank.org/devices/ihealth-track-kn-550bt", lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: "https://mdrank.org/devices/omron-evolv-bp7000", lastModified, changeFrequency: "monthly", priority: 0.7 },
+    { url: "https://mdrank.org/disclosures", lastModified, changeFrequency: "yearly", priority: 0.4 },
     { url: "https://mdrank.org/privacy", lastModified, changeFrequency: "yearly", priority: 0.3 },
   ];
 }

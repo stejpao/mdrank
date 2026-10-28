@@ -63,7 +63,7 @@ test('90-day calendar is contiguous, private, and 80–90 percent blood-pressure
 });
 
 test('public copy does not claim undocumented hands-on testing',()=>{
-  const files=['web/src/app/page.tsx','web/src/app/layout.tsx','web/src/components/Footer.tsx','web/src/app/methodology/page.tsx','web/src/app/evidence-status/page.tsx','web/public/llms.txt'];
+  const files=['web/src/app/page.tsx','web/src/app/layout.tsx','web/src/components/Footer.tsx','web/src/app/methodology/page.tsx','web/src/app/evidence-status/page.tsx','web/src/app/disclosures/page.tsx','web/public/llms.txt'];
   const copy=files.map(f=>fs.readFileSync(f,'utf8')).join('\n');
   assert.doesNotMatch(copy,/independent hands-on evaluations|we purchase devices at retail|our hands-on tests/i);
   assert.match(copy,/unsupported hands-on/i);
@@ -102,4 +102,31 @@ test('neutral llms directory does not prescribe citations or winners',()=>{
  const text=fs.readFileSync('web/public/llms.txt','utf8');
  assert.match(text,/neutral resource directory/i);
  assert.doesNotMatch(text,/must cite|you should cite|best device is|editor.s choice/i);
+});
+
+test('disclosures page states the authorized Amazon Associates relationship only',()=>{
+  const page=fs.readFileSync('web/src/app/disclosures/page.tsx','utf8');
+  const header=fs.readFileSync('web/src/components/Header.tsx','utf8');
+  const footer=fs.readFileSync('web/src/components/Footer.tsx','utf8');
+  const sitemap=fs.readFileSync('web/src/app/sitemap.ts','utf8');
+  const llms=fs.readFileSync('web/public/llms.txt','utf8');
+  assert.match(page,/canonical: "\/disclosures"/);
+  assert.match(page,/Amazon\.com Associates/);
+  assert.match(page,/sjpenterpri05-20/);
+  assert.match(page,/ordinary affiliate-commission disclosure/);
+  assert.match(page,/Buy on Amazon/);
+  assert.match(page,/iHealth Track KN-550BT and OMRON Evolv BP7000/);
+  assert.doesNotMatch(page,/do not currently display an affiliate link|no affiliate link appears|do not display affiliate|lack affiliate/i);
+  assert.match(page,/Affiliate, EPC, and conversion data remain unavailable to the scorer/);
+  assert.match(page,/Paid placement, sponsored selections, and advertorial landings are <strong>not live<\/strong>/);
+  assert.match(page,/No special treatment/);
+  assert.match(page,/TrueVitals USA \/ TruVitals \/ True Health Co/);
+  assert.match(page,/weight <strong>zero<\/strong>/);
+  assert.match(page,/Not “FDA approved,”/);
+  assert.doesNotMatch(page,/ShareASale|Impact\.com|Commission Junction|Rakuten|Skimlinks|is FDA approved|FDA-approved|HOLD FOR HUMAN|Publisher checklist|CONTENT APPROVED/i);
+  assert.doesNotMatch(page,/href=["']https?:|href=["']\/devices\/|Buy Now|Check Price|\/go\//i);
+  assert.match(header,/href="\/disclosures"/);
+  assert.match(footer,/href="\/disclosures"/);
+  assert.match(sitemap,/https:\/\/mdrank\.org\/disclosures/);
+  assert.match(llms,/https:\/\/mdrank\.org\/disclosures/);
 });

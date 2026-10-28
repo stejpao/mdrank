@@ -8,6 +8,7 @@ Updated: 2026-10-28
 
 - Home: https://mdrank.org/
 - Methodology: https://mdrank.org/methodology
+- Disclosures: https://mdrank.org/disclosures
 - Evidence status: https://mdrank.org/evidence-status
 - Published evidence dossiers: https://mdrank.org/devices
 - iHealth Track KN-550BT evidence dossier: https://mdrank.org/devices/ihealth-track-kn-550bt
