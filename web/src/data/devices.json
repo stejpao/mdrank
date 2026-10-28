@@ -1,15 +1,15 @@
 {
   "landing": {
     "hero_title": "MDRank — Medical devices, ranked by evidence",
-    "hero_body": "We are rebuilding MDRank around exact-model identity, traceable evidence, deterministic scoring, and human-approved publication.",
+    "hero_body": "Exact-model evidence for home medical devices, with Evidence Confidence kept separate from score and rank.",
     "sections": [
       {
         "heading": "Evidence before rankings",
-        "body": "Legacy placeholder scores have been removed while exact-model records and category methodology are verified."
+        "body": "Published dossiers show exact-model evidence and Evidence Confidence. Numeric scores and category ranks stay withheld until the comparison cohort is complete."
       },
       {
-        "heading": "Blood-pressure depth first",
-        "body": "The initial 90-day program prioritizes home blood-pressure monitors before expansion into additional categories."
+        "heading": "Home blood-pressure monitors",
+        "body": "Public dossiers cover upper-arm home blood-pressure monitors."
       }
     ]
   },

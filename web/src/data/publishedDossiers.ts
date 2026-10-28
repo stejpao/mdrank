@@ -52,7 +52,7 @@ export const publishedDossiers: PublishedDossier[] = [
     category: "Upper-arm blood-pressure monitor",
     evidenceCutoff: "July 21, 2026",
     directAnswer:
-      "The iHealth Track KN-550BT has a strong exact-model evidence packet: FDA clearance K160014, three commercial GUDID records, current standard and XL cuff packages, and a 2024 exact-model validation study that passed both reported criteria. Its numeric score and category rank remain withheld while MDRank completes and validates the deterministic scoring implementation.",
+      "The iHealth Track KN-550BT has a strong exact-model evidence packet: FDA clearance K160014, three commercial GUDID records, current standard and XL cuff packages, and a 2024 exact-model validation study that passed both reported criteria. Its numeric score and category rank remain withheld until the comparison cohort is complete.",
     disposition: "accepted-evidence-dossier",
     evidenceConfidence: "High",
     publicExperienceConfidence: "Insufficient",
@@ -60,7 +60,7 @@ export const publishedDossiers: PublishedDossier[] = [
     scoreStatus: "withheld",
     rankStatus: "withheld",
     scoreReason:
-      "The category methodology is owner-approved, but the production scorer, normalized evidence adapter, fixtures, and commercial-isolation tests have not completed validation. Rank also requires a sufficiently complete eligible comparison cohort.",
+      "MDRank publishes a numeric score and a category rank when the eligible comparison cohort is complete. That cohort is not complete for home blood-pressure monitors, so score and rank are withheld. Evidence Confidence is reported separately.",
     exactIdentity: [
       "Exact US model KN-550BT appears across FDA clearance K160014, manufacturer support, exact-model validation, and three commercial GUDID records.",
       "Primary DIs reviewed: 00850078377081, 00856362005005, and 00856362005395.",
@@ -114,7 +114,7 @@ export const publishedDossiers: PublishedDossier[] = [
       "The manufacturer support source exposes manual-derived specifications, but a current standalone exact manual PDF was not exposed through the reviewed support route.",
       "An older manufacturer correction identifies a KN-550BT/KN-550LT cover typo; no KN-550LT evidence is transferred here.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "No product photograph is used under MDRank's owner-approved no-product-media launch policy.",
+      "No product photograph is published on this dossier.",
     ],
     sources: [
       { label: "FDA K160014 record", url: "https://api.fda.gov/device/510k.json?search=k_number:K160014&limit=10", sourceClass: "A" },
@@ -125,7 +125,10 @@ export const publishedDossiers: PublishedDossier[] = [
       { label: "HSA Shopping iHealth Track eligibility page", url: "https://www.hsashopping.com/products/ihealth-track-blood-pressure-monitor", sourceClass: "D" },
       { label: "iHealth privacy policy", url: "https://ihealthlabs.com/policies/privacy-policy", sourceClass: "C" },
     ],
-    changeLog: ["July 22, 2026: First human-approved public evidence dossier. Score, rank, public-experience claims, and product imagery withheld."],
+    changeLog: [
+      "July 22, 2026: Evidence dossier published. Score, rank, public-experience claims, and product imagery withheld.",
+      "October 28, 2026: Score and rank remain withheld until the comparison cohort is complete. Evidence cutoff unchanged.",
+    ],
   },
   {
     slug: "omron-evolv-bp7000",
@@ -136,7 +139,7 @@ export const publishedDossiers: PublishedDossier[] = [
     category: "Upper-arm blood-pressure monitor",
     evidenceCutoff: "July 21, 2026",
     directAnswer:
-      "The OMRON Evolv BP7000 has strong exact US regulatory identity and official manual documentation. Its peer-reviewed validation evidence carries a material family-level caveat because the paper and validation registry name HEM-7600T rather than the US BP7000/HEM-7600T-Z. Its score and category rank are therefore withheld while the deterministic scorer and comparison cohort are completed.",
+      "The OMRON Evolv BP7000 has strong exact US regulatory identity and official manual documentation. Its peer-reviewed validation evidence carries a material family-level caveat because the paper and validation registry name HEM-7600T rather than the US BP7000/HEM-7600T-Z. Its score and category rank are withheld until the comparison cohort is complete.",
     disposition: "accepted-evidence-dossier",
     evidenceConfidence: "Moderate",
     publicExperienceConfidence: "Insufficient",
@@ -144,7 +147,7 @@ export const publishedDossiers: PublishedDossier[] = [
     scoreStatus: "withheld",
     rankStatus: "withheld",
     scoreReason:
-      "The production scorer and its tests are not yet validated. Exact applicability of HEM-7600T validation evidence to BP7000/HEM-7600T-Z remains a documented family-level caveat, and rank requires a sufficiently complete eligible category cohort.",
+      "MDRank publishes a numeric score and a category rank when the eligible comparison cohort is complete. That cohort is not complete for home blood-pressure monitors, so score and rank are withheld. Exact applicability of HEM-7600T validation evidence to BP7000/HEM-7600T-Z remains a documented family-level caveat.",
     exactIdentity: [
       "FDA K162092 names the Evolv model BP7000 and records product code DXN.",
       "AccessGUDID DI 00073796270001 identifies exact model BP7000 in US commercial distribution.",
@@ -197,7 +200,7 @@ export const publishedDossiers: PublishedDossier[] = [
       "Prior stored readings require a compatible smart device; app behavior and compatibility can change.",
       "Manufacturer portability, ease-of-use, movement-interference, and accuracy wording is not independent proof.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "No product photograph is used under MDRank's owner-approved no-product-media launch policy.",
+      "No product photograph is published on this dossier.",
     ],
     sources: [
       { label: "FDA 510(k) K162092 summary", url: "https://www.accessdata.fda.gov/cdrh_docs/pdf16/K162092.pdf", sourceClass: "A" },
@@ -208,7 +211,10 @@ export const publishedDossiers: PublishedDossier[] = [
       { label: "STRIDE BP HEM-7600T registry entry", url: "https://www.stridebp.org/device/omron-hem-7600t/", sourceClass: "A" },
       { label: "HSA Shopping BP7000 eligibility page", url: "https://www.hsashopping.com/products/omron-evolv-bp7000", sourceClass: "D" },
     ],
-    changeLog: ["July 22, 2026: First human-approved public evidence dossier. Score, rank, public-experience claims, and product imagery withheld."],
+    changeLog: [
+      "July 22, 2026: Evidence dossier published. Score, rank, public-experience claims, and product imagery withheld.",
+      "October 28, 2026: Score and rank remain withheld until the comparison cohort is complete. Evidence cutoff unchanged.",
+    ],
   },
 ];
 

@@ -19,7 +19,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
     headline: `${dossier.name} evidence dossier`,
     description: dossier.directAnswer,
     datePublished: "2026-07-22",
-    dateModified: "2026-07-22",
+    dateModified: "2026-10-28",
     mainEntityOfPage: `https://mdrank.org/devices/${dossier.slug}`,
     author: { "@type": "Organization", name: "MDRank", url: "https://mdrank.org" },
     publisher: { "@type": "Organization", name: "MDRank", url: "https://mdrank.org" },
@@ -55,7 +55,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
       </nav>
 
       <header className="mt-6 border-b border-slate-200 pb-8">
-        <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Accepted unranked evidence dossier</p>
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Published evidence dossier</p>
         <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">{dossier.name}</h1>
         <p className="mt-3 text-lg text-slate-600">Exact model: <strong>{dossier.model}</strong> · {dossier.market}</p>
         <div className="mt-6 rounded-2xl border border-indigo-200 bg-indigo-50 p-6">
@@ -68,11 +68,11 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         <StatusCard label="Product score" value="Withheld" detail="No editor-assigned substitute" />
         <StatusCard label="Category rank" value="Withheld" detail="Comparison cohort incomplete" />
         <StatusCard label="Evidence Confidence" value={dossier.evidenceConfidence} detail="Separate from product score" />
-        <StatusCard label="Public Experience" value={dossier.publicExperienceConfidence} detail="No permitted review corpus used" />
+        <StatusCard label="Public Experience" value={dossier.publicExperienceConfidence} detail="No permitted customer reviews in use" />
       </section>
 
-      <section className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6 text-amber-950">
-        <h2 className="text-xl font-bold">Why score and rank are withheld</h2>
+      <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 text-slate-800">
+        <h2 className="text-xl font-bold text-slate-950">Why score and rank are withheld</h2>
         <p className="mt-3 leading-relaxed">{dossier.scoreReason}</p>
         <p className="mt-3 text-sm"><strong>Testing status:</strong> {dossier.testingStatus}</p>
       </section>

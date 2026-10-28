@@ -15,7 +15,7 @@ interface PageProps {
 export const metadata: Metadata = {
   title: "Medical-Device Rankings",
   description:
-    "Evidence-led medical-device rankings will appear after exact-model verification, methodology checks, and human publication approval.",
+    "Category ranks stay withheld until the comparison cohort is complete. Published evidence dossiers include exact-model findings and Evidence Confidence.",
   alternates: { canonical: "/rankings" },
   robots: { index: false, follow: true },
 };
@@ -48,7 +48,9 @@ export default async function RankingsPage({ searchParams }: PageProps) {
           {category?.name ?? "Medical Device"} Rankings
         </h1>
         <p className="mt-2 text-slate-600">
-          Exact-model comparisons built from traceable evidence and a versioned category methodology.
+          {devices.length === 0
+            ? "Scores and ranks stay withheld until the comparison cohort is complete."
+            : "Exact-model comparisons built from traceable evidence and a published category method."}
         </p>
         {category && devices.length > 0 && (
           <div className="mt-3 flex flex-wrap gap-2">
@@ -66,17 +68,17 @@ export default async function RankingsPage({ searchParams }: PageProps) {
       </div>
 
       {devices.length === 0 ? (
-        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-7 text-amber-950">
-          <h2 className="text-xl font-bold">Public rankings are temporarily withheld</h2>
+        <section className="rounded-2xl border border-slate-200 bg-white p-7 text-slate-800">
+          <h2 className="text-xl font-bold text-slate-950">Category ranks are withheld</h2>
           <p className="mt-3 max-w-3xl leading-relaxed">
-            MDRank removed inherited placeholder scores and unsupported testing claims. Rankings will return only after exact-model identity, evidence, deterministic scoring, and human publication gates pass.
+            MDRank publishes a category rank when the eligible comparison cohort is complete. Until then, this page does not show scores. Published dossiers report exact-model findings and Evidence Confidence.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
-            <Link href="/methodology" className="rounded-lg bg-amber-900 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-950">
-              Read the methodology
+            <Link href="/devices" className="rounded-lg bg-indigo-700 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-800">
+              Read evidence dossiers
             </Link>
-            <Link href="/evidence-status" className="rounded-lg border border-amber-300 px-4 py-2 text-sm font-semibold hover:bg-amber-100">
-              View evidence-system status
+            <Link href="/methodology" className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50">
+              Read the methodology
             </Link>
           </div>
         </section>

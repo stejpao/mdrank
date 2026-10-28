@@ -5,7 +5,7 @@ import { publishedDossiers } from "@/data/publishedDossiers";
 
 export const metadata: Metadata = {
   title: "Published Medical-Device Evidence Dossiers",
-  description: "Human-approved exact-model evidence dossiers with visible confidence, limitations, testing status, and clearly withheld scores and ranks where comparison is incomplete.",
+  description: "Exact-model evidence dossiers with Evidence Confidence, limitations, and testing status. Scores and ranks stay withheld until the comparison cohort is complete.",
   alternates: { canonical: "/devices" },
   robots: { index: true, follow: true },
 };
@@ -13,15 +13,15 @@ export const metadata: Metadata = {
 export default function DossiersIndexPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
-      <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Human-approved public records</p>
+      <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Published records</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">Medical-device evidence dossiers</h1>
       <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-700">
-        These exact-model dossiers passed private evidence and human publication review. A published dossier is not automatically scored, ranked, recommended, hands-on tested, or supported by customer-review evidence. Each page shows its current status directly.
+        These exact-model dossiers are published. A published dossier is not a score, a rank, a recommendation, a hands-on test, or a customer-review summary. Each page shows its status directly.
       </p>
 
-      <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6 text-amber-950">
-        <strong>Rankings remain withheld.</strong>
-        <p className="mt-2">MDRank will assign category ranks only after the eligible comparison cohort and deterministic scoring implementation pass their required gates.</p>
+      <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-slate-800">
+        <strong>Scores and ranks stay withheld until the comparison cohort is complete.</strong>
+        <p className="mt-2">Evidence Confidence is shown on each dossier and is separate from the product score.</p>
       </div>
 
       <div className="mt-8 grid gap-5">
