@@ -87,7 +87,9 @@ test('public pages use a finished voice and keep rank withholding',()=>{
   ];
   const copy=files.map(f=>fs.readFileSync(f,'utf8')).join('\n');
   assert.doesNotMatch(copy,/integrity reset|pre-release|rebuilding|under construction|temporarily withheld|coming soon|what is not live|scaffolding|work in progress|\bWIP\b|launch policy|not yet validated|first 90 days/i);
-  assert.match(copy,/withheld until the comparison cohort is complete/i);
+  assert.match(copy,/upper-arm-home-bp-v1\.0\.0/);
+  assert.match(copy,/Score and rank stay withheld when exact-model evidence is incomplete/i);
+  assert.doesNotMatch(copy,/withheld until the comparison cohort is complete/i);
   assert.match(copy,/Evidence Confidence/);
   assert.match(copy,/FDA clearance is not FDA approval/i);
 });

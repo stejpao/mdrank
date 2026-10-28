@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | MDRank",
   },
   description:
-    "Exact-model medical-device evidence with visible Evidence Confidence. Scores and category ranks are published when a comparison cohort is complete.",
+    "Exact-model medical-device evidence with visible Evidence Confidence. MDRank Score and category rank appear for scored-eligible rows. Incomplete exact-model evidence stays unranked.",
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
 };

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "productId": "ihealth-track-kn-550bt",
+  "slug": "ihealth-track-kn-550bt",
+  "brand": "iHealth",
+  "exactModel": "KN-550BT",
+  "market": "US",
+  "formFactor": "upper-arm",
+  "identity": { "status": "resolved" },
+  "testingStatus": "public-evidence-only",
+  "testingLanguage": { "handsOnClaimWithoutProtocol": false },
+  "disclosureStatus": "independent-editorial",
+  "publication": { "alreadyPublic": true, "url": "/devices/ihealth-track-kn-550bt" },
+  "regulatory": {
+    "clearanceType": "fda-510k",
+    "clearanceNumber": "K160014",
+    "productCode": null,
+    "gudidConsistent": true
+  },
+  "validation": {
+    "scope": "exact-model",
+    "namesExactModel": true,
+    "peerReviewed": true,
+    "namedProtocolPass": true,
+    "fundingIndependence": "unknown"
+  },
+  "measurement": {
+    "method": "oscillometric",
+    "pressureAccuracyBand": "±3 mmHg",
+    "pulseAccuracyBand": "±5%",
+    "positioningResistanceDocumented": null,
+    "positioningEvidenceIds": [],
+    "techniqueResistanceDocumented": null,
+    "techniqueEvidenceIds": []
+  },
+  "fit": {
+    "rangesCm": [
+      { "min": 22, "max": 42, "packageId": "550BT" },
+      { "min": 42, "max": 48, "packageId": "550BT-XL" }
+    ]
+  },
+  "usability": { "displayDocumented": true, "onDeviceReadingReview": true },
+  "dataHandling": { "memoryDocumented": true, "syncDocumented": true, "privacyPolicyCited": true },
+  "ownership": { "powerDocumented": true, "warrantyDocumented": null, "cuffService": null },
+  "recall": { "queried": true, "activeIndexedMatch": false },
+  "conflicts": [],
+  "publicExperience": { "licensedExactModelCorpus": false },
+  "evidenceDates": { "criticalRetrievedAt": "2026-07-21", "asOf": "2026-10-28" },
+  "primarySources": [
+    { "id": "fda-k160014", "sourceClass": "A", "url": "https://api.fda.gov/device/510k.json?search=k_number:K160014&limit=10", "retrievedAt": "2026-07-21" },
+    { "id": "pubmed-37702596", "sourceClass": "A", "url": "https://pubmed.ncbi.nlm.nih.gov/37702596/", "retrievedAt": "2026-07-21" },
+    { "id": "support-specs", "sourceClass": "C", "url": "https://support.ihealthlabs.com/hc/en-us/articles/34550216066445-FAQ-Specifications-and-display-Symbols-iHealth-Track-KN-550BT", "retrievedAt": "2026-07-21" },
+    { "id": "support-memory", "sourceClass": "C", "url": "https://support.ihealthlabs.com/hc/en-us/articles/8164457920525-FAQ-Reading-Measurements-in-Memory-Synchronize-data-Track-KN-550BT", "retrievedAt": "2026-07-21" },
+    { "id": "manufacturer-offer", "sourceClass": "C", "url": "https://ihealthlabs.com/products/ihealth-track-connected-blood-pressure-monitor", "retrievedAt": "2026-07-21" },
+    { "id": "privacy-policy", "sourceClass": "C", "url": "https://ihealthlabs.com/policies/privacy-policy", "retrievedAt": "2026-07-21" }
+  ],
+  "materialClaims": [
+    { "id": "clearance", "text": "FDA K160014 records a substantially equivalent decision for model KN-550BT.", "evidenceIds": ["fda-k160014"] },
+    { "id": "validation-pass", "text": "A 2024 peer-reviewed paper names KN-550BT and reports a pass on both stated AAMI/ESH/ISO criteria. Funding independence was not established.", "evidenceIds": ["pubmed-37702596"] },
+    { "id": "method-and-bands", "text": "Manufacturer documentation states an oscillometric method, pressure accuracy ±3 mmHg, and pulse accuracy ±5%.", "evidenceIds": ["support-specs"] },
+    { "id": "cuff-ranges", "text": "The standard package cuff is 22–42 cm and the XL package cuff is 42–48 cm.", "evidenceIds": ["manufacturer-offer"] },
+    { "id": "memory-sync", "text": "On-device memory is 60 readings, with Bluetooth synchronization.", "evidenceIds": ["support-memory"] },
+    { "id": "display-power", "text": "The display is a color-coded LCD and power is four 1.5V AAA batteries.", "evidenceIds": ["support-specs"] },
+    { "id": "privacy", "text": "An iHealth privacy policy was cited for data-handling context.", "evidenceIds": ["privacy-policy"] }
+  ]
+}

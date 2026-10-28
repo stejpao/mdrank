@@ -59,8 +59,8 @@ export type PublishedDossier = {
   evidenceConfidence: string;
   publicExperienceConfidence: string;
   testingStatus: string;
-  scoreStatus: "withheld";
-  rankStatus: "withheld";
+  scoreStatus: "published" | "withheld";
+  rankStatus: "published" | "withheld";
   scoreReason: string;
   illustrativePhoto?: IllustrativePhoto;
   amazonListing?: AmazonListing;
@@ -91,15 +91,15 @@ export const publishedDossiers: PublishedDossier[] = [
     category: "Upper-arm blood-pressure monitor",
     evidenceCutoff: "July 21, 2026",
     directAnswer:
-      "The iHealth Track KN-550BT has a strong exact-model evidence packet: FDA clearance K160014, three commercial GUDID records, current standard and XL cuff packages, and a 2024 exact-model validation study that passed both reported criteria. Its numeric score and category rank remain withheld until the comparison cohort is complete.",
+      "The iHealth Track KN-550BT has FDA clearance K160014, three commercial GUDID records, current standard and XL cuff packages, and a 2024 peer-reviewed study that names KN-550BT and reports a pass on both stated AAMI/ESH/ISO criteria. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays High and is separate from the score. Funding independence of the validation study was not established. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     disposition: "accepted-evidence-dossier",
     evidenceConfidence: "High",
     publicExperienceConfidence: "Insufficient",
     testingStatus: "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    scoreStatus: "withheld",
-    rankStatus: "withheld",
+    scoreStatus: "published",
+    rankStatus: "published",
     scoreReason:
-      "MDRank publishes a numeric score and a category rank when the eligible comparison cohort is complete. That cohort is not complete for home blood-pressure monitors, so score and rank are withheld. Evidence Confidence is reported separately.",
+      "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. No licensed exact-model customer-review corpus was acquired, so the public-input sprinkle stays neutral. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     exactIdentity: [
       "Exact US model KN-550BT appears across FDA clearance K160014, manufacturer support, exact-model validation, and three commercial GUDID records.",
       "Primary DIs reviewed: 00850078377081, 00856362005005, and 00856362005395.",
@@ -166,7 +166,7 @@ export const publishedDossiers: PublishedDossier[] = [
     ],
     changeLog: [
       "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
-      "October 28, 2026: Score and rank remain withheld until the comparison cohort is complete. An owner-supplied illustrative photograph edited for clarity and a disclosed Amazon Associates link were added. Evidence cutoff unchanged.",
+      "October 28, 2026: Owner-enabled rubric upper-arm-home-bp-v1.0.0. MDRank Score and category rank published for this exact model. Evidence Confidence remains High and separate. The disclosed Amazon Associates link stays weight zero. Evidence cutoff unchanged.",
     ],
     handlingGlance: [
       { id: "cuff-fit", label: "Cuff fit", summary: "22–42 cm standard · 42–48 cm XL", fit: "Strong with the matching package", confidence: "High", meter: "strong" },
@@ -210,7 +210,7 @@ export const publishedDossiers: PublishedDossier[] = [
     category: "Upper-arm blood-pressure monitor",
     evidenceCutoff: "July 21, 2026",
     directAnswer:
-      "The OMRON Evolv BP7000 has strong exact US regulatory identity and official manual documentation. Its peer-reviewed validation evidence carries a material family-level caveat because the paper and validation registry name HEM-7600T rather than the US BP7000/HEM-7600T-Z. Its score and category rank are withheld until the comparison cohort is complete.",
+      "The OMRON Evolv BP7000 has FDA clearance K162092 and official US documentation for BP7000/HEM-7600T-Z. Peer-reviewed validation names HEM-7600T rather than the US model, a material family-level caveat, so this dossier stays unranked. MDRank Score and category rank are withheld. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     disposition: "accepted-evidence-dossier",
     evidenceConfidence: "Moderate",
     publicExperienceConfidence: "Insufficient",
@@ -218,7 +218,7 @@ export const publishedDossiers: PublishedDossier[] = [
     scoreStatus: "withheld",
     rankStatus: "withheld",
     scoreReason:
-      "MDRank publishes a numeric score and a category rank when the eligible comparison cohort is complete. That cohort is not complete for home blood-pressure monitors, so score and rank are withheld. Exact applicability of HEM-7600T validation evidence to BP7000/HEM-7600T-Z remains a documented family-level caveat.",
+      "Withheld under rubric upper-arm-home-bp-v1.0.0. Identity is resolved with a model-family caveat, and validation evidence names HEM-7600T rather than BP7000/HEM-7600T-Z. Family-only validation is not scored and is not upgraded to exact-model validation. Evidence Confidence stays Moderate and separate.",
     exactIdentity: [
       "FDA K162092 names the Evolv model BP7000 and records product code DXN.",
       "AccessGUDID DI 00073796270001 identifies exact model BP7000 in US commercial distribution.",
@@ -284,7 +284,7 @@ export const publishedDossiers: PublishedDossier[] = [
     ],
     changeLog: [
       "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
-      "October 28, 2026: Score and rank remain withheld until the comparison cohort is complete. An owner-supplied illustrative photograph edited for clarity and a disclosed Amazon Associates link were added. Evidence cutoff unchanged.",
+      "October 28, 2026: Owner-enabled rubric upper-arm-home-bp-v1.0.0. Score and rank remain withheld because validation is family-level. Evidence Confidence remains Moderate. The disclosed Amazon Associates link stays weight zero. Evidence cutoff unchanged.",
     ],
     handlingGlance: [
       { id: "cuff-fit", label: "Cuff fit", summary: "22–42 cm integrated cuff", fit: "Strong", confidence: "High", meter: "strong" },

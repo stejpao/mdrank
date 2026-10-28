@@ -192,8 +192,8 @@ export default function DisclosuresPage() {
                 </tr>
                 <tr>
                   <th scope="row" className="px-4 py-3 align-top font-medium text-slate-900">Category rank</th>
-                  <td className="px-4 py-3 align-top">Ordering among eligible exact-model peers when the cohort and scorer are ready</td>
-                  <td className="px-4 py-3 align-top">Not reserved; not for sale; currently withheld while the comparison cohort and production scorer complete validation</td>
+                  <td className="px-4 py-3 align-top">Ordering among scored-eligible exact-model peers under rubric upper-arm-home-bp-v1.0.0</td>
+                  <td className="px-4 py-3 align-top">Not reserved; not for sale. Incomplete exact-model evidence, including family-level validation, stays unranked</td>
                 </tr>
                 <tr>
                   <th scope="row" className="px-4 py-3 align-top font-medium text-slate-900">Public Experience</th>
@@ -203,7 +203,7 @@ export default function DisclosuresPage() {
                 <tr>
                   <th scope="row" className="px-4 py-3 align-top font-medium text-slate-900">FDA 510(k) clearance (with K-number)</th>
                   <td className="px-4 py-3 align-top">Regulatory clearance decision for a named device</td>
-                  <td className="px-4 py-3 align-top">Not “FDA approved,” not endorsement, not independent validation, not proof one device is more accurate than another</td>
+                  <td className="px-4 py-3 align-top">Not “FDA approved,” not endorsement, not independent validation, not proof one device is more accurate than another. A De Novo DEN number counts as FDA-cleared on the same terms as a 510(k) K-number</td>
                 </tr>
                 <tr>
                   <th scope="row" className="px-4 py-3 align-top font-medium text-slate-900">Family-level validation</th>
@@ -272,7 +272,7 @@ export default function DisclosuresPage() {
           </p>
           <ul className="mt-4 list-disc space-y-3 pl-5">
             <li>
-              <strong>October 28, 2026.</strong> Amazon.com Associates is the affiliate relationship for MDRank buy links (Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>). The two public upper-arm dossiers show a Buy on Amazon link with an ordinary affiliate-commission disclosure. Affiliate, EPC, and conversion data remain unavailable to the scorer (weight zero). Paid placement remains not live. No other affiliate program is authorized.
+              <strong>October 28, 2026.</strong> Amazon.com Associates is the affiliate relationship for MDRank buy links (Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>). The two public upper-arm dossiers show a Buy on Amazon link with an ordinary affiliate-commission disclosure. Affiliate, EPC, and conversion data remain unavailable to the scorer (weight zero). Paid placement remains not live. No other affiliate program is authorized. Rubric upper-arm-home-bp-v1.0.0 may publish an MDRank Score and category rank for a scored-eligible exact-model dossier. Incomplete exact-model evidence stays withheld.
             </li>
           </ul>
           <h3 className="mt-6 text-xl font-semibold text-slate-950">MDRank.org</h3>
