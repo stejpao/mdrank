@@ -39,7 +39,7 @@ export function DossierShare({ name, model, variant = "hero" }: DossierShareProp
   const buttonClass =
     variant === "dock"
       ? "flex min-h-12 w-full items-center justify-center rounded-lg bg-slate-950 px-4 text-sm font-semibold text-white"
-      : "inline-flex min-h-11 items-center justify-center rounded-lg bg-slate-950 px-4 text-sm font-semibold text-white hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950";
+      : "inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-slate-950 px-4 text-sm font-semibold text-white hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950 sm:w-auto";
 
   return (
     <div className={variant === "dock" ? "fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white p-3 md:hidden" : ""}>

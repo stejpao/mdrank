@@ -46,6 +46,10 @@ body {
   @apply bg-slate-100 text-slate-600;
 }
 
+.sheet-section {
+  scroll-margin-top: 4.75rem;
+}
+
 .catalog-card {
   transition: border-color 160ms ease, box-shadow 160ms ease;
 }

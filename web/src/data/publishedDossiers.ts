@@ -187,7 +187,7 @@ export const publishedDossiers: PublishedDossier[] = [
       { id: "connectivity", criterion: "Connectivity", finding: "Bluetooth with iHealth MyVitals synchronization.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "iHealth KN-550BT memory and synchronization support" },
     ],
     illustrativePhoto: {
-      src: "/images/dossiers/ihealth-kn-550bt-real-use.jpg",
+      src: "/devices/ihealth-track-kn-550bt/real-use.jpg",
       width: 1152,
       height: 864,
       alt: "Illustrative real-use photo edited for clarity, showing an upper-arm cuff and monitor for the iHealth Track KN-550BT. Not manufacturer or clinical photography.",
@@ -305,7 +305,7 @@ export const publishedDossiers: PublishedDossier[] = [
       { id: "connectivity", criterion: "Connectivity", finding: "Bluetooth Low Energy with OMRON connect.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "OMRON US BP7000 product page" },
     ],
     illustrativePhoto: {
-      src: "/images/dossiers/omron-evolv-bp7000-real-use.jpg",
+      src: "/devices/omron-evolv-bp7000/real-use.jpg",
       width: 1152,
       height: 864,
       alt: "Illustrative real-use photo edited for clarity, showing an upper-arm cuff monitor for the OMRON Evolv BP7000. Not manufacturer or clinical photography.",

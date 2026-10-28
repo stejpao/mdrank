@@ -33,10 +33,10 @@ function FitMeter({ meter, fit }: { meter: HandlingMeter; fit: string }) {
 
 function StatusCard({ label, value, detail }: { label: string; value: string; detail?: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5">
-      <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">{label}</p>
-      <p className="mt-2 text-xl font-bold text-slate-950">{value}</p>
-      {detail && <p className="mt-2 text-sm leading-relaxed text-slate-600">{detail}</p>}
+    <div className="rounded-lg border border-slate-200 bg-white px-3 py-2.5">
+      <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">{label}</p>
+      <p className="mt-1 text-base font-bold leading-tight text-slate-950">{value}</p>
+      {detail && <p className="mt-1 text-xs leading-snug text-slate-500">{detail}</p>}
     </div>
   );
 }
@@ -73,7 +73,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
   };
 
   return (
-    <div className="mx-auto max-w-5xl px-4 pb-24 pt-8 sm:px-6 md:pb-10 md:pt-10">
+    <div className="mx-auto max-w-5xl bg-[#f6f3ec] px-4 pb-24 pt-6 sm:px-6 md:pb-12 md:pt-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
@@ -85,39 +85,45 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         <span>{dossier.model}</span>
       </nav>
 
-      <header className="mt-6 border-b border-slate-200 pb-8">
+      <header className="mt-4">
         {photo ? (
-          <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+          <figure className="-mx-4 overflow-hidden border-y border-slate-200 bg-white sm:mx-0 sm:rounded-2xl sm:border">
             <Image
               src={photo.src}
               alt={photo.alt}
               width={photo.width}
               height={photo.height}
               priority
-              sizes="(min-width: 768px) 720px, 100vw"
+              sizes="(min-width: 768px) 960px, 100vw"
               data-rights-status={photo.rightsStatus}
               className="h-auto w-full bg-slate-100"
             />
-            <figcaption className="border-t border-slate-100 px-4 py-3 text-sm text-slate-600">{photo.caption}</figcaption>
+            <figcaption className="px-4 py-3 text-sm text-slate-700">{photo.caption}</figcaption>
             <p className="px-4 pb-4 text-xs leading-relaxed text-slate-500">{photo.rightsNote}</p>
           </figure>
         ) : null}
-        <div className="mt-6 flex flex-wrap items-start justify-between gap-3">
-          <div className="min-w-0 flex-1">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Published evidence dossier</p>
-            <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">{dossier.name}</h1>
-            <p className="mt-3 text-lg text-slate-600">Exact model: <strong>{dossier.model}</strong> · {dossier.market}</p>
-          </div>
+        <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Published evidence dossier</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">{dossier.name}</h1>
+        <p className="mt-2 text-lg text-slate-700">Exact model: <strong>{dossier.model}</strong> · {dossier.market}</p>
+        <div className="mt-4">
           <DossierShare name={dossier.name} model={dossier.model} />
         </div>
-        <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+        <div id="answer" className="sheet-section mt-5 rounded-xl border border-slate-200 bg-white p-4">
           <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">Direct answer</h2>
-          <p className="mt-3 leading-relaxed text-slate-800">{dossier.directAnswer}</p>
+          <p className="mt-2 text-[15px] leading-relaxed text-slate-800">{dossier.directAnswer}</p>
         </div>
       </header>
+      <nav aria-label="On this page" className="sticky top-0 z-20 -mx-4 mt-4 flex flex-wrap gap-2 border-y border-slate-200 bg-[#f6f3ec]/95 px-4 py-2 backdrop-blur sm:mx-0 sm:rounded-xl sm:border">
+        <a className="rounded-full bg-white px-3 py-1 text-sm font-semibold text-slate-800 ring-1 ring-slate-200" href="#status">Status</a>
+        <a className="rounded-full bg-white px-3 py-1 text-sm font-semibold text-slate-800 ring-1 ring-slate-200" href="#handling">Handling</a>
+        <a className="rounded-full bg-white px-3 py-1 text-sm font-semibold text-slate-800 ring-1 ring-slate-200" href="#buy">Buy</a>
+        <a className="rounded-full bg-white px-3 py-1 text-sm font-semibold text-slate-800 ring-1 ring-slate-200" href="#specs">Specs</a>
+        <a className="rounded-full bg-white px-3 py-1 text-sm font-semibold text-slate-800 ring-1 ring-slate-200" href="#persona">Persona</a>
+        <a className="rounded-full bg-white px-3 py-1 text-sm font-semibold text-slate-800 ring-1 ring-slate-200" href="#evidence">Evidence</a>
+      </nav>
       <DossierShare name={dossier.name} model={dossier.model} variant="dock" />
 
-      <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-label="Dossier status">
+      <section id="status" className="sheet-section mt-6 grid grid-cols-2 gap-2" aria-label="Dossier status">
         <StatusCard label="Product score" value="Withheld" detail="No editor-assigned substitute" />
         <StatusCard label="Category rank" value="Withheld" detail="Comparison cohort incomplete" />
         <StatusCard label="Evidence Confidence" value={dossier.evidenceConfidence} detail="Separate from product score" />
@@ -130,7 +136,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         <p className="mt-3 text-sm"><strong>Testing status:</strong> {dossier.testingStatus}</p>
       </section>
 
-      <section className="mt-8" aria-labelledby="handling-glance-heading" data-section="handling-glance" data-affiliate-weight="0">
+      <section id="handling" className="sheet-section mt-8" aria-labelledby="handling-glance-heading" data-section="handling-glance" data-affiliate-weight="0">
         <h2 id="handling-glance-heading" className="text-2xl font-bold text-slate-950">Handling snapshot</h2>
         <p className="mt-2 text-sm text-slate-600">Qualitative ownership notes from the published specifications and persona-fit record. Not a product score or rank.</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -174,7 +180,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
       </section>
 
       {amazonUrl && dossier.amazonListing ? (
-        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6" aria-labelledby="where-to-buy-heading" data-section="where-to-buy" data-affiliate-weight="0">
+        <section id="buy" className="sheet-section mt-8 rounded-2xl border border-slate-200 bg-white p-5" aria-labelledby="where-to-buy-heading" data-section="where-to-buy" data-affiliate-weight="0">
           <h2 id="where-to-buy-heading" className="text-xl font-bold text-slate-950">Where to buy</h2>
           <p className="mt-3 leading-relaxed text-slate-800" data-field="where-to-buy-answer">
             Where to buy: the Amazon.com listing for {dossier.name} ({dossier.model}, ASIN {dossier.amazonListing.asin}) is {amazonUrl}. The link has zero weight on the withheld product score and category rank.
@@ -200,7 +206,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
             data-affiliate="amazon-associates"
             data-asin={dossier.amazonListing.asin}
             data-merchant="Amazon"
-            className="mt-4 inline-flex min-h-11 items-center rounded-lg bg-slate-950 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
+            className="mt-4 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-slate-950 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950 sm:w-auto"
           >
             Buy on Amazon
             <span className="sr-only"> (opens in a new tab)</span>
@@ -212,10 +218,10 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         </section>
       ) : null}
 
-      <section className="mt-10">
+      <section id="identity" className="sheet-section mt-8">
         <h2 className="text-2xl font-bold text-slate-950">Verified exact identity</h2>
-        <ul className="mt-4 space-y-3 text-slate-700">
-          {dossier.exactIdentity.map((item) => <li key={item} className="rounded-xl border border-slate-200 bg-white p-4">{item}</li>)}
+        <ul className="mt-3 divide-y divide-slate-200 rounded-xl border border-slate-200 bg-white text-sm leading-relaxed text-slate-700">
+          {dossier.exactIdentity.map((item) => <li key={item} className="px-4 py-3">{item}</li>)}
         </ul>
       </section>
 
@@ -243,7 +249,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         </ul>
       </section>
 
-      <section className="mt-10">
+      <section id="specs" className="sheet-section mt-8">
         <h2 className="text-2xl font-bold text-slate-950">Manufacturer-attributed specifications</h2>
         <p className="mt-2 text-sm text-slate-600">These specifications come from the cited manufacturer/FDA materials. MDRank did not independently measure them.</p>
         <dl className="mt-5 divide-y divide-slate-100 overflow-hidden rounded-2xl border border-slate-200 bg-white">
@@ -256,7 +262,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         </dl>
       </section>
 
-      <section className="mt-10" aria-labelledby="persona-fit-heading">
+      <section id="persona" className="sheet-section mt-8" aria-labelledby="persona-fit-heading">
         <h2 id="persona-fit-heading" className="text-2xl font-bold text-slate-950">Persona fit</h2>
         <p className="mt-2 text-sm text-slate-600">Fit statements describe documented cuff and workflow requirements. They are not medical-suitability determinations.</p>
         <div className="mt-4 grid gap-3">
@@ -278,7 +284,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         </ul>
       </section>
 
-      <section className="mt-10">
+      <section id="evidence" className="sheet-section mt-8">
         <h2 className="text-2xl font-bold text-slate-950">Evidence ledger</h2>
         <p className="mt-2 text-sm text-slate-600">Evidence cutoff: {dossier.evidenceCutoff}. Source class A is regulatory, government, registry, or peer-reviewed evidence; C is manufacturer documentation; D is current-offer or eligibility evidence.</p>
         <ul className="mt-5 space-y-3">
