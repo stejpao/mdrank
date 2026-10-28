@@ -16,7 +16,7 @@ export default function DisclosuresPage() {
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
       <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-700">Transparency</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">Disclosures</h1>
-      <p className="mt-4 text-sm text-slate-600">Effective October 27, 2026</p>
+      <p className="mt-4 text-sm text-slate-600">Updated October 28, 2026</p>
 
       <div className="mt-8 space-y-8 text-base leading-7 text-slate-700">
         <section className="space-y-4">
@@ -38,12 +38,12 @@ export default function DisclosuresPage() {
           <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
             <table className="w-full min-w-[720px] text-left text-sm leading-6">
               <caption className="sr-only">
-                Current commercial relationships and their effect on score, rank, and Evidence Confidence as of October 27, 2026
+                Current commercial relationships and their effect on score, rank, and Evidence Confidence as of October 28, 2026
               </caption>
               <thead className="bg-slate-50 text-slate-700">
                 <tr>
                   <th scope="col" className="px-4 py-3 font-semibold">Relationship type</th>
-                  <th scope="col" className="px-4 py-3 font-semibold">Current status (as of October 27, 2026)</th>
+                  <th scope="col" className="px-4 py-3 font-semibold">Current status (as of October 28, 2026)</th>
                   <th scope="col" className="px-4 py-3 font-semibold">Effect on score / rank / Evidence Confidence</th>
                 </tr>
               </thead>
@@ -53,9 +53,11 @@ export default function DisclosuresPage() {
                     Affiliate / commission links on public MDRank product pages
                   </th>
                   <td className="px-4 py-3 align-top">
-                    <strong>None live.</strong> Public dossiers do not display affiliate links, offer prices, or buy buttons.
+                    <strong>Amazon.com Associates.</strong> Affiliate buy links may appear on product pages, using Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>, and are labeled with an ordinary affiliate-commission disclosure. No other affiliate program is authorized.
                   </td>
-                  <td className="px-4 py-3 align-top">None. No commission field is available to the scorer.</td>
+                  <td className="px-4 py-3 align-top">
+                    None. Affiliate, EPC, and conversion data remain unavailable to the scorer. Affiliate participation weight is zero.
+                  </td>
                 </tr>
                 <tr>
                   <th scope="row" className="px-4 py-3 align-top font-medium text-slate-900">
@@ -88,7 +90,7 @@ export default function DisclosuresPage() {
             </table>
           </div>
           <p className="mt-4">
-            If a qualifying affiliate link, paid placement, or other commercial relationship goes live later, this table
+            If another affiliate program, paid placement, or other commercial relationship is added later, this table
             will be updated with the relationship type, start date, and disclosure label before or at the same time the
             commercial feature appears on the site.
           </p>
@@ -104,13 +106,16 @@ export default function DisclosuresPage() {
             product link or offer.
           </p>
           <p className="mt-4">
-            <strong>Current state:</strong> No live affiliate relationships are claimed for public MDRank product
-            dossiers. The two human-approved upper-arm blood-pressure dossiers (iHealth Track KN-550BT; OMRON Evolv
-            BP7000 / HEM-7600T-Z) state that no affiliate link appears on those pages.
+            <strong>Current state:</strong> Amazon.com Associates is the only authorized affiliate relationship.
+            MDRank buy links may use Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>.
+            A qualifying Amazon link may appear on a product page and is labeled with an ordinary affiliate-commission
+            disclosure. Affiliate, EPC, and conversion data remain unavailable to the scorer (weight zero). No other
+            affiliate program is authorized. The two human-approved upper-arm blood-pressure dossiers (iHealth Track
+            KN-550BT; OMRON Evolv BP7000 / HEM-7600T-Z) do not currently display an affiliate link, offer price, or buy button.
           </p>
-          <p className="mt-4"><strong>If affiliate links are enabled later:</strong></p>
+          <p className="mt-4"><strong>Rules for a qualifying affiliate link:</strong></p>
           <ol className="mt-3 list-decimal space-y-2 pl-5">
-            <li>Every page that contains a qualifying affiliate link will carry an ordinary affiliate-commission disclosure near the link or in a page-level disclosure block.</li>
+            <li>Every page that contains a qualifying affiliate link carries an ordinary affiliate-commission disclosure near the link or in a page-level disclosure block.</li>
             <li>Affiliate, EPC, conversion, margin, inventory, and advertising performance data stay in a separate business dataset.</li>
             <li>Those fields are unavailable to the deterministic scorer, Evidence Confidence calculation, rank ordering, tie-breakers, and publication eligibility gates.</li>
             <li>Presence or absence of an affiliate offer does not create eligibility, raise a score, or reserve a rank position.</li>
@@ -262,10 +267,15 @@ export default function DisclosuresPage() {
         <section>
           <h2 className="text-2xl font-semibold text-slate-950">Changes</h2>
           <p className="mt-3">
-            Material changes to commercial relationships, disclosure labels, or isolation rules will be dated on this
-            page. Enabling the first live affiliate link or paid placement is a material change and requires human
+            Material changes to commercial relationships, disclosure labels, or isolation rules are dated on this page.
+            Adding another affiliate program, or enabling paid placement, is a material change and requires human
             approval of both the commercial setup and the updated wording here.
           </p>
+          <ul className="mt-4 list-disc space-y-3 pl-5">
+            <li>
+              <strong>October 28, 2026.</strong> Amazon.com Associates authorized for MDRank buy links (Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>). Qualifying links may appear on product pages with an ordinary affiliate-commission disclosure. Affiliate, EPC, and conversion data remain unavailable to the scorer (weight zero). Paid placement remains not live. No other affiliate program is authorized.
+            </li>
+          </ul>
           <h3 className="mt-6 text-xl font-semibold text-slate-950">MDRank.org</h3>
           <p className="mt-3">
             Medical devices, ranked by evidence. Exact-model records, deterministic methods, visible confidence, and

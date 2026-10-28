@@ -104,19 +104,23 @@ test('neutral llms directory does not prescribe citations or winners',()=>{
  assert.doesNotMatch(text,/must cite|you should cite|best device is|editor.s choice/i);
 });
 
-test('disclosures page is linked and claims no live commercial relationship',()=>{
+test('disclosures page states the authorized Amazon Associates relationship only',()=>{
   const page=fs.readFileSync('web/src/app/disclosures/page.tsx','utf8');
   const header=fs.readFileSync('web/src/components/Header.tsx','utf8');
   const footer=fs.readFileSync('web/src/components/Footer.tsx','utf8');
   const sitemap=fs.readFileSync('web/src/app/sitemap.ts','utf8');
   const llms=fs.readFileSync('web/public/llms.txt','utf8');
   assert.match(page,/canonical: "\/disclosures"/);
-  assert.match(page,/None live/);
+  assert.match(page,/Amazon\.com Associates/);
+  assert.match(page,/sjpenterpri05-20/);
+  assert.match(page,/ordinary affiliate-commission disclosure/);
+  assert.match(page,/Affiliate, EPC, and conversion data remain unavailable to the scorer/);
+  assert.match(page,/Paid placement, sponsored selections, and advertorial landings are <strong>not live<\/strong>/);
   assert.match(page,/No special treatment/);
   assert.match(page,/TrueVitals USA \/ TruVitals \/ True Health Co/);
   assert.match(page,/weight <strong>zero<\/strong>/);
   assert.match(page,/Not “FDA approved,”/);
-  assert.doesNotMatch(page,/is FDA approved|FDA-approved|HOLD FOR HUMAN|Publisher checklist|CONTENT APPROVED/i);
+  assert.doesNotMatch(page,/ShareASale|Impact\.com|Commission Junction|Rakuten|Skimlinks|is FDA approved|FDA-approved|HOLD FOR HUMAN|Publisher checklist|CONTENT APPROVED/i);
   assert.doesNotMatch(page,/href=["']https?:|href=["']\/devices\/|Buy Now|Check Price|\/go\//i);
   assert.match(header,/href="\/disclosures"/);
   assert.match(footer,/href="\/disclosures"/);
