@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { PublicPageJsonLd } from "@/components/PublicPageJsonLd";
 import { CATEGORIES, getLandingCopy } from "@/lib/db";
 import { publishedDossiers } from "@/data/publishedDossiers";
 import { getPublicScore } from "@/lib/publicScore";
@@ -10,6 +11,7 @@ export default async function HomePage() {
 
   return (
     <div>
+      <PublicPageJsonLd path="/" />
       <section className="bg-gradient-to-br from-indigo-950 to-indigo-700 text-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-200">MDRank Evidence Engine</p>

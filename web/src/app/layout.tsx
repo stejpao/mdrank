@@ -4,8 +4,12 @@ import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
 import { GA_CONSENT_BOOTSTRAP } from "@/lib/analytics";
+import { socialMetadata } from "@/lib/pageMetadata";
 
 import "./globals.css";
+
+const homeDescription =
+  "Exact-model medical-device evidence with visible Evidence Confidence. MDRank Score and category rank appear for scored-eligible rows. Incomplete exact-model evidence stays unranked.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mdrank.org"),
@@ -13,10 +17,15 @@ export const metadata: Metadata = {
     default: "MDRank — Medical devices, ranked by evidence",
     template: "%s | MDRank",
   },
-  description:
-    "Exact-model medical-device evidence with visible Evidence Confidence. MDRank Score and category rank appear for scored-eligible rows. Incomplete exact-model evidence stays unranked.",
+  description: homeDescription,
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+  ...socialMetadata({
+    title: "MDRank — Medical devices, ranked by evidence",
+    description: homeDescription,
+    path: "/",
+    ogType: "website",
+  }),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

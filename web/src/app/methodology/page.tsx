@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
 
+import { PublicPageJsonLd } from "@/components/PublicPageJsonLd";
+import { socialMetadata } from "@/lib/pageMetadata";
+
+const description = "How MDRank resolves exact medical-device models, evaluates evidence, and separates product score from Evidence Confidence.";
+
 export const metadata: Metadata = {
   title: "MDRank Methodology",
-  description: "How MDRank resolves exact medical-device models, evaluates evidence, and separates product score from Evidence Confidence.",
+  description,
   alternates: { canonical: "/methodology" },
+  ...socialMetadata({
+    title: "MDRank Methodology",
+    description,
+    path: "/methodology",
+    ogType: "website",
+  }),
 };
 
 const principles = [
@@ -18,6 +29,7 @@ const principles = [
 export default function MethodologyPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+      <PublicPageJsonLd path="/methodology" />
       <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Methodology version 1.0</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">How MDRank evaluates medical devices</h1>
       <p className="mt-5 text-lg leading-relaxed text-slate-700">MDRank evaluates exact device models against a published method. No product earns a public ranking merely because it appears in a manufacturer catalog, affiliate feed, competitor page, or an AI-generated summary.</p>

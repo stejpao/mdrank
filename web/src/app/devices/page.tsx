@@ -1,15 +1,25 @@
 import type { Metadata } from "next";
 
 import { DossierCatalog } from "@/components/DossierCatalog";
+import { PublicPageJsonLd } from "@/components/PublicPageJsonLd";
 import { publishedDossiers } from "@/data/publishedDossiers";
 import { isPublicUpperArmDossier } from "@/lib/catalog";
+import { socialMetadata } from "@/lib/pageMetadata";
 import { getPublicScore } from "@/lib/publicScore";
+
+const description = "Exact-model upper-arm evidence dossiers. MDRank Score and category rank appear when the row is scored-eligible. Evidence Confidence stays separate. Incomplete exact-model evidence stays unranked.";
 
 export const metadata: Metadata = {
   title: "Published Medical-Device Evidence Dossiers",
-  description: "Exact-model upper-arm evidence dossiers. MDRank Score and category rank appear when the row is scored-eligible. Evidence Confidence stays separate. Incomplete exact-model evidence stays unranked.",
+  description,
   alternates: { canonical: "/devices" },
   robots: { index: true, follow: true },
+  ...socialMetadata({
+    title: "Published Medical-Device Evidence Dossiers",
+    description,
+    path: "/devices",
+    ogType: "website",
+  }),
 };
 
 interface PageProps {
@@ -40,6 +50,7 @@ export default async function DossiersIndexPage({ searchParams }: PageProps) {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
+      <PublicPageJsonLd path="/devices" />
       <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Published records</p>
       <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Upper-arm blood-pressure evidence dossiers</h1>
       <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-700">

@@ -7,6 +7,7 @@ import { RankingsFilters } from "@/components/RankingsFilters";
 import { publishedDossiers } from "@/data/publishedDossiers";
 import { CATEGORIES, getDevices, getManufacturers, getStats } from "@/lib/db";
 import { formatPrice } from "@/lib/format";
+import { socialMetadata } from "@/lib/pageMetadata";
 import { listPublicScores } from "@/lib/publicScore";
 import type { DeviceFilters, SortField } from "@/lib/types";
 
@@ -14,12 +15,20 @@ interface PageProps {
   searchParams: Promise<Record<string, string | undefined>>;
 }
 
+const description =
+  "Upper-arm home blood-pressure ranks under rubric upper-arm-home-bp-v1.0.0. Scored-eligible dossiers show an MDRank Score and category rank. Incomplete exact-model evidence stays unranked.";
+
 export const metadata: Metadata = {
   title: "Medical-Device Rankings",
-  description:
-    "Upper-arm home blood-pressure ranks under rubric upper-arm-home-bp-v1.0.0. Scored-eligible dossiers show an MDRank Score and category rank. Incomplete exact-model evidence stays unranked.",
+  description,
   alternates: { canonical: "/rankings" },
   robots: { index: false, follow: true },
+  ...socialMetadata({
+    title: "Medical-Device Rankings",
+    description,
+    path: "/rankings",
+    ogType: "website",
+  }),
 };
 
 export default async function RankingsPage({ searchParams }: PageProps) {

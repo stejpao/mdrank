@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { PublicPageJsonLd } from "@/components/PublicPageJsonLd";
 import { getPublicScore } from "@/lib/publicScore";
+import { socialMetadata } from "@/lib/pageMetadata";
+
+const description =
+  "What MDRank publishes for upper-arm home blood-pressure monitors: exact-model dossiers, Evidence Confidence, and MDRank Score plus category rank when a row is scored-eligible.";
 
 export const metadata: Metadata = {
   title: "Evidence status",
-  description:
-    "What MDRank publishes for upper-arm home blood-pressure monitors: exact-model dossiers, Evidence Confidence, and MDRank Score plus category rank when a row is scored-eligible.",
+  description,
   alternates: { canonical: "/evidence-status" },
+  ...socialMetadata({
+    title: "Evidence status",
+    description,
+    path: "/evidence-status",
+    ogType: "website",
+  }),
 };
 
 const ihealth = getPublicScore("ihealth-track-kn-550bt");
@@ -32,6 +42,7 @@ const withheld = [
 export default function EvidenceStatusPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+      <PublicPageJsonLd path="/evidence-status" />
       <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Public record as of October 28, 2026</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">Evidence status</h1>
       <p className="mt-5 text-lg leading-relaxed text-slate-700">
