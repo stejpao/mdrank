@@ -21,9 +21,13 @@ export type IllustrativePhoto = {
   rightsNote: string;
 };
 
+export type AmazonCanadaLocalMatch = "confirmed" | "not-documented";
+
 export type AmazonListing = {
   asin: string;
   listingNote: string;
+  /** Confirmed Amazon.ca Local-match substitution for this US ASIN, or none documented. */
+  canadaLocalMatch: AmazonCanadaLocalMatch;
 };
 
 export type HandlingMeter = "strong" | "mixed" | "limited" | "unsupported" | "documented";
@@ -167,6 +171,7 @@ export const publishedDossiers: PublishedDossier[] = [
     changeLog: [
       "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
       "October 28, 2026: Owner-enabled rubric upper-arm-home-bp-v1.0.0. MDRank Score and category rank published for this exact model. Evidence Confidence remains High and separate. The disclosed Amazon Associates link stays weight zero. Evidence cutoff unchanged.",
+      "October 28, 2026: The amazon.com Buy link stays ASIN B01C5QS1T8. An on-page note says Amazon.ca Local match may show Canadian shoppers a similar product that is not this exact model. It does not appear on every visit. Affiliate weight remains zero.",
     ],
     handlingGlance: [
       { id: "cuff-fit", label: "Cuff fit", summary: "22–42 cm standard · 42–48 cm XL", fit: "Strong with the matching package", confidence: "High", meter: "strong" },
@@ -197,6 +202,7 @@ export const publishedDossiers: PublishedDossier[] = [
     },
     amazonListing: {
       asin: "B01C5QS1T8",
+      canadaLocalMatch: "confirmed",
       listingNote:
         "Amazon.com product details for ASIN B01C5QS1T8 list model name KN-550BT, model number 550BT, and UPC 856362005005. That UPC matches reviewed DI 00856362005005. The listing describes an upper-arm cuff of 22–42 cm, the standard package in this dossier, and leaves the XL package unresolved. Amazon marketing copy is not MDRank evidence.",
     },
@@ -285,6 +291,7 @@ export const publishedDossiers: PublishedDossier[] = [
     changeLog: [
       "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
       "October 28, 2026: Owner-enabled rubric upper-arm-home-bp-v1.0.0. Score and rank remain withheld because validation is family-level. Evidence Confidence remains Moderate. The disclosed Amazon Associates link stays weight zero. Evidence cutoff unchanged.",
+      "October 28, 2026: The amazon.com Buy link stays ASIN B01MRL790Q. An on-page note says Amazon.ca Local match may show Canadian shoppers a similar product that is not this exact model. It does not appear on every visit. Affiliate weight remains zero.",
     ],
     handlingGlance: [
       { id: "cuff-fit", label: "Cuff fit", summary: "22–42 cm integrated cuff", fit: "Strong", confidence: "High", meter: "strong" },
@@ -315,6 +322,7 @@ export const publishedDossiers: PublishedDossier[] = [
     },
     amazonListing: {
       asin: "B01MRL790Q",
+      canadaLocalMatch: "confirmed",
       listingNote:
         "Amazon.com product details for ASIN B01MRL790Q list model BP7000 and UPC 073796270001. That UPC matches reviewed DI 00073796270001. The listing describes an upper-arm monitor. Amazon marketing copy is not MDRank evidence.",
     },

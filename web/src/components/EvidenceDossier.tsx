@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { AmazonCanadaNote } from "@/components/AmazonCanadaNote";
 import { DossierShare } from "@/components/DossierShare";
 import type { HandlingMeter, PublishedDossier } from "@/data/publishedDossiers";
 import { amazonAssociateUrl } from "@/lib/amazon";
@@ -199,7 +200,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
           <dl className="mt-4 grid gap-2 text-sm sm:grid-cols-3">
             <div>
               <dt className="font-semibold text-slate-500">purchase_url</dt>
-              <dd className="break-all" data-field="purchase_url">{amazonUrl}</dd>
+              <dd className="break-all" data-field="purchase_url" aria-describedby="amazon-canada-local-match">{amazonUrl}</dd>
             </div>
             <div>
               <dt className="font-semibold text-slate-500">asin</dt>
@@ -210,10 +211,12 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
               <dd data-field="merchant">Amazon</dd>
             </div>
           </dl>
+          <AmazonCanadaNote id="amazon-canada-local-match" asin={dossier.amazonListing.asin} canadaLocalMatch={dossier.amazonListing.canadaLocalMatch} />
           <a
             href={amazonUrl}
             rel="sponsored nofollow noopener noreferrer"
             target="_blank"
+            aria-describedby="amazon-canada-local-match"
             data-affiliate="amazon-associates"
             data-asin={dossier.amazonListing.asin}
             data-merchant="Amazon"
@@ -312,6 +315,9 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         <h2 className="text-xl font-bold text-slate-950">Publication and change log</h2>
         <ul className="mt-4 space-y-2 text-sm text-slate-700">{dossier.changeLog.map((item) => <li key={item}>• {item}</li>)}</ul>
         <p className="mt-4 text-sm text-slate-600">No price or rating schema appears on this dossier. A schema.org Offer records the verified Amazon listing and has zero weight in the MDRank Score and category rank. The illustrative photo is not product evidence.</p>
+        {dossier.amazonListing ? (
+          <AmazonCanadaNote asin={dossier.amazonListing.asin} canadaLocalMatch={dossier.amazonListing.canadaLocalMatch} />
+        ) : null}
       </section>
     </div>
   );

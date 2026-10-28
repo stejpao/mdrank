@@ -152,6 +152,10 @@ test('visible FAQ and trust links use the same dossier evidence', () => {
   assert.match(seo, /href="\/evidence-status"/);
   assert.match(seo, /may earn a commission/);
   assert.match(seo, /zero weight in the MDRank Score and category rank/);
+  assert.match(seo, /AmazonCanadaNote/);
+  const canadaNote = fs.readFileSync('web/src/components/AmazonCanadaNote.tsx', 'utf8');
+  assert.match(canadaNote, /Local match/);
+  assert.match(fs.readFileSync('web/src/data/publishedDossiers.ts', 'utf8'), /canadaLocalMatch: "confirmed"/);
   assert.doesNotMatch(seo, /Buy Now|Check Price|AggregateRating/);
   assert.match(seo, /\*Photo edited for clarity\./);
   assert.match(dossier, /"@type": "BreadcrumbList"/);
