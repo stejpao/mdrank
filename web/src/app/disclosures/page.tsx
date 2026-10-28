@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { PublicPageJsonLd } from "@/components/PublicPageJsonLd";
+import { socialMetadata } from "@/lib/pageMetadata";
+
+const description =
+  "How MDRank handles affiliate links, paid placement, operator relationships, scoring boundaries, and commercial isolation.";
+
 export const metadata: Metadata = {
   title: "Disclosures",
-  description:
-    "How MDRank handles affiliate links, paid placement, operator relationships, scoring boundaries, and commercial isolation.",
+  description,
   alternates: { canonical: "/disclosures" },
+  ...socialMetadata({
+    title: "Disclosures",
+    description,
+    path: "/disclosures",
+    ogType: "website",
+  }),
 };
 
 const textLink =
@@ -14,6 +25,7 @@ const textLink =
 export default function DisclosuresPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+      <PublicPageJsonLd path="/disclosures" />
       <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-700">Transparency</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">Disclosures</h1>
       <p className="mt-4 text-sm text-slate-600">Updated October 28, 2026</p>

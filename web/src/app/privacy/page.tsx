@@ -1,16 +1,27 @@
 import type { Metadata } from "next";
 
 import { AnalyticsPreferencesButton } from "@/components/GoogleAnalytics";
+import { PublicPageJsonLd } from "@/components/PublicPageJsonLd";
+import { socialMetadata } from "@/lib/pageMetadata";
+
+const description = "How MDRank uses privacy-respecting analytics and handles site-use data.";
 
 export const metadata: Metadata = {
   title: "Privacy notice",
-  description: "How MDRank uses privacy-respecting analytics and handles site-use data.",
+  description,
   alternates: { canonical: "/privacy" },
+  ...socialMetadata({
+    title: "Privacy notice",
+    description,
+    path: "/privacy",
+    ogType: "website",
+  }),
 };
 
 export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+      <PublicPageJsonLd path="/privacy" />
       <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-700">Privacy</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">Privacy notice</h1>
       <p className="mt-4 text-sm text-slate-600">Effective July 21, 2026</p>
