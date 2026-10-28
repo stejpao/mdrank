@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "productId": "trackstar-302-2110b",
+  "slug": "trackstar-302-2110b",
+  "brand": "Trackstar (Veridian)",
+  "exactModel": "302-2110B",
+  "market": "US",
+  "formFactor": "upper-arm",
+  "identity": {
+    "status": "resolved"
+  },
+  "testingStatus": "public-evidence-only",
+  "testingLanguage": {
+    "handsOnClaimWithoutProtocol": false
+  },
+  "disclosureStatus": "independent-editorial",
+  "publication": {
+    "alreadyPublic": false,
+    "humanPublish": true,
+    "url": "/devices/trackstar-302-2110b"
+  },
+  "regulatory": {
+    "clearanceType": "fda-510k",
+    "clearanceNumber": "K241351"
+  },
+  "validation": {
+    "scope": "none",
+    "namesExactModel": false,
+    "peerReviewed": false,
+    "namedProtocolPass": false,
+    "fundingIndependence": "not-applicable"
+  },
+  "measurement": {},
+  "fit": {
+    "rangesCm": []
+  },
+  "usability": {},
+  "dataHandling": {},
+  "ownership": {},
+  "recall": {},
+  "conflicts": [],
+  "publicExperience": {
+    "licensedExactModelCorpus": false
+  },
+  "evidenceDates": {
+    "criticalRetrievedAt": "2026-10-28",
+    "asOf": "2026-10-28"
+  },
+  "primarySources": [
+    {
+      "id": "fda-clearance",
+      "sourceClass": "A",
+      "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K241351",
+      "retrievedAt": "2026-10-28"
+    }
+  ],
+  "materialClaims": [
+    {
+      "id": "clearance",
+      "text": "The published packet records FDA-cleared K241351 for this exact model. Clearance is not accuracy proof.",
+      "evidenceIds": [
+        "fda-clearance"
+      ]
+    }
+  ]
+}

@@ -58,7 +58,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
     "@type": "Article",
     headline: `${dossier.name} evidence dossier`,
     description: dossier.directAnswer,
-    datePublished: "2026-07-22",
+    datePublished: dossier.publishedOn ?? "2026-07-22",
     dateModified: "2026-10-28",
     mainEntityOfPage: `https://mdrank.org/devices/${dossier.slug}`,
     author: { "@type": "Organization", name: "MDRank", url: "https://mdrank.org" },

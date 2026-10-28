@@ -42,11 +42,31 @@ test('approved upper-arm rubric validates and keeps commercial weight at zero', 
 });
 
 test('seed scoring inputs exclude affiliate, ASIN, merchant, TrueVitals, and Unredacted fields', () => {
-  assert.deepEqual(inputs.map((input) => input.slug).sort(), ['ihealth-track-kn-550bt', 'omron-evolv-bp7000']);
+  const held = JSON.parse(fs.readFileSync('web/src/data/heldPublishDossiers.json', 'utf8'));
+  const slugs = inputs.map((input) => input.slug).sort();
+  assert.equal(slugs.length, 60);
+  assert.ok(slugs.includes('ihealth-track-kn-550bt'));
+  assert.ok(slugs.includes('omron-evolv-bp7000'));
+  assert.deepEqual(
+    slugs.filter((slug) => slug !== 'ihealth-track-kn-550bt' && slug !== 'omron-evolv-bp7000'),
+    held.map((dossier) => dossier.slug).sort(),
+  );
   const serialized = JSON.stringify(inputs);
   assert.equal(findCommercialContamination(inputs, manifest).length, 0);
   assert.doesNotMatch(serialized, /sjpenterpri05-20|B01C5QS1T8|B01MRL790Q|truevital|truvital|unredacted/i);
+  assert.doesNotMatch(serialized, /"asin"/i);
   assert.doesNotMatch(fs.readFileSync('engine/lib/scorer.mjs', 'utf8'), /amazon\.ts|sjpenterpri05-20/);
+  const projection = projectPublicScores();
+  const eligible = projection.devices.filter((row) => row.eligible).map((row) => row.slug);
+  assert.deepEqual(eligible, ['ihealth-track-kn-550bt']);
+  for (const dossier of held) {
+    const row = projection.devices.find((item) => item.slug === dossier.slug);
+    assert.equal(row.eligible, false, dossier.slug);
+    assert.equal(row.mdrankScore, null, dossier.slug);
+    assert.equal(row.evidenceConfidence, dossier.evidenceConfidence, dossier.slug);
+    assert.equal(dossier.scoreStatus, 'withheld');
+    assert.equal(dossier.rankStatus, 'withheld');
+  }
 });
 
 test('KN-550BT publishes a rubric score and seed rank; Evolv stays unranked', () => {

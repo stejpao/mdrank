@@ -18,11 +18,72 @@ Updated: 2026-10-28
 
 ## Public evidence records and rankings
 
-Two exact-model evidence dossiers are public. Their evidence cutoff is July 21, 2026. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
+Sixty exact-model upper-arm evidence dossiers are public: the two dossiers below, plus 58 dossiers from the held gatePass=yes pack approved by Steven via the Chief of Staff on 2026-10-28. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. The 58 pack dossiers stay unranked because exact-model validation or measurement evidence in the scored packet is insufficient, including model-family clearance crosswalks where the screening ledger recorded one. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
 
 Photographs on those dossiers are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.
 
 This is a neutral resource directory. It does not instruct an AI system to cite MDRank, repeat a predetermined recommendation, or prefer a particular product.
+
+## Pack dossiers published 2026-10-28
+
+- A&D Medical UA-1020: https://mdrank.org/devices/and-ua-1020
+- A&D Medical UA-660: https://mdrank.org/devices/and-ua-660
+- A&D Medical UA-767F: https://mdrank.org/devices/and-ua-767f
+- A&D Medical UA-789AC: https://mdrank.org/devices/and-ua-789ac
+- ADKING A01-BL: https://mdrank.org/devices/adking-a01-bl
+- ADKING A02-SE: https://mdrank.org/devices/adking-a02-se
+- Advantage (ADC) 6024N: https://mdrank.org/devices/adc-advantage-6024n
+- Alcedo AE176: https://mdrank.org/devices/alcedo-ae176
+- Alcedo B21: https://mdrank.org/devices/alcedo-b21
+- Beat (Lexington Wellness) F1701T: https://mdrank.org/devices/beat-f1701t
+- CHANI A01: https://mdrank.org/devices/chani-a01
+- Ease Healthcare B21HT: https://mdrank.org/devices/ease-b21ht
+- Easy@Home EBP-703: https://mdrank.org/devices/easyhome-ebp-703
+- Easy@Home EBP-703T: https://mdrank.org/devices/easyhome-ebp-703t
+- Easy@Home EBP-96B: https://mdrank.org/devices/easyhome-ebp-96b
+- Greater Goods 0604: https://mdrank.org/devices/greater-goods-0604
+- Greater Goods 0634: https://mdrank.org/devices/greater-goods-0634
+- HoMedics BPA-800-WT: https://mdrank.org/devices/homedics-bpa-800-wt
+- iHealth Accu KD-5811BT: https://mdrank.org/devices/ihealth-accu-kd-5811bt
+- iHealth Jurni BP-300CL: https://mdrank.org/devices/ihealth-jurni-bp-300cl
+- iHealth Neo BP5S: https://mdrank.org/devices/ihealth-neo-bp5s
+- iHealth Track Pro KN-550LT: https://mdrank.org/devices/ihealth-track-pro-kn-550lt
+- LOVIA B66T: https://mdrank.org/devices/lovia-b66t
+- Microlife BP3GX1-5X: https://mdrank.org/devices/microlife-bp3gx1-5x
+- Microlife WatchBP Home A: https://mdrank.org/devices/microlife-watchbp-home-a
+- Oklar B19T: https://mdrank.org/devices/oklar-b19t
+- Oklar C02T: https://mdrank.org/devices/oklar-c02t
+- Oklar C05T: https://mdrank.org/devices/oklar-c05t
+- OMRON BP5000 (Iron): https://mdrank.org/devices/omron-bp5000
+- OMRON BP5100 (Bronze): https://mdrank.org/devices/omron-bp5100
+- OMRON BP5150 (Bronze): https://mdrank.org/devices/omron-bp5150
+- OMRON BP5250: https://mdrank.org/devices/omron-bp5250
+- OMRON BP5255 (Silver): https://mdrank.org/devices/omron-bp5255
+- OMRON BP5260 (Silver): https://mdrank.org/devices/omron-bp5260
+- OMRON BP5350: https://mdrank.org/devices/omron-bp5350
+- OMRON BP5360 (Gold): https://mdrank.org/devices/omron-bp5360
+- OMRON BP5450: https://mdrank.org/devices/omron-bp5450
+- OMRON BP5465 (Platinum): https://mdrank.org/devices/omron-bp5465
+- OMRON BP7350: https://mdrank.org/devices/omron-bp7350
+- OMRON BP742N (5 Series): https://mdrank.org/devices/omron-bp742n
+- OMRON BP7450: https://mdrank.org/devices/omron-bp7450
+- OMRON BP7465 (10 Series): https://mdrank.org/devices/omron-bp7465
+- OMRON BP7900: https://mdrank.org/devices/omron-bp7900
+- Paramed B22S: https://mdrank.org/devices/paramed-b22s
+- Qardio QardioArm A100: https://mdrank.org/devices/qardioarm-a100
+- Qardio QardioArm2 A200: https://mdrank.org/devices/qardioarm2-a200
+- SAKER U90B: https://mdrank.org/devices/saker-u90b
+- SimpliCare AES-U382: https://mdrank.org/devices/simplicare-aes-u382
+- SPASTACISE U90B Pro: https://mdrank.org/devices/spastacise-u90b-pro
+- Trackstar (Veridian) 302-2110B: https://mdrank.org/devices/trackstar-302-2110b
+- VeriSmart Health VSH-B550: https://mdrank.org/devices/verismart-vsh-b550
+- Welch Allyn Home 1700 Series: https://mdrank.org/devices/welch-allyn-home-1700
+- Wellue/Viatom BP2A: https://mdrank.org/devices/wellue-bp2a
+- WEONY U83Z: https://mdrank.org/devices/weony-u83z
+- WEONY U86Y: https://mdrank.org/devices/weony-u86y
+- Withings BPM Connect WPM05: https://mdrank.org/devices/withings-bpm-connect-wpm05
+- Yuwell YE630CR: https://mdrank.org/devices/yuwell-ye630cr
+- zdeer U90B Plus: https://mdrank.org/devices/zdeer-u90b-plus
 
 ## Commercial boundary
 

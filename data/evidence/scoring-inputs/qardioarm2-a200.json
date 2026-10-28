@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "productId": "qardioarm2-a200",
+  "slug": "qardioarm2-a200",
+  "brand": "Qardio",
+  "exactModel": "QardioArm2 A200",
+  "market": "US",
+  "formFactor": "upper-arm",
+  "identity": {
+    "status": "resolved"
+  },
+  "testingStatus": "public-evidence-only",
+  "testingLanguage": {
+    "handsOnClaimWithoutProtocol": false
+  },
+  "disclosureStatus": "independent-editorial",
+  "publication": {
+    "alreadyPublic": false,
+    "humanPublish": true,
+    "url": "/devices/qardioarm2-a200"
+  },
+  "regulatory": {
+    "clearanceType": "fda-510k",
+    "clearanceNumber": "K220106"
+  },
+  "validation": {
+    "scope": "none",
+    "namesExactModel": false,
+    "peerReviewed": false,
+    "namedProtocolPass": false,
+    "fundingIndependence": "not-applicable"
+  },
+  "measurement": {},
+  "fit": {
+    "rangesCm": []
+  },
+  "usability": {},
+  "dataHandling": {},
+  "ownership": {},
+  "recall": {},
+  "conflicts": [],
+  "publicExperience": {
+    "licensedExactModelCorpus": false
+  },
+  "evidenceDates": {
+    "criticalRetrievedAt": "2026-10-28",
+    "asOf": "2026-10-28"
+  },
+  "primarySources": [
+    {
+      "id": "fda-clearance",
+      "sourceClass": "A",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K220106.pdf",
+      "retrievedAt": "2026-10-28"
+    }
+  ],
+  "materialClaims": [
+    {
+      "id": "clearance",
+      "text": "The published packet records FDA-cleared K220106 for this exact model. Clearance is not accuracy proof.",
+      "evidenceIds": [
+        "fda-clearance"
+      ]
+    }
+  ]
+}

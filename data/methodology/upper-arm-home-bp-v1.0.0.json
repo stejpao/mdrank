@@ -9,8 +9,8 @@
     "approvedBy": "Steven",
     "via": "Chief of Staff",
     "approvedAt": "2026-10-27T22:16:00-04:00",
-    "scope": "Existing public upper-arm dossiers only. No new /devices URLs.",
-    "cohortNote": "Ranks are among scored-eligible public rows under this rubric. Family-level validation stays unranked. The rank is not a market-wide best list."
+    "scope": "Public upper-arm dossiers. Steven approved the held gatePass=yes pack of 58 new /devices URLs via Chief of Staff on 2026-10-28. A new URL still requires humanPublish on its scoring input. Incomplete exact-model evidence stays unranked.",
+    "cohortNote": "Ranks are among scored-eligible public rows under this rubric. Family-level validation and incomplete exact-model evidence stay unranked. The rank is not a market-wide best list."
   },
   "commercialIsolation": {
     "weight": 0,
