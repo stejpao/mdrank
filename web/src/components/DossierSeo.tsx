@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { AmazonCanadaNote } from "@/components/AmazonCanadaNote";
 import dossierFaqs from "@/data/dossierFaqs.json";
 import publicOffers from "@/data/publicOffers.json";
 import { publishedDossiers, type PublishedDossier } from "@/data/publishedDossiers";
@@ -16,7 +17,7 @@ const faqsBySlug = dossierFaqs as FaqMap;
 const offersBySlug = publicOffers as OfferMap;
 
 type CommerceFields = {
-  amazonListing?: { asin?: string };
+  amazonListing?: { asin?: string; canadaLocalMatch?: "confirmed" | "not-documented" };
   illustrativePhoto?: { src?: string; caption?: string };
 };
 
@@ -28,6 +29,7 @@ export function DossierSeo({ dossier }: { dossier: PublishedDossier }) {
   const offer = offersBySlug[dossier.slug];
   const commerce = dossier as PublishedDossier & CommerceFields;
   const asin = commerce.amazonListing?.asin || offer?.asin || null;
+  const canadaLocalMatch = commerce.amazonListing?.canadaLocalMatch ?? "not-documented";
   const photo = commerce.illustrativePhoto;
   const image =
     photo?.src && photo.caption === PHOTO_CAPTION ? `https://mdrank.org${photo.src}` : null;
@@ -98,6 +100,7 @@ export function DossierSeo({ dossier }: { dossier: PublishedDossier }) {
             </>
           ) : null}
         </p>
+        {asin ? <AmazonCanadaNote asin={asin} canadaLocalMatch={canadaLocalMatch} /> : null}
         <ul className="mt-4 space-y-2 text-sm font-semibold">
           <li><Link href="/methodology" className="text-indigo-700 hover:underline">Methodology</Link></li>
           <li><Link href="/disclosures" className="text-indigo-700 hover:underline">Disclosures</Link></li>
