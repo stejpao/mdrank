@@ -118,7 +118,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
           </div>
           <DossierShare name={dossier.name} model={dossier.model} />
         </div>
-        <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+        <div id="direct-answer" className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
           <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">Direct answer</h2>
           <p className="mt-3 leading-relaxed text-slate-800">{dossier.directAnswer}</p>
         </div>
@@ -311,7 +311,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
       <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
         <h2 className="text-xl font-bold text-slate-950">Publication and change log</h2>
         <ul className="mt-4 space-y-2 text-sm text-slate-700">{dossier.changeLog.map((item) => <li key={item}>• {item}</li>)}</ul>
-        <p className="mt-4 text-sm text-slate-600">No price, offer schema, rating schema, or editor-assigned score appears on this dossier. The illustrative photo is not product evidence. A disclosed Amazon link, when shown, stays commercially isolated from the MDRank Score and category rank.</p>
+        <p className="mt-4 text-sm text-slate-600">No price or rating schema appears on this dossier. A schema.org Offer records the verified Amazon listing and has zero weight in the MDRank Score and category rank. The illustrative photo is not product evidence.</p>
       </section>
     </div>
   );

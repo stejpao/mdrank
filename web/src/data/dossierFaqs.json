@@ -1,0 +1,38 @@
+{
+  "ihealth-track-kn-550bt": [
+    {
+      "question": "Is the iHealth Track KN-550BT FDA cleared?",
+      "answer": "FDA K160014 identifies the Wireless Blood Pressure Monitor, model KN-550BT, and records a substantially equivalent decision dated July 13, 2016. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "What cuff sizes does the reviewed manufacturer offer document?",
+      "answer": "The current manufacturer offer separates standard SKU 550BT with a 22–42 cm cuff from SKU 550BT-XL with a 42–48 cm cuff. No public official crosswalk was found mapping each of the three primary device identifiers to the standard versus XL retail package."
+    },
+    {
+      "question": "What did the exact-model validation study report?",
+      "answer": "A 2024 peer-reviewed paper names the exact KN-550BT model. The study reports 89 qualified participants and states that the device passed both reported AAMI/ESH/ISO criteria. The reviewed PubMed packet did not establish funding independence. MDRank has not performed hands-on or laboratory testing of this monitor."
+    },
+    {
+      "question": "Does the displayed HSA/FSA eligibility change the score?",
+      "answer": "The current manufacturer offer labels the Track standard and XL variants HSA/FSA eligible, and HSA Shopping separately identifies the named iHealth Track offer as eligible. Eligibility is displayed separately and does not affect the MDRank score or rank. MDRank did not complete checkout or test benefit-card acceptance."
+    }
+  ],
+  "omron-evolv-bp7000": [
+    {
+      "question": "Is the OMRON Evolv BP7000 FDA cleared?",
+      "answer": "FDA K162092 records a substantially equivalent decision dated November 22, 2016 for Evolv model BP7000. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Does the HEM-7600T validation study establish exact BP7000 validation?",
+      "answer": "The peer-reviewed HEM-7600T study reports passing ANSI/AAMI/ISO 81060-2:2013 criteria in adults. The reviewed paper does not name BP7000 or HEM-7600T-Z. MDRank shows that result as family-level context, not exact BP7000 validation proof."
+    },
+    {
+      "question": "What cuff limits does the reviewed evidence document?",
+      "answer": "The OMRON US manual documents an integrated cuff range of 22–42 cm (9–17 in). The FDA summary states the integrated cuff is not replaceable."
+    },
+    {
+      "question": "Can earlier readings be reviewed on the monitor without a smartphone?",
+      "answer": "Current readings work without a phone, but prior stored readings require transfer to a smart device for viewing. No two-user mode was established in the reviewed official evidence."
+    }
+  ]
+}
