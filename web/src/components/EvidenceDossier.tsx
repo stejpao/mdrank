@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import type { PublishedDossier } from "@/data/publishedDossiers";
+import { amazonAssociateUrl } from "@/lib/amazon";
 
 function StatusCard({ label, value, detail }: { label: string; value: string; detail?: string }) {
   return (
@@ -13,6 +15,8 @@ function StatusCard({ label, value, detail }: { label: string; value: string; de
 }
 
 export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
+  const photo = dossier.illustrativePhoto;
+  const amazonUrl = dossier.amazonListing ? amazonAssociateUrl(dossier.amazonListing.asin) : null;
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -64,6 +68,21 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         </div>
       </header>
 
+      {photo ? (
+        <figure className="motion-safe:animate-catalog-rise mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white">
+          <Image
+            src={photo.src}
+            alt={photo.alt}
+            width={photo.width}
+            height={photo.height}
+            data-rights-status={photo.rightsStatus}
+            className="h-auto w-full bg-slate-100"
+          />
+          <figcaption className="border-t border-slate-100 px-5 py-3 text-sm text-slate-600">{photo.caption}</figcaption>
+          <p className="px-5 pb-4 text-xs leading-relaxed text-slate-500">{photo.rightsNote}</p>
+        </figure>
+      ) : null}
+
       <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-label="Dossier status">
         <StatusCard label="Product score" value="Withheld" detail="No editor-assigned substitute" />
         <StatusCard label="Category rank" value="Withheld" detail="Comparison cohort incomplete" />
@@ -76,6 +95,28 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         <p className="mt-3 leading-relaxed">{dossier.scoreReason}</p>
         <p className="mt-3 text-sm"><strong>Testing status:</strong> {dossier.testingStatus}</p>
       </section>
+
+      {amazonUrl && dossier.amazonListing ? (
+        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6" aria-labelledby="retail-listing-heading">
+          <h2 id="retail-listing-heading" className="text-xl font-bold text-slate-950">Retail listing</h2>
+          <p className="mt-3 leading-relaxed text-slate-700">
+            Disclosed Amazon Associates link for a current Amazon.com listing whose product details match this exact model. The listing is commercially isolated from scoring.
+          </p>
+          <a
+            href={amazonUrl}
+            rel="sponsored nofollow noopener noreferrer"
+            target="_blank"
+            className="mt-4 inline-flex rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-indigo-300 hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700"
+          >
+            View on Amazon
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+          <p className="mt-3 text-sm leading-relaxed text-slate-700">
+            <strong>Affiliate disclosure:</strong> MDRank may earn a commission if you buy through this Amazon link. Affiliate, sponsorship, and advertising relationships stay out of scoring and leave the withheld score and rank unchanged.
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-slate-600">{dossier.amazonListing.listingNote}</p>
+        </section>
+      ) : null}
 
       <section className="mt-10">
         <h2 className="text-2xl font-bold text-slate-950">Verified exact identity</h2>
@@ -161,7 +202,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
       <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
         <h2 className="text-xl font-bold text-slate-950">Publication and change log</h2>
         <ul className="mt-4 space-y-2 text-sm text-slate-700">{dossier.changeLog.map((item) => <li key={item}>• {item}</li>)}</ul>
-        <p className="mt-4 text-sm text-slate-600">No product image, price, offer, affiliate link, rating schema, or editor-assigned score appears on this dossier.</p>
+        <p className="mt-4 text-sm text-slate-600">No price, offer schema, rating schema, or editor-assigned score appears on this dossier. The illustrative photo is not product evidence. A disclosed Amazon link, when shown, stays commercially isolated from the withheld score and rank.</p>
       </section>
     </div>
   );

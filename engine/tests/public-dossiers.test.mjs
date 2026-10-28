@@ -45,11 +45,40 @@ test('public dossiers make testing and validation boundaries visible',()=>{
   assert.match(component,/Manufacturer-attributed specifications/);
 });
 
-test('no product imagery, offers, aggregate ratings, prices, or affiliate calls are serialized',()=>{
-  assert.doesNotMatch(component,/<img|image:/i);
-  assert.doesNotMatch(publicCopy,/AggregateRating|retail_price|Check Price|Buy Now|href=\{?['"]?\/go\//i);
-  assert.doesNotMatch(component,/"@type": "Offer"/);
-  assert.match(component,/No product image, price, offer, affiliate link, rating schema, or editor-assigned score/);
+test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
+  const amazon=fs.readFileSync('web/src/lib/amazon.ts','utf8');
+  const catalog=fs.readFileSync('web/src/components/DossierCatalog.tsx','utf8');
+  const guard=fs.readFileSync('web/src/lib/catalog.ts','utf8');
+  assert.match(component,/from "next\/image"/);
+  assert.match(component,/<Image/);
+  assert.match(component,/const photo = dossier\.illustrativePhoto/);
+  assert.match(component,/alt=\{photo\.alt\}/);
+  assert.match(component,/\{photo\.caption\}/);
+  assert.match(component,/data-rights-status=\{photo\.rightsStatus\}/);
+  assert.equal((data.match(/caption: "\*Photo edited for clarity\.",/g)||[]).length,2);
+  assert.equal((data.match(/Illustrative real-use photo edited for clarity/g)||[]).length,2);
+  assert.match(data,/Not manufacturer or clinical photography/);
+  assert.equal((data.match(/rightsStatus: "owned",/g)||[]).length,2);
+  assert.match(amazon,/sjpenterpri05-20/);
+  assert.match(amazon,/https:\/\/www\.amazon\.com\/dp\/\$\{asin\}\?tag=\$\{AMAZON_ASSOCIATES_TAG\}/);
+  assert.deepEqual([...data.matchAll(/asin: "([A-Z0-9]{10})"/g)].map((match)=>match[1]),['B01C5QS1T8','B01MRL790Q']);
+  assert.match(component,/amazonAssociateUrl/);
+  assert.match(component,/Affiliate disclosure/);
+  assert.match(component,/may earn a commission/i);
+  assert.match(component,/No price, offer schema, rating schema, or editor-assigned score appears on this dossier/);
+  assert.doesNotMatch(component,/"@type": "Offer"|aggregateRating|offers:/i);
+  assert.doesNotMatch([publicCopy,catalog,amazon].join('\n'),/AggregateRating|retail_price|Check Price|Buy Now|href=\{?['"]?\/go\/|FDA approved/i);
+  assert.match(index,/DossierCatalog/);
+  assert.match(index,/isPublicUpperArmDossier/);
+  assert.match(catalog,/htmlFor="dossier-search"/);
+  assert.match(catalog,/<legend[^>]*>Brand<\/legend>/);
+  assert.match(catalog,/>Withheld</);
+  assert.doesNotMatch(catalog,/mdrank_score|rank_in_subcategory|Editor/);
+  assert.match(guard,/\\bwrist\\b/);
+  assert.match(guard,/\\boptical\\b/);
+  assert.doesNotMatch(index,/candidates|home-blood-pressure-monitors/);
+  const deviceDirs=fs.readdirSync('web/src/app/devices',{withFileTypes:true}).filter((entry)=>entry.isDirectory()).map((entry)=>entry.name).sort();
+  assert.deepEqual(deviceDirs,['[slug]','ihealth-track-kn-550bt','omron-evolv-bp7000']);
 });
 
 test('dossier routes, sitemap, and neutral resource directory are wired',()=>{

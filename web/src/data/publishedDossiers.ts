@@ -11,6 +11,21 @@ export type PersonaFit = {
   basis: string;
 };
 
+export type IllustrativePhoto = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  caption: "*Photo edited for clarity.";
+  rightsStatus: "owned";
+  rightsNote: string;
+};
+
+export type AmazonListing = {
+  asin: string;
+  listingNote: string;
+};
+
 export type PublishedDossier = {
   slug: string;
   name: string;
@@ -27,6 +42,8 @@ export type PublishedDossier = {
   scoreStatus: "withheld";
   rankStatus: "withheld";
   scoreReason: string;
+  illustrativePhoto?: IllustrativePhoto;
+  amazonListing?: AmazonListing;
   exactIdentity: string[];
   regulatoryFindings: string[];
   validationFindings: string[];
@@ -114,7 +131,7 @@ export const publishedDossiers: PublishedDossier[] = [
       "The manufacturer support source exposes manual-derived specifications, but a current standalone exact manual PDF was not exposed through the reviewed support route.",
       "An older manufacturer correction identifies a KN-550BT/KN-550LT cover typo; no KN-550LT evidence is transferred here.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "No product photograph is published on this dossier.",
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
     ],
     sources: [
       { label: "FDA K160014 record", url: "https://api.fda.gov/device/510k.json?search=k_number:K160014&limit=10", sourceClass: "A" },
@@ -126,9 +143,23 @@ export const publishedDossiers: PublishedDossier[] = [
       { label: "iHealth privacy policy", url: "https://ihealthlabs.com/policies/privacy-policy", sourceClass: "C" },
     ],
     changeLog: [
-      "July 22, 2026: Evidence dossier published. Score, rank, public-experience claims, and product imagery withheld.",
-      "October 28, 2026: Score and rank remain withheld until the comparison cohort is complete. Evidence cutoff unchanged.",
+      "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
+      "October 28, 2026: Score and rank remain withheld until the comparison cohort is complete. An owner-supplied illustrative photograph edited for clarity and a disclosed Amazon Associates link were added. Evidence cutoff unchanged.",
     ],
+    illustrativePhoto: {
+      src: "/images/dossiers/ihealth-kn-550bt-real-use.jpg",
+      width: 1152,
+      height: 864,
+      alt: "Illustrative real-use photo edited for clarity, showing an upper-arm cuff and monitor for the iHealth Track KN-550BT. Not manufacturer or clinical photography.",
+      caption: "*Photo edited for clarity.",
+      rightsStatus: "owned",
+      rightsNote: "Owner-supplied illustrative photograph edited for clarity. Rights status: owned. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+    },
+    amazonListing: {
+      asin: "B01C5QS1T8",
+      listingNote:
+        "Amazon.com product details for ASIN B01C5QS1T8 list model name KN-550BT, model number 550BT, and UPC 856362005005. That UPC matches reviewed DI 00856362005005. The listing describes an upper-arm cuff of 22–42 cm, the standard package in this dossier, and leaves the XL package unresolved. Amazon marketing copy is not MDRank evidence.",
+    },
   },
   {
     slug: "omron-evolv-bp7000",
@@ -200,7 +231,7 @@ export const publishedDossiers: PublishedDossier[] = [
       "Prior stored readings require a compatible smart device; app behavior and compatibility can change.",
       "Manufacturer portability, ease-of-use, movement-interference, and accuracy wording is not independent proof.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "No product photograph is published on this dossier.",
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
     ],
     sources: [
       { label: "FDA 510(k) K162092 summary", url: "https://www.accessdata.fda.gov/cdrh_docs/pdf16/K162092.pdf", sourceClass: "A" },
@@ -212,9 +243,23 @@ export const publishedDossiers: PublishedDossier[] = [
       { label: "HSA Shopping BP7000 eligibility page", url: "https://www.hsashopping.com/products/omron-evolv-bp7000", sourceClass: "D" },
     ],
     changeLog: [
-      "July 22, 2026: Evidence dossier published. Score, rank, public-experience claims, and product imagery withheld.",
-      "October 28, 2026: Score and rank remain withheld until the comparison cohort is complete. Evidence cutoff unchanged.",
+      "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
+      "October 28, 2026: Score and rank remain withheld until the comparison cohort is complete. An owner-supplied illustrative photograph edited for clarity and a disclosed Amazon Associates link were added. Evidence cutoff unchanged.",
     ],
+    illustrativePhoto: {
+      src: "/images/dossiers/omron-evolv-bp7000-real-use.jpg",
+      width: 1152,
+      height: 864,
+      alt: "Illustrative real-use photo edited for clarity, showing an upper-arm cuff monitor for the OMRON Evolv BP7000. Not manufacturer or clinical photography.",
+      caption: "*Photo edited for clarity.",
+      rightsStatus: "owned",
+      rightsNote: "Owner-supplied illustrative photograph edited for clarity. Rights status: owned. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+    },
+    amazonListing: {
+      asin: "B01MRL790Q",
+      listingNote:
+        "Amazon.com product details for ASIN B01MRL790Q list model BP7000 and UPC 073796270001. That UPC matches reviewed DI 00073796270001. The listing describes an upper-arm monitor. Amazon marketing copy is not MDRank evidence.",
+    },
   },
 ];
 
