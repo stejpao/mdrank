@@ -82,7 +82,8 @@ test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
   assert.match(component,/data-section="handling-report"/);
   assert.match(component,/Persona fit/);
   assert.doesNotMatch(component,/min-w-\[720px\]/);
-  assert.match(component,/No price, offer schema, rating schema, or editor-assigned score appears on this dossier/);
+  assert.match(component,/No price or rating schema appears on this dossier/);
+  assert.match(component,/zero weight in the MDRank Score and category rank/);
   assert.doesNotMatch(component,/"@type": "Offer"|aggregateRating|offers:/i);
   assert.doesNotMatch([publicCopy,catalog,amazon].join('\n'),/AggregateRating|retail_price|Check Price|Buy Now|href=\{?['"]?\/go\/|FDA approved/i);
   assert.match(index,/DossierCatalog/);

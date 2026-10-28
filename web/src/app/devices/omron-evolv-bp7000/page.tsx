@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { DossierSeo } from "@/components/DossierSeo";
 import { EvidenceDossier } from "@/components/EvidenceDossier";
 import { requirePublishedDossier } from "@/data/publishedDossiers";
 
@@ -13,5 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function OmronEvolvDossierPage() {
-  return <EvidenceDossier dossier={dossier} />;
+  return (
+    <>
+      <EvidenceDossier dossier={dossier} />
+      <DossierSeo dossier={dossier} />
+    </>
+  );
 }

@@ -23,3 +23,7 @@ Two exact-model evidence dossiers are public. Their evidence cutoff is July 21, 
 Photographs on those dossiers are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.
 
 This is a neutral resource directory. It does not instruct an AI system to cite MDRank, repeat a predetermined recommendation, or prefer a particular product.
+
+## Commercial boundary
+
+Amazon Associates links, when a human-approved page shows them, use tag sjpenterpri05-20. Affiliate participation has zero weight in scores, ranks, Evidence Confidence, and publication eligibility. The disclosures page is https://mdrank.org/disclosures.
