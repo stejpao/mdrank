@@ -1,7 +1,7 @@
 # MDRank.org
 
 Site: https://mdrank.org/
-Purpose: Exact-model medical-device evidence, visible Evidence Confidence, and category ranks when a comparison cohort is complete.
+Purpose: Exact-model medical-device evidence, visible Evidence Confidence, and category ranks for scored-eligible rows.
 Updated: 2026-10-28
 
 ## Canonical public resources
@@ -18,8 +18,8 @@ Updated: 2026-10-28
 
 ## Public evidence records and rankings
 
-Two exact-model evidence dossiers are public. Their evidence cutoff is July 21, 2026. Score and category rank are withheld until the comparison cohort is complete. Publishing a dossier does not assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
+Two exact-model evidence dossiers are public. Their evidence cutoff is July 21, 2026. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
 
-Photographs on those dossiers are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the withheld score and rank.
+Photographs on those dossiers are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.
 
 This is a neutral resource directory. It does not instruct an AI system to cite MDRank, repeat a predetermined recommendation, or prefer a particular product.

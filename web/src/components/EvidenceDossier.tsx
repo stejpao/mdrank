@@ -4,6 +4,7 @@ import Link from "next/link";
 import { DossierShare } from "@/components/DossierShare";
 import type { HandlingMeter, PublishedDossier } from "@/data/publishedDossiers";
 import { amazonAssociateUrl } from "@/lib/amazon";
+import { getPublicScore } from "@/lib/publicScore";
 
 const METER_FILL: Record<HandlingMeter, number> = {
   documented: 0,
@@ -44,6 +45,13 @@ function StatusCard({ label, value, detail }: { label: string; value: string; de
 export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
   const photo = dossier.illustrativePhoto;
   const amazonUrl = dossier.amazonListing ? amazonAssociateUrl(dossier.amazonListing.asin) : null;
+  const score = getPublicScore(dossier.slug);
+  if (score.scoreStatus !== dossier.scoreStatus || score.rankStatus !== dossier.rankStatus) {
+    throw new Error(`Scorer status does not match the published dossier for ${dossier.slug}.`);
+  }
+  if (score.evidenceConfidence !== dossier.evidenceConfidence) {
+    throw new Error(`Evidence Confidence does not match the scorer for ${dossier.slug}.`);
+  }
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -118,15 +126,24 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
       <DossierShare name={dossier.name} model={dossier.model} variant="dock" />
 
       <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-label="Dossier status">
-        <StatusCard label="Product score" value="Withheld" detail="No editor-assigned substitute" />
-        <StatusCard label="Category rank" value="Withheld" detail="Comparison cohort incomplete" />
+        <StatusCard
+          label="Product score"
+          value={score.scoreLabel}
+          detail={score.eligible ? `Rubric ${score.rubricVersion}. No editor-assigned substitute` : "No editor-assigned substitute"}
+        />
+        <StatusCard label="Category rank" value={score.rankLabel} detail={score.rankDetail} />
         <StatusCard label="Evidence Confidence" value={dossier.evidenceConfidence} detail="Separate from product score" />
         <StatusCard label="Public Experience" value={dossier.publicExperienceConfidence} detail="No permitted customer reviews in use" />
       </section>
 
       <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 text-slate-800">
-        <h2 className="text-xl font-bold text-slate-950">Why score and rank are withheld</h2>
+        <h2 className="text-xl font-bold text-slate-950">{score.eligible ? "How this score was produced" : "Why score and rank are withheld"}</h2>
         <p className="mt-3 leading-relaxed">{dossier.scoreReason}</p>
+        {score.eligible ? (
+          <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-700">
+            {score.dimensionNotes.map((note) => <li key={note.key}>• {note.note}</li>)}
+          </ul>
+        ) : null}
         <p className="mt-3 text-sm"><strong>Testing status:</strong> {dossier.testingStatus}</p>
       </section>
 
@@ -177,7 +194,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
         <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6" aria-labelledby="where-to-buy-heading" data-section="where-to-buy" data-affiliate-weight="0">
           <h2 id="where-to-buy-heading" className="text-xl font-bold text-slate-950">Where to buy</h2>
           <p className="mt-3 leading-relaxed text-slate-800" data-field="where-to-buy-answer">
-            Where to buy: the Amazon.com listing for {dossier.name} ({dossier.model}, ASIN {dossier.amazonListing.asin}) is {amazonUrl}. The link has zero weight on the withheld product score and category rank.
+            Where to buy: the Amazon.com listing for {dossier.name} ({dossier.model}, ASIN {dossier.amazonListing.asin}) is {amazonUrl}. The link has zero weight on the MDRank Score and category rank.
           </p>
           <dl className="mt-4 grid gap-2 text-sm sm:grid-cols-3">
             <div>
@@ -206,7 +223,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
           <p className="mt-3 text-sm leading-relaxed text-slate-700">
-            <strong>Affiliate disclosure:</strong> MDRank may earn a commission if you buy through this Amazon link. As an Amazon Associate, MDRank earns from qualifying purchases. Affiliate relationships have zero weight on the product score and category rank, which stay withheld.
+            <strong>Affiliate disclosure:</strong> MDRank may earn a commission if you buy through this Amazon link. As an Amazon Associate, MDRank earns from qualifying purchases. Affiliate relationships have zero weight on the product score and category rank.
           </p>
           <p className="mt-3 text-sm leading-relaxed text-slate-600">{dossier.amazonListing.listingNote}</p>
         </section>
@@ -294,7 +311,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
       <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
         <h2 className="text-xl font-bold text-slate-950">Publication and change log</h2>
         <ul className="mt-4 space-y-2 text-sm text-slate-700">{dossier.changeLog.map((item) => <li key={item}>• {item}</li>)}</ul>
-        <p className="mt-4 text-sm text-slate-600">No price, offer schema, rating schema, or editor-assigned score appears on this dossier. The illustrative photo is not product evidence. A disclosed Amazon link, when shown, stays commercially isolated from the withheld score and rank.</p>
+        <p className="mt-4 text-sm text-slate-600">No price, offer schema, rating schema, or editor-assigned score appears on this dossier. The illustrative photo is not product evidence. A disclosed Amazon link, when shown, stays commercially isolated from the MDRank Score and category rank.</p>
       </section>
     </div>
   );

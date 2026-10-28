@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { CATEGORIES, getLandingCopy } from "@/lib/db";
 import { publishedDossiers } from "@/data/publishedDossiers";
+import { getPublicScore } from "@/lib/publicScore";
 
 export default async function HomePage() {
   const landing = await getLandingCopy();
@@ -28,7 +29,7 @@ export default async function HomePage() {
 
       <section className="border-b border-slate-200 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 py-5 text-sm leading-relaxed text-slate-700 sm:px-6">
-          <strong>Scores and ranks stay withheld until the comparison cohort is complete.</strong> Published dossiers report exact-model evidence and Evidence Confidence.
+          <strong>MDRank Score and category rank use rubric upper-arm-home-bp-v1.0.0.</strong> Score and rank stay withheld when exact-model evidence is incomplete. Evidence Confidence stays separate.
         </div>
       </section>
 
@@ -47,7 +48,7 @@ export default async function HomePage() {
           <article className="rounded-2xl border border-slate-200 bg-white p-6">
             <p className="text-xs font-bold uppercase tracking-wide text-indigo-700">Publication review</p>
             <h2 className="mt-3 text-xl font-bold text-slate-950">Reviewed before publication</h2>
-            <p className="mt-2 text-sm text-slate-600">Every public product page is reviewed before publication. A dossier can be public while its score and rank remain withheld.</p>
+            <p className="mt-2 text-sm text-slate-600">Every public product page is reviewed before publication. A dossier can be public while its score and rank stay withheld.</p>
           </article>
         </div>
       </section>
@@ -57,24 +58,27 @@ export default async function HomePage() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Public records</p>
             <h2 className="mt-2 text-2xl font-bold text-slate-950">Published evidence dossiers</h2>
-            <p className="mt-2 max-w-3xl text-slate-600">These dossiers are on the public site. Score and rank stay withheld until the comparison cohort is complete.</p>
+            <p className="mt-2 max-w-3xl text-slate-600">These dossiers are on the public site. A row shows an MDRank Score and category rank only when exact-model scoring gates pass.</p>
           </div>
           <Link href="/devices" className="text-sm font-semibold text-indigo-700 hover:underline">View all dossiers →</Link>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {publishedDossiers.map((dossier) => (
+          {publishedDossiers.map((dossier) => {
+            const score = getPublicScore(dossier.slug);
+            return (
             <article key={dossier.slug} className="rounded-2xl border border-slate-200 bg-white p-6">
               <p className="text-xs font-bold uppercase tracking-wide text-indigo-700">{dossier.model}</p>
               <h3 className="mt-2 text-xl font-bold text-slate-950">{dossier.name}</h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-700">{dossier.directAnswer}</p>
               <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
-                <span className="rounded bg-slate-100 px-2 py-1">Score withheld</span>
-                <span className="rounded bg-slate-100 px-2 py-1">Rank withheld</span>
+                <span className="rounded bg-slate-100 px-2 py-1">Score {score.scoreLabel}</span>
+                <span className="rounded bg-slate-100 px-2 py-1">Rank {score.rankLabel}</span>
                 <span className="rounded bg-indigo-50 px-2 py-1 text-indigo-800">Evidence Confidence: {dossier.evidenceConfidence}</span>
               </div>
               <Link href={`/devices/${dossier.slug}`} className="mt-5 inline-block text-sm font-semibold text-indigo-700 hover:underline">Read dossier →</Link>
             </article>
-          ))}
+            );
+          })}
         </div>
       </section>
 

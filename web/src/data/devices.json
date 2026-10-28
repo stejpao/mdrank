@@ -5,7 +5,7 @@
     "sections": [
       {
         "heading": "Evidence before rankings",
-        "body": "Published dossiers show exact-model evidence and Evidence Confidence. Numeric scores and category ranks stay withheld until the comparison cohort is complete."
+        "body": "Published dossiers show exact-model evidence and Evidence Confidence. An MDRank Score and category rank appear only for scored-eligible rows. Incomplete exact-model evidence stays unranked."
       },
       {
         "heading": "Home blood-pressure monitors",

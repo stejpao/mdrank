@@ -1,0 +1,243 @@
+{
+  "schemaVersion": "1.0.0",
+  "category": "upper-arm-home-bp",
+  "rubricVersion": "upper-arm-home-bp-v1.0.0",
+  "llmMayChooseNumericRules": false,
+  "scoreScale": { "min": 0, "max": 100, "decimals": 1, "unitInterval": true },
+  "livePublication": {
+    "scoresAndRanksEnabled": true,
+    "approvedBy": "Steven",
+    "via": "Chief of Staff",
+    "approvedAt": "2026-10-27T22:16:00-04:00",
+    "scope": "Existing public upper-arm dossiers only. No new /devices URLs.",
+    "cohortNote": "Ranks are among scored-eligible public rows under this rubric. Family-level validation stays unranked. The rank is not a market-wide best list."
+  },
+  "commercialIsolation": {
+    "weight": 0,
+    "blockedValues": ["sjpenterpri05-20", "unredacted"],
+    "blockedKeyFragments": [
+      "affiliate", "asin", "merchant", "paid", "sponsor", "margin", "inventory",
+      "conversion", "epc", "clickthrough", "operator", "truevital", "truvital",
+      "truehealth", "authenticreview", "unredacted", "associates", "amazontag",
+      "hsafsa", "hsa", "fsa", "advertorial", "commission", "reservedrank",
+      "brandboost", "brandfavor"
+    ],
+    "note": "Affiliate rate, EPC, conversion, inventory, margin, paid placement, merchant, ASIN, Amazon Associates tag sjpenterpri05-20, TrueVitals/TruVitals/True Health Co, Authentic Reviews commercial fields, and Unredacted records are unavailable to the scorer."
+  },
+  "eligibilityGates": [
+    { "id": "identity-resolved", "rule": "identity.status must be resolved. Family-caveat rows are not scored." },
+    { "id": "family-validation-not-exact", "rule": "validation.scope family-only does not transfer and is not scored." },
+    { "id": "family-validation-presented-as-exact", "rule": "A family-caveat identity cannot be labeled exact-model validation." },
+    { "id": "category-upper-arm-home-bp", "rule": "formFactor upper-arm and oscillometric method. Wrist and optical are out of cohort." },
+    { "id": "market-US-seed", "rule": "market is US for v1." },
+    { "id": "testing-status-declared", "rule": "testingStatus is present. Hands-on language without a protocol packet withholds the score." },
+    { "id": "minimum-primary-sources", "rule": "At least one Class A or Class C primary source." },
+    { "id": "material-claims-traceable", "rule": "Every material claim has evidence ids that exist on primarySources." },
+    { "id": "no-commercial-fields-present", "rule": "Scorer input contains no forbidden commercial key or blocked value." },
+    { "id": "disclosure-status-ok-for-page-type", "rule": "disclosureStatus is independent-editorial or approved." },
+    { "id": "human-publish-for-new-url", "rule": "A row that is not already public requires human Publish. This scorer does not open a new /devices URL." },
+    { "id": "regulatory-clearance-required", "rule": "FDA 510(k) K-number or De Novo DEN-number. Both count as FDA-cleared. Clearance is not accuracy." },
+    { "id": "active-indexed-recall-unaddressed", "rule": "An active indexed recall holds the score for manual review." },
+    { "id": "material-source-conflict", "rule": "A material conflict holds the score for manual review." },
+    { "id": "stale-critical-source-beyond-freshness", "rule": "Critical source age beyond freshnessRules holds the score for manual review." },
+    { "id": "live-scores-not-enabled", "rule": "livePublication.scoresAndRanksEnabled must be true." }
+  ],
+  "dimensions": [
+    {
+      "key": "validation",
+      "label": "Exact-model validation",
+      "weight": 0.28,
+      "factors": [
+        { "id": "peer-reviewed", "kind": "boolean", "path": "validation.peerReviewed", "presentScore": 1, "absentScore": 0 },
+        { "id": "named-protocol-pass", "kind": "boolean", "path": "validation.namedProtocolPass", "presentScore": 1, "absentScore": 0 },
+        {
+          "id": "funding-independence",
+          "kind": "enum",
+          "path": "validation.fundingIndependence",
+          "presentValues": ["independent"],
+          "presentScore": 1,
+          "unknownValues": ["unknown"],
+          "unknownScore": 0.5,
+          "absentValues": ["not-applicable", "none"],
+          "partialValues": ["manufacturer-funded"],
+          "partialScore": 0.25,
+          "absentScore": 0
+        }
+      ]
+    },
+    {
+      "key": "measurement_performance",
+      "label": "Measurement performance (documented)",
+      "weight": 0.18,
+      "factors": [
+        {
+          "id": "oscillometric-method",
+          "kind": "enum",
+          "path": "measurement.method",
+          "presentValues": ["oscillometric"],
+          "presentScore": 1,
+          "absentValues": ["other", "wrist", "optical", "cuffless"],
+          "absentScore": 0
+        },
+        { "id": "pressure-accuracy-band", "kind": "attributed-band", "path": "measurement.pressureAccuracyBand", "partialScore": 0.6, "presentScore": 0.6, "absentScore": 0 },
+        { "id": "pulse-accuracy-band", "kind": "attributed-band", "path": "measurement.pulseAccuracyBand", "partialScore": 0.6, "presentScore": 0.6, "absentScore": 0 }
+      ]
+    },
+    {
+      "key": "regulatory",
+      "label": "Regulatory clearance posture",
+      "weight": 0.12,
+      "factors": [
+        {
+          "id": "us-clearance-type",
+          "kind": "enum",
+          "path": "regulatory.clearanceType",
+          "presentValues": ["fda-510k", "fda-de-novo"],
+          "presentScore": 1,
+          "absentValues": ["none"],
+          "absentScore": 0,
+          "unknownValues": ["unknown"],
+          "unknownScore": 0.5
+        },
+        { "id": "clearance-number", "kind": "clearance-number", "path": "regulatory.clearanceNumber", "pattern": "^(K|DEN)\\d{6}$", "presentScore": 1, "absentScore": 0 },
+        { "id": "gudid-consistent", "kind": "boolean", "path": "regulatory.gudidConsistent", "presentScore": 1, "absentScore": 0 },
+        { "id": "product-code", "kind": "nonempty-string", "path": "regulatory.productCode", "presentScore": 1, "absentScore": 0 }
+      ]
+    },
+    {
+      "key": "cuff_fit",
+      "label": "Cuff / fit coverage",
+      "weight": 0.12,
+      "factors": [
+        { "id": "range-documented", "kind": "range-present", "path": "fit.rangesCm", "presentScore": 1, "absentScore": 0 },
+        {
+          "id": "documented-span",
+          "kind": "cuff-span",
+          "path": "fit.rangesCm",
+          "bands": [
+            { "minSpanCm": 26, "score": 1 },
+            { "minSpanCm": 20, "score": 0.75 },
+            { "minSpanCm": 0.01, "score": 0.45 }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "power_warranty_ownership",
+      "label": "Power / warranty / ownership facts",
+      "weight": 0.09,
+      "factors": [
+        { "id": "power-documented", "kind": "boolean", "path": "ownership.powerDocumented", "presentScore": 0.7, "absentScore": 0 },
+        { "id": "warranty-documented", "kind": "boolean", "path": "ownership.warrantyDocumented", "presentScore": 0.8, "absentScore": 0.2 },
+        {
+          "id": "cuff-service",
+          "kind": "enum",
+          "path": "ownership.cuffService",
+          "presentValues": ["replaceable"],
+          "presentScore": 0.8,
+          "partialValues": ["not-replaceable"],
+          "partialScore": 0.4,
+          "absentScore": 0.4
+        }
+      ]
+    },
+    {
+      "key": "positioning_technique_resistance",
+      "label": "Positioning / technique resistance",
+      "weight": 0.08,
+      "factors": [
+        { "id": "positioning-resistance", "kind": "boolean", "path": "measurement.positioningResistanceDocumented", "requiresEvidenceIds": "measurement.positioningEvidenceIds", "presentScore": 0.7, "absentScore": 0 },
+        { "id": "technique-resistance", "kind": "boolean", "path": "measurement.techniqueResistanceDocumented", "requiresEvidenceIds": "measurement.techniqueEvidenceIds", "presentScore": 0.7, "absentScore": 0 }
+      ]
+    },
+    {
+      "key": "usability_display",
+      "label": "Usability / display",
+      "weight": 0.08,
+      "factors": [
+        { "id": "display-documented", "kind": "boolean", "path": "usability.displayDocumented", "presentScore": 0.7, "absentScore": 0 },
+        { "id": "on-device-reading-review", "kind": "boolean", "path": "usability.onDeviceReadingReview", "presentScore": 1, "absentScore": 0 }
+      ]
+    },
+    {
+      "key": "data_handling",
+      "label": "Data handling",
+      "weight": 0.05,
+      "factors": [
+        { "id": "memory-documented", "kind": "boolean", "path": "dataHandling.memoryDocumented", "presentScore": 0.7, "absentScore": 0 },
+        { "id": "sync-documented", "kind": "boolean", "path": "dataHandling.syncDocumented", "presentScore": 0.7, "absentScore": 0 },
+        { "id": "privacy-policy-cited", "kind": "boolean", "path": "dataHandling.privacyPolicyCited", "presentScore": 0.6, "absentScore": 0 }
+      ]
+    }
+  ],
+  "publicInputSprinkle": {
+    "weight": 0.05,
+    "appliedAs": "bounded-delta-after-weighted-sum",
+    "neutralWhenNoCorpus": 0,
+    "maxAbsoluteContribution": 0.05,
+    "top5FlipGuard": { "peerGap": 0.05, "topN": 5 },
+    "note": "The eight approved dimension weights already sum to 1. The 0.05 public-input sprinkle is a separate capped delta, not a ninth weight and not a silent rescaling. No licensed exact-model corpus contributes 0. Themes cannot prove clinical accuracy. The sprinkle cannot by itself reverse top-5 order against a peer whose base score is within 0.05."
+  },
+  "penalties": [
+    { "id": "family-validation-presented-as-exact", "effect": "withhold" },
+    { "id": "unresolved-identity-leak", "effect": "withhold" },
+    { "id": "active-indexed-recall-unaddressed", "effect": "withhold-manual-review" },
+    { "id": "material-source-conflict", "effect": "withhold-manual-review" },
+    { "id": "stale-critical-source-beyond-freshness", "effect": "withhold-manual-review" },
+    { "id": "testing-language-violation", "effect": "withhold" }
+  ],
+  "tieBreakers": [
+    { "id": "higher-evidence-confidence", "field": "evidenceConfidence.numeric" },
+    { "id": "stronger-exact-model-validation", "field": "validation.scope" },
+    { "id": "fresher-critical-evidence", "field": "evidenceDates.criticalRetrievedAt" },
+    { "id": "broader-documented-cuff-span", "field": "fit.rangesCm" },
+    { "id": "lexicographic-product-id", "field": "productId" }
+  ],
+  "stabilityRules": [
+    { "id": "minimum-score-delta", "minimumDeltaOnUnitInterval": 0.005 },
+    { "id": "rubric-bump-on-weight-change", "note": "Any weight, gate, penalty, or tie-breaker change requires a new rubricVersion." }
+  ],
+  "manualReviewTriggers": [
+    "identity-conflict",
+    "family-exact-validation-dispute",
+    "recall-signal",
+    "disclosure-anomaly",
+    "commercial-field-in-input",
+    "hands-on-language-without-protocol"
+  ],
+  "freshnessRules": [
+    { "id": "critical-class-a-c", "maxAgeDays": 540, "clock": "evidenceDates.asOf minus evidenceDates.criticalRetrievedAt" }
+  ],
+  "confidenceCalculation": {
+    "method": "completeness-independence-currency-consistency",
+    "separateFromScore": true,
+    "weights": { "completeness": 0.3, "independence": 0.3, "currency": 0.2, "consistency": 0.2 },
+    "ordinal": [
+      { "level": "High", "minimum": 0.75 },
+      { "level": "Moderate", "minimum": 0.5 },
+      { "level": "Low", "minimum": 0.3 },
+      { "level": "Insufficient", "minimum": 0 }
+    ],
+    "independenceScores": {
+      "exact-independent": 1,
+      "exact-funding-unknown": 0.7,
+      "exact-manufacturer-funded": 0.45,
+      "family-only": 0.35,
+      "none": 0,
+      "missing": 0.5
+    },
+    "consistencyScores": {
+      "resolved": 1,
+      "resolved-with-model-family-caveat": 0.45,
+      "conflict": 0.2,
+      "unresolved": 0
+    }
+  },
+  "scoreShrinkage": {
+    "neutral": 0.5,
+    "method": "missing-factor-replaced-by-neutral-before-dimension-mean",
+    "note": "A missing factor scores at neutral. It is not filled with a favorable result, a failure, marketing, or a testimonial."
+  },
+  "clearanceNumberPattern": "^(K|DEN)\\d{6}$",
+  "deNovoCountsAsCleared": true
+}

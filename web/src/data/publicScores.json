@@ -1,0 +1,100 @@
+{
+  "rubricVersion": "upper-arm-home-bp-v1.0.0",
+  "category": "upper-arm-home-bp",
+  "scoreScale": "0-100",
+  "liveScoresEnabled": true,
+  "devices": [
+    {
+      "slug": "ihealth-track-kn-550bt",
+      "productId": "ihealth-track-kn-550bt",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 78.3,
+      "scoreLabel": "78.3",
+      "rank": 1,
+      "cohortSize": 1,
+      "rankLabel": "1 of 1",
+      "rankDetail": "1 of 1 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "High",
+      "evidenceConfidenceNumeric": 0.91,
+      "clearanceLabel": "FDA-cleared K160014",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "documented",
+          "note": "Exact-model validation: documented exact-model evidence."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "documented",
+          "note": "Regulatory clearance posture: FDA-cleared K160014. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "documented",
+          "note": "Usability / display: documented exact-model evidence."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-evolv-bp7000",
+      "productId": "omron-evolv-bp7000",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 1,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.66,
+      "clearanceLabel": "FDA-cleared K162092",
+      "failedGates": [
+        "identity-resolved",
+        "family-validation-not-exact"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    }
+  ]
+}

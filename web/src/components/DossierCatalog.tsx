@@ -11,6 +11,8 @@ export type CatalogDossier = {
   category: string;
   directAnswer: string;
   evidenceConfidence: string;
+  scoreLabel: string;
+  rankLabel: string;
 };
 
 type DossierCatalogProps = {
@@ -187,11 +189,11 @@ export function DossierCatalog({ dossiers, initialQuery, initialBrand }: Dossier
               <dl className="mt-5 grid grid-cols-3 gap-2 text-center text-xs">
                 <div className="rounded-xl bg-slate-100 px-2 py-3">
                   <dt className="font-semibold uppercase tracking-wide text-slate-500">Score</dt>
-                  <dd className="mt-1 font-bold text-slate-900">Withheld</dd>
+                  <dd className="mt-1 font-bold text-slate-900">{dossier.scoreLabel}</dd>
                 </div>
                 <div className="rounded-xl bg-slate-100 px-2 py-3">
                   <dt className="font-semibold uppercase tracking-wide text-slate-500">Rank</dt>
-                  <dd className="mt-1 font-bold text-slate-900">Withheld</dd>
+                  <dd className="mt-1 font-bold text-slate-900">{dossier.rankLabel}</dd>
                 </div>
                 <div className="rounded-xl bg-indigo-50 px-2 py-3">
                   <dt className="font-semibold uppercase tracking-wide text-indigo-700">Evidence</dt>

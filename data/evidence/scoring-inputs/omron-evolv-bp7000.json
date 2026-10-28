@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "productId": "omron-evolv-bp7000",
+  "slug": "omron-evolv-bp7000",
+  "brand": "OMRON",
+  "exactModel": "BP7000",
+  "market": "US",
+  "formFactor": "upper-arm",
+  "identity": { "status": "resolved-with-model-family-caveat" },
+  "testingStatus": "public-evidence-only",
+  "testingLanguage": { "handsOnClaimWithoutProtocol": false },
+  "disclosureStatus": "independent-editorial",
+  "publication": { "alreadyPublic": true, "url": "/devices/omron-evolv-bp7000" },
+  "regulatory": {
+    "clearanceType": "fda-510k",
+    "clearanceNumber": "K162092",
+    "productCode": "DXN",
+    "gudidConsistent": true
+  },
+  "validation": {
+    "scope": "family-only",
+    "namesExactModel": false,
+    "peerReviewed": true,
+    "namedProtocolPass": null,
+    "fundingIndependence": null
+  },
+  "measurement": {
+    "method": "oscillometric",
+    "pressureAccuracyBand": "±3 mmHg",
+    "pulseAccuracyBand": "±5% of displayed reading",
+    "positioningResistanceDocumented": null,
+    "positioningEvidenceIds": [],
+    "techniqueResistanceDocumented": null,
+    "techniqueEvidenceIds": []
+  },
+  "fit": {
+    "rangesCm": [
+      { "min": 22, "max": 42, "packageId": "BP7000" }
+    ]
+  },
+  "usability": { "displayDocumented": true, "onDeviceReadingReview": false },
+  "dataHandling": { "memoryDocumented": true, "syncDocumented": true, "privacyPolicyCited": null },
+  "ownership": { "powerDocumented": true, "warrantyDocumented": null, "cuffService": "not-replaceable" },
+  "recall": { "queried": true, "activeIndexedMatch": false },
+  "conflicts": [],
+  "publicExperience": { "licensedExactModelCorpus": false },
+  "evidenceDates": { "criticalRetrievedAt": "2026-07-21", "asOf": "2026-10-28" },
+  "primarySources": [
+    { "id": "fda-k162092", "sourceClass": "A", "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf16/K162092.pdf", "retrievedAt": "2026-07-21" },
+    { "id": "gudid-00073796270001", "sourceClass": "A", "url": "https://accessgudid.nlm.nih.gov/api/v3/devices/lookup.json?di=00073796270001", "retrievedAt": "2026-07-21" },
+    { "id": "pubmed-33577185", "sourceClass": "A", "url": "https://pubmed.ncbi.nlm.nih.gov/33577185/", "retrievedAt": "2026-07-21" },
+    { "id": "stride-hem-7600t", "sourceClass": "A", "url": "https://www.stridebp.org/device/omron-hem-7600t/", "retrievedAt": "2026-07-21" },
+    { "id": "omron-manual", "sourceClass": "C", "url": "https://omronhealthcare.com/storage/pdfs/evolv-wireless-upper-arm-blood-pressure-monitor-bp7000-im-en03022020.pdf", "retrievedAt": "2026-07-21" },
+    { "id": "omron-product", "sourceClass": "C", "url": "https://omronhealthcare.com/products/evolv-wireless-upper-arm-blood-pressure-monitor-bp7000", "retrievedAt": "2026-07-21" }
+  ],
+  "materialClaims": [
+    { "id": "clearance", "text": "FDA K162092 records a substantially equivalent decision for Evolv model BP7000, product code DXN.", "evidenceIds": ["fda-k162092"] },
+    { "id": "gudid", "text": "AccessGUDID DI 00073796270001 identifies exact model BP7000.", "evidenceIds": ["gudid-00073796270001"] },
+    { "id": "family-validation", "text": "The peer-reviewed paper and STRIDE BP entry name HEM-7600T, not BP7000 or HEM-7600T-Z.", "evidenceIds": ["pubmed-33577185", "stride-hem-7600t"] },
+    { "id": "cuff", "text": "The manual documents an integrated cuff range of 22–42 cm. The FDA summary states the cuff is not replaceable.", "evidenceIds": ["omron-manual", "fda-k162092"] },
+    { "id": "specs", "text": "Manufacturer documentation states an oscillometric method, OLED display, four AAA batteries, and stated accuracy bands.", "evidenceIds": ["omron-manual"] },
+    { "id": "memory", "text": "Internal memory is up to 100 measurements. Prior stored readings require a smart device to view.", "evidenceIds": ["omron-manual"] }
+  ]
+}

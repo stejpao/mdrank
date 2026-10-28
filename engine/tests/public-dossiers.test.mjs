@@ -28,13 +28,21 @@ test('only explicitly owner-approved accepted dossier slugs are published',()=>{
   }
 });
 
-test('public dossiers visibly withhold score and rank without editor substitutes',()=>{
-  assert.match(component,/Product score[\s\S]*value="Withheld"/);
-  assert.match(component,/Category rank[\s\S]*value="Withheld"/);
+test('public dossiers show rubric scores only for scored-eligible rows',()=>{
+  assert.match(component,/getPublicScore/);
+  assert.match(component,/score\.scoreLabel/);
+  assert.match(component,/score\.rankLabel/);
   assert.match(component,/No editor-assigned substitute/);
+  assert.match(component,/score\.rubricVersion/);
+  assert.match(data,/scoreStatus: "published"/);
+  assert.match(data,/scoreStatus: "withheld"/);
+  assert.match(data,/rankStatus: "published"/);
+  assert.match(data,/rankStatus: "withheld"/);
   assert.match(publicCopy,/Evidence Confidence/);
   assert.match(publicCopy,/Public Experience/);
+  assert.match(publicCopy,/upper-arm-home-bp-v1\.0\.0/);
   assert.doesNotMatch(publicCopy,/mdrank_score|rank_in_subcategory|Editor&apos;s Choice|recommended product/i);
+  assert.doesNotMatch(publicCopy,/FDA approved/i);
 });
 
 test('public dossiers make testing and validation boundaries visible',()=>{
@@ -81,7 +89,8 @@ test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
   assert.match(index,/isPublicUpperArmDossier/);
   assert.match(catalog,/htmlFor="dossier-search"/);
   assert.match(catalog,/<legend[^>]*>Brand<\/legend>/);
-  assert.match(catalog,/>Withheld</);
+  assert.match(catalog,/dossier\.scoreLabel/);
+  assert.match(catalog,/dossier\.rankLabel/);
   assert.doesNotMatch(catalog,/mdrank_score|rank_in_subcategory|Editor/);
   assert.match(guard,/\\bwrist\\b/);
   assert.match(guard,/\\boptical\\b/);
