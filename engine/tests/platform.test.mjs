@@ -114,6 +114,9 @@ test('disclosures page states the authorized Amazon Associates relationship only
   assert.match(page,/Amazon\.com Associates/);
   assert.match(page,/sjpenterpri05-20/);
   assert.match(page,/ordinary affiliate-commission disclosure/);
+  assert.match(page,/Buy on Amazon/);
+  assert.match(page,/iHealth Track KN-550BT and OMRON Evolv BP7000/);
+  assert.doesNotMatch(page,/do not currently display an affiliate link|no affiliate link appears|do not display affiliate|lack affiliate/i);
   assert.match(page,/Affiliate, EPC, and conversion data remain unavailable to the scorer/);
   assert.match(page,/Paid placement, sponsored selections, and advertorial landings are <strong>not live<\/strong>/);
   assert.match(page,/No special treatment/);

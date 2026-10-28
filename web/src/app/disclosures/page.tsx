@@ -53,7 +53,7 @@ export default function DisclosuresPage() {
                     Affiliate / commission links on public MDRank product pages
                   </th>
                   <td className="px-4 py-3 align-top">
-                    <strong>Amazon.com Associates.</strong> Affiliate buy links may appear on product pages, using Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>, and are labeled with an ordinary affiliate-commission disclosure. No other affiliate program is authorized.
+                    <strong>Amazon.com Associates.</strong> The two public upper-arm blood-pressure dossiers (iHealth Track KN-550BT and OMRON Evolv BP7000 / HEM-7600T-Z) each show a Buy on Amazon link using Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>, labeled with an ordinary affiliate-commission disclosure. No other affiliate program is authorized.
                   </td>
                   <td className="px-4 py-3 align-top">
                     None. Affiliate, EPC, and conversion data remain unavailable to the scorer. Affiliate participation weight is zero.
@@ -107,11 +107,10 @@ export default function DisclosuresPage() {
           </p>
           <p className="mt-4">
             <strong>Current state:</strong> Amazon.com Associates is the only authorized affiliate relationship.
-            MDRank buy links may use Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>.
-            A qualifying Amazon link may appear on a product page and is labeled with an ordinary affiliate-commission
-            disclosure. Affiliate, EPC, and conversion data remain unavailable to the scorer (weight zero). No other
-            affiliate program is authorized. The two human-approved upper-arm blood-pressure dossiers (iHealth Track
-            KN-550BT; OMRON Evolv BP7000 / HEM-7600T-Z) do not currently display an affiliate link, offer price, or buy button.
+            The two public upper-arm blood-pressure dossiers (iHealth Track KN-550BT and OMRON Evolv BP7000 /
+            HEM-7600T-Z) each show a Buy on Amazon link using Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>,
+            with an ordinary affiliate-commission disclosure. Affiliate, EPC, and conversion data remain unavailable
+            to the scorer (weight zero). No other affiliate program is authorized.
           </p>
           <p className="mt-4"><strong>Rules for a qualifying affiliate link:</strong></p>
           <ol className="mt-3 list-decimal space-y-2 pl-5">
@@ -273,7 +272,7 @@ export default function DisclosuresPage() {
           </p>
           <ul className="mt-4 list-disc space-y-3 pl-5">
             <li>
-              <strong>October 28, 2026.</strong> Amazon.com Associates authorized for MDRank buy links (Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>). Qualifying links may appear on product pages with an ordinary affiliate-commission disclosure. Affiliate, EPC, and conversion data remain unavailable to the scorer (weight zero). Paid placement remains not live. No other affiliate program is authorized.
+              <strong>October 28, 2026.</strong> Amazon.com Associates is the affiliate relationship for MDRank buy links (Associates tag <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">sjpenterpri05-20</code>). The two public upper-arm dossiers show a Buy on Amazon link with an ordinary affiliate-commission disclosure. Affiliate, EPC, and conversion data remain unavailable to the scorer (weight zero). Paid placement remains not live. No other affiliate program is authorized.
             </li>
           </ul>
           <h3 className="mt-6 text-xl font-semibold text-slate-950">MDRank.org</h3>
