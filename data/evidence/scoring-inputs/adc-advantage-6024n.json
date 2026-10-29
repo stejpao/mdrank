@@ -21,30 +21,67 @@
   },
   "regulatory": {
     "clearanceType": "fda-510k",
-    "clearanceNumber": "K230075"
+    "clearanceNumber": "K230075",
+    "clearanceNote": "K230075 attribution to 6024N is unconfirmed: the retrieved 510(k) summary names Microlife model BP3KV1-5K."
   },
   "validation": {
     "scope": "none",
     "namesExactModel": false,
     "peerReviewed": false,
     "namedProtocolPass": false,
-    "fundingIndependence": "not-applicable"
+    "fundingIndependence": "not-applicable",
+    "basis": "ValidateBP listing is cited as context only and is not credited as validation (owner decision 2026-10-29)."
   },
-  "measurement": {},
+  "measurement": {
+    "method": "oscillometric",
+    "pressureAccuracyBand": "±3 mmHg",
+    "pulseAccuracyBand": "±5%",
+    "positioningResistanceDocumented": null,
+    "positioningEvidenceIds": [],
+    "techniqueResistanceDocumented": null,
+    "techniqueEvidenceIds": []
+  },
   "fit": {
-    "rangesCm": []
+    "rangesCm": [
+      {
+        "min": 22,
+        "max": 42,
+        "packageId": "standard"
+      },
+      {
+        "min": 17,
+        "max": 22,
+        "packageId": "optional-SA"
+      },
+      {
+        "min": 32,
+        "max": 52,
+        "packageId": "optional-LA"
+      }
+    ]
   },
-  "usability": {},
-  "dataHandling": {},
-  "ownership": {},
+  "usability": {
+    "displayDocumented": true,
+    "onDeviceReadingReview": null
+  },
+  "dataHandling": {
+    "memoryDocumented": true,
+    "syncDocumented": true,
+    "privacyPolicyCited": null
+  },
+  "ownership": {
+    "powerDocumented": true,
+    "warrantyDocumented": null,
+    "cuffService": null
+  },
   "recall": {},
   "conflicts": [],
   "publicExperience": {
     "licensedExactModelCorpus": false
   },
   "evidenceDates": {
-    "criticalRetrievedAt": "2026-10-28",
-    "asOf": "2026-10-28"
+    "criticalRetrievedAt": "2026-10-29",
+    "asOf": "2026-10-29"
   },
   "primarySources": [
     {
@@ -52,6 +89,30 @@
       "sourceClass": "A",
       "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K230075",
       "retrievedAt": "2026-10-28"
+    },
+    {
+      "id": "manufacturer-manual",
+      "sourceClass": "C",
+      "url": "https://www.adctoday.com/sites/default/files/literature/93-6024N-00%20rev%207_0.pdf",
+      "retrievedAt": "2026-10-29"
+    },
+    {
+      "id": "manufacturer-product-page",
+      "sourceClass": "C",
+      "url": "https://www.adctoday.com/products/6024N",
+      "retrievedAt": "2026-10-29"
+    },
+    {
+      "id": "validatebp-listing",
+      "sourceClass": "A",
+      "url": "https://www.validatebp.org/device/advantage-connectr-6024n",
+      "retrievedAt": "2026-10-29"
+    },
+    {
+      "id": "fda-510k-summary-k230075",
+      "sourceClass": "A",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230075.pdf",
+      "retrievedAt": "2026-10-29"
     }
   ],
   "materialClaims": [
@@ -60,6 +121,42 @@
       "text": "The published packet records FDA-cleared K230075 for this exact model. Clearance is not accuracy proof.",
       "evidenceIds": [
         "fda-clearance"
+      ]
+    },
+    {
+      "id": "method-and-bands",
+      "text": "The ADC 6024N instructions for use state an oscillometric measuring method, static pressure accuracy ±3 mmHg and pulse ±5% of readout value.",
+      "evidenceIds": [
+        "manufacturer-manual"
+      ]
+    },
+    {
+      "id": "cuff-ranges",
+      "text": "The ADC product page lists a 22–42 cm cuff range; the manual lists optional cuffs of 17–22 cm and 32–52 cm.",
+      "evidenceIds": [
+        "manufacturer-product-page",
+        "manufacturer-manual"
+      ]
+    },
+    {
+      "id": "display-power-memory",
+      "text": "The manual lists an LCD display, 4 AAA batteries with an optional AC adapter, 99 measurements per user (2 users), and Bluetooth Low Energy.",
+      "evidenceIds": [
+        "manufacturer-manual"
+      ]
+    },
+    {
+      "id": "validation-listing",
+      "text": "ValidateBP lists this exact model against ISO 81060-2:2018/AMD1:2020/AMD2:2024.. Cited as context only; MDRank does not credit this listing as validation.",
+      "evidenceIds": [
+        "validatebp-listing"
+      ]
+    },
+    {
+      "id": "clearance-unconfirmed",
+      "text": "The K230075 510(k) summary names Microlife model BP3KV1-5K and does not name 6024N, so the link between 6024N and K230075 is unconfirmed.",
+      "evidenceIds": [
+        "fda-510k-summary-k230075"
       ]
     }
   ]

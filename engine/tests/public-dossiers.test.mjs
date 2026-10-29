@@ -19,6 +19,8 @@ const sitemap=fs.readFileSync(sitemapPath,'utf8');
 const llms=fs.readFileSync(llmsPath,'utf8');
 const publicCopy=[data,component,index,ihealth,omron,llms].join('\n');
 
+const scores=JSON.parse(fs.readFileSync('web/src/data/publicScores.json','utf8'));
+
 test('only explicitly owner-approved accepted dossier slugs are published',()=>{
   const held=JSON.parse(fs.readFileSync('web/src/data/heldPublishDossiers.json','utf8'));
   const pack=fs.readFileSync('data/publication/PUBLISH-PACK-HELD-YES.md','utf8');
@@ -30,8 +32,9 @@ test('only explicitly owner-approved accepted dossier slugs are published',()=>{
   assert.equal(held.filter((dossier)=>dossier.disposition==='accepted-evidence-dossier').length,58);
   for(const dossier of held){
     assert.match(pack,new RegExp(`\`${dossier.slug}\``));
-    assert.equal(dossier.scoreStatus,'withheld');
-    assert.equal(dossier.rankStatus,'withheld');
+    const row=scores.devices.find((item)=>item.slug===dossier.slug);
+    assert.equal(dossier.scoreStatus,row.scoreStatus,dossier.slug);
+    assert.equal(dossier.rankStatus,row.rankStatus,dossier.slug);
     assert.equal(dossier.category,'Upper-arm blood-pressure monitor');
     assert.doesNotMatch(`${dossier.name} ${dossier.model}`,/\bwrist\b|\boptical\b/i);
   }

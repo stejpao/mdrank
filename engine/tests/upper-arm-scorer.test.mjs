@@ -41,6 +41,12 @@ test('approved upper-arm rubric validates and keeps commercial weight at zero', 
   assert.doesNotMatch(tieText, /affiliate|asin|merchant|truevital|unredacted|hsa|brand/i);
 });
 
+const B1_PASS_17_ELIGIBLE = [
+  'adc-advantage-6024n', 'and-ua-767f', 'omron-bp5000', 'omron-bp5250', 'omron-bp5350',
+  'omron-bp5360', 'omron-bp5450', 'omron-bp5465', 'omron-bp7350', 'omron-bp7450',
+  'omron-bp7465', 'omron-bp7900', 'welch-allyn-home-1700', 'withings-bpm-connect-wpm05',
+];
+
 test('seed scoring inputs exclude affiliate, ASIN, merchant, TrueVitals, and Unredacted fields', () => {
   const held = JSON.parse(fs.readFileSync('web/src/data/heldPublishDossiers.json', 'utf8'));
   const slugs = inputs.map((input) => input.slug).sort();
@@ -58,14 +64,15 @@ test('seed scoring inputs exclude affiliate, ASIN, merchant, TrueVitals, and Unr
   assert.doesNotMatch(fs.readFileSync('engine/lib/scorer.mjs', 'utf8'), /amazon\.ts|sjpenterpri05-20/);
   const projection = projectPublicScores();
   const eligible = projection.devices.filter((row) => row.eligible).map((row) => row.slug);
-  assert.deepEqual(eligible, ['ihealth-track-kn-550bt']);
+  assert.deepEqual([...eligible].sort(), [...B1_PASS_17_ELIGIBLE, 'ihealth-track-kn-550bt'].sort());
   for (const dossier of held) {
     const row = projection.devices.find((item) => item.slug === dossier.slug);
-    assert.equal(row.eligible, false, dossier.slug);
-    assert.equal(row.mdrankScore, null, dossier.slug);
+    const shouldScore = B1_PASS_17_ELIGIBLE.includes(dossier.slug);
+    assert.equal(row.eligible, shouldScore, dossier.slug);
+    if (!shouldScore) assert.equal(row.mdrankScore, null, dossier.slug);
     assert.equal(row.evidenceConfidence, dossier.evidenceConfidence, dossier.slug);
-    assert.equal(dossier.scoreStatus, 'withheld');
-    assert.equal(dossier.rankStatus, 'withheld');
+    assert.equal(dossier.scoreStatus, row.scoreStatus, dossier.slug);
+    assert.equal(dossier.rankStatus, row.rankStatus, dossier.slug);
   }
 });
 
@@ -77,8 +84,8 @@ test('KN-550BT publishes a rubric score and seed rank; Evolv stays unranked', ()
   assert.equal(ihealth.mdrankScore, 78.3);
   assert.equal(ihealth.scoreLabel, '78.3');
   assert.equal(ihealth.rank, 1);
-  assert.equal(ihealth.cohortSize, 1);
-  assert.equal(ihealth.rankLabel, '1 of 1');
+  assert.equal(ihealth.cohortSize, 15);
+  assert.equal(ihealth.rankLabel, '1 of 15');
   assert.equal(ihealth.evidenceConfidence, 'High');
   assert.equal(ihealth.evidenceConfidenceNumeric, 0.91);
   assert.equal(ihealth.clearanceLabel, 'FDA-cleared K160014');

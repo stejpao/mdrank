@@ -28,23 +28,54 @@
     "namesExactModel": false,
     "peerReviewed": false,
     "namedProtocolPass": false,
-    "fundingIndependence": "not-applicable"
+    "fundingIndependence": "not-applicable",
+    "basis": "ValidateBP listing is cited as context only and is not credited as validation (owner decision 2026-10-29)."
   },
-  "measurement": {},
+  "measurement": {
+    "method": "oscillometric",
+    "pressureAccuracyBand": "±3 mmHg",
+    "pulseAccuracyBand": "±5%",
+    "positioningResistanceDocumented": null,
+    "positioningEvidenceIds": [],
+    "techniqueResistanceDocumented": null,
+    "techniqueEvidenceIds": []
+  },
   "fit": {
-    "rangesCm": []
+    "rangesCm": [
+      {
+        "min": 22,
+        "max": 42,
+        "packageId": "included"
+      },
+      {
+        "min": 17,
+        "max": 22,
+        "packageId": "optional"
+      }
+    ]
   },
-  "usability": {},
-  "dataHandling": {},
-  "ownership": {},
+  "usability": {
+    "displayDocumented": true,
+    "onDeviceReadingReview": null
+  },
+  "dataHandling": {
+    "memoryDocumented": true,
+    "syncDocumented": null,
+    "privacyPolicyCited": null
+  },
+  "ownership": {
+    "powerDocumented": true,
+    "warrantyDocumented": null,
+    "cuffService": null
+  },
   "recall": {},
   "conflicts": [],
   "publicExperience": {
     "licensedExactModelCorpus": false
   },
   "evidenceDates": {
-    "criticalRetrievedAt": "2026-10-28",
-    "asOf": "2026-10-28"
+    "criticalRetrievedAt": "2026-10-29",
+    "asOf": "2026-10-29"
   },
   "primarySources": [
     {
@@ -52,6 +83,18 @@
       "sourceClass": "A",
       "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K133379",
       "retrievedAt": "2026-10-28"
+    },
+    {
+      "id": "manufacturer-manual",
+      "sourceClass": "C",
+      "url": "https://omronhealthcare.com/storage/pdfs/iron-upper-arm-blood-pressure-monitor-bp5000-im-en_fr_3145996-0b.pdf",
+      "retrievedAt": "2026-10-29"
+    },
+    {
+      "id": "validatebp-listing",
+      "sourceClass": "A",
+      "url": "https://www.validatebp.org/device/iron-upper-arm-blood-pressure-monitor",
+      "retrievedAt": "2026-10-29"
     }
   ],
   "materialClaims": [
@@ -60,6 +103,34 @@
       "text": "The published packet records FDA-cleared K133379 for this exact model. Clearance is not accuracy proof.",
       "evidenceIds": [
         "fda-clearance"
+      ]
+    },
+    {
+      "id": "method-and-bands",
+      "text": "The OMRON instruction manual (BP5000 HEM-7121J-ZAZ) states the oscillometric measurement method and pressure accuracy ±3 mmHg, pulse ±5% of display reading.",
+      "evidenceIds": [
+        "manufacturer-manual"
+      ]
+    },
+    {
+      "id": "cuff-ranges",
+      "text": "The manual lists the applicable cuff circumference: 22–42 cm (included cuff); 17–22 cm (optional cuff).",
+      "evidenceIds": [
+        "manufacturer-manual"
+      ]
+    },
+    {
+      "id": "display-power-memory",
+      "text": "The manual lists an LCD digital display and power from 4 AA batteries or an AC adapter. Memory: last reading only (1 user).",
+      "evidenceIds": [
+        "manufacturer-manual"
+      ]
+    },
+    {
+      "id": "validation-listing",
+      "text": "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2013.. Cited as context only; MDRank does not credit this listing as validation.",
+      "evidenceIds": [
+        "validatebp-listing"
       ]
     }
   ]

@@ -28,23 +28,49 @@
     "namesExactModel": false,
     "peerReviewed": false,
     "namedProtocolPass": false,
-    "fundingIndependence": "not-applicable"
+    "fundingIndependence": "not-applicable",
+    "basis": "ValidateBP listing is cited as context only and is not credited as validation (owner decision 2026-10-29)."
   },
-  "measurement": {},
+  "measurement": {
+    "method": "oscillometric",
+    "pressureAccuracyBand": "±3 mmHg or 2%",
+    "pulseAccuracyBand": "±5%",
+    "positioningResistanceDocumented": null,
+    "positioningEvidenceIds": [],
+    "techniqueResistanceDocumented": null,
+    "techniqueEvidenceIds": []
+  },
   "fit": {
-    "rangesCm": []
+    "rangesCm": [
+      {
+        "min": 22,
+        "max": 42,
+        "packageId": "integrated"
+      }
+    ]
   },
-  "usability": {},
-  "dataHandling": {},
-  "ownership": {},
+  "usability": {
+    "displayDocumented": null,
+    "onDeviceReadingReview": null
+  },
+  "dataHandling": {
+    "memoryDocumented": null,
+    "syncDocumented": true,
+    "privacyPolicyCited": null
+  },
+  "ownership": {
+    "powerDocumented": true,
+    "warrantyDocumented": null,
+    "cuffService": null
+  },
   "recall": {},
   "conflicts": [],
   "publicExperience": {
     "licensedExactModelCorpus": false
   },
   "evidenceDates": {
-    "criticalRetrievedAt": "2026-10-28",
-    "asOf": "2026-10-28"
+    "criticalRetrievedAt": "2026-10-29",
+    "asOf": "2026-10-29"
   },
   "primarySources": [
     {
@@ -52,6 +78,18 @@
       "sourceClass": "A",
       "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K223374",
       "retrievedAt": "2026-10-28"
+    },
+    {
+      "id": "fda-510k-summary",
+      "sourceClass": "A",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K223374.pdf",
+      "retrievedAt": "2026-10-29"
+    },
+    {
+      "id": "validatebp-listing",
+      "sourceClass": "A",
+      "url": "https://www.validatebp.org/device/withings-bpm-connect",
+      "retrievedAt": "2026-10-29"
     }
   ],
   "materialClaims": [
@@ -60,6 +98,34 @@
       "text": "The published packet records FDA-cleared K223374 for this exact model. Clearance is not accuracy proof.",
       "evidenceIds": [
         "fda-clearance"
+      ]
+    },
+    {
+      "id": "method-and-bands",
+      "text": "The FDA 510(k) summary K223374 for WPM05/WPM06 lists the oscillometric principle, BP accuracy within ±3 mmHg or 2% of reading, and pulse ±5% of reading.",
+      "evidenceIds": [
+        "fda-510k-summary"
+      ]
+    },
+    {
+      "id": "cuff-ranges",
+      "text": "K223374 states an intended arm circumference of 22–42 cm.",
+      "evidenceIds": [
+        "fda-510k-summary"
+      ]
+    },
+    {
+      "id": "power-sync",
+      "text": "K223374 lists a 5V rechargeable Li-Polymer battery and, for WPM05, Bluetooth and Wi-Fi.",
+      "evidenceIds": [
+        "fda-510k-summary"
+      ]
+    },
+    {
+      "id": "validation-listing",
+      "text": "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2013.. Cited as context only; MDRank does not credit this listing as validation.",
+      "evidenceIds": [
+        "validatebp-listing"
       ]
     }
   ]
