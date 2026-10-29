@@ -5,6 +5,7 @@ import dossierFaqs from "@/data/dossierFaqs.json";
 import publicOffers from "@/data/publicOffers.json";
 import { publishedDossiers, type PublishedDossier } from "@/data/publishedDossiers";
 import { amazonAssociateUrl } from "@/lib/amazon";
+import { selectDossierPeers } from "@/lib/dossierPeers.mjs";
 import { buildDossierStructuredData, scoreStatusFaq } from "@/lib/dossierSchema.mjs";
 import { getPublicScore } from "@/lib/publicScore";
 
@@ -60,7 +61,7 @@ export function DossierSeo({ dossier }: { dossier: PublishedDossier }) {
     offerNote: offer?.offerNote ?? null,
     image,
   });
-  const peer = publishedDossiers.find((item) => item.slug !== dossier.slug);
+  const peers = selectDossierPeers(publishedDossiers, dossier.slug);
 
   return (
     <div className="mx-auto max-w-5xl px-4 pb-12 sm:px-6">
@@ -89,6 +90,26 @@ export function DossierSeo({ dossier }: { dossier: PublishedDossier }) {
         </div>
       </section>
 
+      {peers.length > 0 ? (
+        <nav className="mt-10 rounded-2xl border border-slate-200 bg-white p-6" aria-labelledby="catalog-peers-heading" data-section="catalog-peers">
+          <h2 id="catalog-peers-heading" className="text-xl font-bold text-slate-950">
+            Other upper-arm monitors in the catalog
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-slate-600">
+            Other published upper-arm dossiers in this catalog. Each link is another exact model of the same form factor.
+          </p>
+          <ul className="mt-4 space-y-2 text-sm font-semibold">
+            {peers.map((peer) => (
+              <li key={peer.slug}>
+                <Link href={`/devices/${peer.slug}`} className="text-indigo-700 hover:underline">
+                  {peer.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ) : null}
+
       <nav className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6" aria-label="Trust">
         <h2 className="text-xl font-bold text-slate-950">How to read this record</h2>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -105,13 +126,6 @@ export function DossierSeo({ dossier }: { dossier: PublishedDossier }) {
           <li><Link href="/methodology" className="text-indigo-700 hover:underline">Methodology</Link></li>
           <li><Link href="/disclosures" className="text-indigo-700 hover:underline">Disclosures</Link></li>
           <li><Link href="/evidence-status" className="text-indigo-700 hover:underline">Evidence-system status</Link></li>
-          {peer ? (
-            <li>
-              <Link href={`/devices/${peer.slug}`} className="text-indigo-700 hover:underline">
-                Other published upper-arm dossier: {peer.model}
-              </Link>
-            </li>
-          ) : null}
         </ul>
       </nav>
     </div>
