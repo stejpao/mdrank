@@ -67,14 +67,14 @@ test('FAQ score status follows the published rubric row', () => {
   const ihealth = scores.devices.find((row) => row.slug === 'ihealth-track-kn-550bt');
   const omron = scores.devices.find((row) => row.slug === 'omron-evolv-bp7000');
   assert.equal(ihealth.mdrankScore, 78.3);
-  assert.equal(ihealth.rankLabel, '1 of 1');
+  assert.equal(ihealth.rankLabel, '1 of 15');
   assert.equal(ihealth.scoreStatus, 'published');
   assert.equal(omron.mdrankScore, null);
   assert.equal(omron.scoreStatus, 'withheld');
   const ihealthFaq = scoreStatusFaq({ ...ihealth, evidenceConfidence: ihealth.evidenceConfidence });
   const omronFaq = scoreStatusFaq({ ...omron, evidenceConfidence: omron.evidenceConfidence });
   assert.match(ihealthFaq.answer, /MDRank Score 78\.3/);
-  assert.match(ihealthFaq.answer, /category rank 1 of 1/);
+  assert.match(ihealthFaq.answer, /category rank 1 of 15/);
   assert.match(ihealthFaq.answer, /Evidence Confidence stays High/);
   assert.doesNotMatch(ihealthFaq.answer, /withheld/i);
   assert.match(omronFaq.answer, /Family-level validation is not exact-model validation/);

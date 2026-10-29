@@ -13,9 +13,9 @@
       "mdrankScore": 78.3,
       "scoreLabel": "78.3",
       "rank": 1,
-      "cohortSize": 1,
-      "rankLabel": "1 of 1",
-      "rankDetail": "1 of 1 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "cohortSize": 15,
+      "rankLabel": "1 of 15",
+      "rankDetail": "1 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
       "evidenceConfidence": "High",
       "evidenceConfidenceNumeric": 0.91,
       "clearanceLabel": "FDA-cleared K160014",
@@ -76,24 +76,968 @@
     {
       "slug": "adc-advantage-6024n",
       "productId": "adc-advantage-6024n",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 51.3,
+      "scoreLabel": "51.3",
+      "rank": 2,
+      "cohortSize": 15,
+      "rankLabel": "2 of 15",
+      "rankDetail": "2 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
       "clearanceLabel": "FDA-cleared K230075",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
+      "failedGates": [],
       "rubricVersion": "upper-arm-home-bp-v1.0.0",
       "publicInputApplied": 0,
-      "dimensionNotes": []
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K230075. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-bp5000",
+      "productId": "omron-bp5000",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.4,
+      "scoreLabel": "49.4",
+      "rank": 3,
+      "cohortSize": 15,
+      "rankLabel": "3 of 15",
+      "rankDetail": "3 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
+      "clearanceLabel": "FDA-cleared K133379",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K133379. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-bp5350",
+      "productId": "omron-bp5350",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.8,
+      "scoreLabel": "49.8",
+      "rank": 4,
+      "cohortSize": 15,
+      "rankLabel": "4 of 15",
+      "rankDetail": "4 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
+      "clearanceLabel": "FDA-cleared K133379",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K133379. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-bp5360",
+      "productId": "omron-bp5360",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.8,
+      "scoreLabel": "49.8",
+      "rank": 5,
+      "cohortSize": 15,
+      "rankLabel": "5 of 15",
+      "rankDetail": "5 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
+      "clearanceLabel": "FDA-cleared DEN230076",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared DEN230076. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-bp5450",
+      "productId": "omron-bp5450",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.8,
+      "scoreLabel": "49.8",
+      "rank": 6,
+      "cohortSize": 15,
+      "rankLabel": "6 of 15",
+      "rankDetail": "6 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
+      "clearanceLabel": "FDA-cleared K133379",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K133379. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-bp5465",
+      "productId": "omron-bp5465",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.8,
+      "scoreLabel": "49.8",
+      "rank": 7,
+      "cohortSize": 15,
+      "rankLabel": "7 of 15",
+      "rankDetail": "7 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
+      "clearanceLabel": "FDA-cleared DEN230076",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared DEN230076. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-bp5250",
+      "productId": "omron-bp5250",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.8,
+      "scoreLabel": "49.8",
+      "rank": 8,
+      "cohortSize": 15,
+      "rankLabel": "8 of 15",
+      "rankDetail": "8 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
+      "clearanceLabel": "FDA-cleared K133383",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K133383. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-bp7350",
+      "productId": "omron-bp7350",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.8,
+      "scoreLabel": "49.8",
+      "rank": 9,
+      "cohortSize": 15,
+      "rankLabel": "9 of 15",
+      "rankDetail": "9 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
+      "clearanceLabel": "FDA-cleared K133383",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K133383. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-bp7450",
+      "productId": "omron-bp7450",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.8,
+      "scoreLabel": "49.8",
+      "rank": 10,
+      "cohortSize": 15,
+      "rankLabel": "10 of 15",
+      "rankDetail": "10 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
+      "clearanceLabel": "FDA-cleared K133383",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K133383. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-bp7465",
+      "productId": "omron-bp7465",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.8,
+      "scoreLabel": "49.8",
+      "rank": 11,
+      "cohortSize": 15,
+      "rankLabel": "11 of 15",
+      "rankDetail": "11 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
+      "clearanceLabel": "FDA-cleared DEN230076",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared DEN230076. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "omron-bp7900",
+      "productId": "omron-bp7900",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.2,
+      "scoreLabel": "49.2",
+      "rank": 12,
+      "cohortSize": 15,
+      "rankLabel": "12 of 15",
+      "rankDetail": "12 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.67,
+      "clearanceLabel": "FDA-cleared K182579",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K182579. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "and-ua-767f",
+      "productId": "and-ua-767f",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.4,
+      "scoreLabel": "49.4",
+      "rank": 13,
+      "cohortSize": 15,
+      "rankLabel": "13 of 15",
+      "rankDetail": "13 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.63,
+      "clearanceLabel": "FDA-cleared K141201",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K141201. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "welch-allyn-home-1700",
+      "productId": "welch-allyn-home-1700",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 49.7,
+      "scoreLabel": "49.7",
+      "rank": 14,
+      "cohortSize": 15,
+      "rankLabel": "14 of 15",
+      "rankDetail": "14 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.6,
+      "clearanceLabel": "FDA-cleared K161886",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K161886. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "partial",
+          "note": "Usability / display: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
+    },
+    {
+      "slug": "withings-bpm-connect-wpm05",
+      "productId": "withings-bpm-connect-wpm05",
+      "eligible": true,
+      "scoreStatus": "published",
+      "rankStatus": "published",
+      "mdrankScore": 48.6,
+      "scoreLabel": "48.6",
+      "rank": 15,
+      "cohortSize": 15,
+      "rankLabel": "15 of 15",
+      "rankDetail": "15 of 15 scored-eligible public dossiers under upper-arm-home-bp-v1.0.0. This is not a market-wide best list.",
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.6,
+      "clearanceLabel": "FDA-cleared K223374",
+      "failedGates": [],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": [
+        {
+          "key": "validation",
+          "label": "Exact-model validation",
+          "state": "partial",
+          "note": "Exact-model validation: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "measurement_performance",
+          "label": "Measurement performance (documented)",
+          "state": "partial",
+          "note": "Measurement performance (documented): partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "regulatory",
+          "label": "Regulatory clearance posture",
+          "state": "partial",
+          "note": "Regulatory clearance posture: FDA-cleared K223374. Clearance is not accuracy proof."
+        },
+        {
+          "key": "cuff_fit",
+          "label": "Cuff / fit coverage",
+          "state": "documented",
+          "note": "Cuff / fit coverage: documented exact-model evidence."
+        },
+        {
+          "key": "power_warranty_ownership",
+          "label": "Power / warranty / ownership facts",
+          "state": "partial",
+          "note": "Power / warranty / ownership facts: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        },
+        {
+          "key": "positioning_technique_resistance",
+          "label": "Positioning / technique resistance",
+          "state": "neutral",
+          "note": "Positioning / technique resistance: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "usability_display",
+          "label": "Usability / display",
+          "state": "neutral",
+          "note": "Usability / display: not documented in the evidence packet, so this dimension stays at neutral."
+        },
+        {
+          "key": "data_handling",
+          "label": "Data handling",
+          "state": "partial",
+          "note": "Data handling: partial. Attributed specifications are not a full result, and missing facts stay at neutral."
+        }
+      ]
     },
     {
       "slug": "adking-a01-bl",
@@ -104,7 +1048,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -126,7 +1070,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -148,7 +1092,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -170,7 +1114,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -192,7 +1136,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -216,7 +1160,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -232,28 +1176,6 @@
       "dimensionNotes": []
     },
     {
-      "slug": "and-ua-767f",
-      "productId": "and-ua-767f",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared K141201",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
       "slug": "and-ua-789ac",
       "productId": "and-ua-789ac",
       "eligible": false,
@@ -262,7 +1184,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -286,7 +1208,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -308,7 +1230,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -330,7 +1252,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -354,7 +1276,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -378,7 +1300,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -402,7 +1324,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -424,11 +1346,11 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.63,
       "clearanceLabel": "FDA-cleared K131395",
       "failedGates": [
         "category-upper-arm-home-bp"
@@ -446,11 +1368,11 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
+      "evidenceConfidence": "Moderate",
+      "evidenceConfidenceNumeric": 0.63,
       "clearanceLabel": "FDA-cleared K131395",
       "failedGates": [
         "category-upper-arm-home-bp"
@@ -468,7 +1390,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -490,7 +1412,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -512,7 +1434,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -536,7 +1458,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -558,7 +1480,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -580,7 +1502,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -602,7 +1524,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -624,7 +1546,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -646,7 +1568,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -670,7 +1592,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -694,34 +1616,12 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K233146",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "omron-bp5000",
-      "productId": "omron-bp5000",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared K133379",
       "failedGates": [
         "category-upper-arm-home-bp"
       ],
@@ -738,7 +1638,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -762,7 +1662,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -778,28 +1678,6 @@
       "dimensionNotes": []
     },
     {
-      "slug": "omron-bp5250",
-      "productId": "omron-bp5250",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared K133383",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
       "slug": "omron-bp5255",
       "productId": "omron-bp5255",
       "eligible": false,
@@ -808,7 +1686,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -832,122 +1710,12 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared DEN230076",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "omron-bp5350",
-      "productId": "omron-bp5350",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared K133379",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "omron-bp5360",
-      "productId": "omron-bp5360",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared DEN230076",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "omron-bp5450",
-      "productId": "omron-bp5450",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared K133379",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "omron-bp5465",
-      "productId": "omron-bp5465",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared DEN230076",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "omron-bp7350",
-      "productId": "omron-bp7350",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared K133383",
       "failedGates": [
         "category-upper-arm-home-bp"
       ],
@@ -964,78 +1732,12 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K133379",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "omron-bp7450",
-      "productId": "omron-bp7450",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared K133383",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "omron-bp7465",
-      "productId": "omron-bp7465",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared DEN230076",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "omron-bp7900",
-      "productId": "omron-bp7900",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared K182579",
       "failedGates": [
         "category-upper-arm-home-bp"
       ],
@@ -1052,7 +1754,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Moderate",
@@ -1075,7 +1777,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
       "evidenceConfidence": "Low",
@@ -1099,7 +1801,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -1121,7 +1823,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -1143,7 +1845,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -1165,7 +1867,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -1187,7 +1889,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -1209,7 +1911,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -1231,34 +1933,12 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K222887",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "welch-allyn-home-1700",
-      "productId": "welch-allyn-home-1700",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared K161886",
       "failedGates": [
         "category-upper-arm-home-bp"
       ],
@@ -1275,7 +1955,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -1297,7 +1977,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -1319,34 +1999,12 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K243115",
-      "failedGates": [
-        "category-upper-arm-home-bp"
-      ],
-      "rubricVersion": "upper-arm-home-bp-v1.0.0",
-      "publicInputApplied": 0,
-      "dimensionNotes": []
-    },
-    {
-      "slug": "withings-bpm-connect-wpm05",
-      "productId": "withings-bpm-connect-wpm05",
-      "eligible": false,
-      "scoreStatus": "withheld",
-      "rankStatus": "withheld",
-      "mdrankScore": null,
-      "scoreLabel": "Withheld",
-      "rank": null,
-      "cohortSize": 1,
-      "rankLabel": "Withheld",
-      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
-      "evidenceConfidence": "Low",
-      "evidenceConfidenceNumeric": 0.47,
-      "clearanceLabel": "FDA-cleared K223374",
       "failedGates": [
         "category-upper-arm-home-bp"
       ],
@@ -1363,7 +2021,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",
@@ -1385,7 +2043,7 @@
       "mdrankScore": null,
       "scoreLabel": "Withheld",
       "rank": null,
-      "cohortSize": 1,
+      "cohortSize": 15,
       "rankLabel": "Withheld",
       "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
       "evidenceConfidence": "Low",

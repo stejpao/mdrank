@@ -332,14 +332,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "A&D Medical UA-767F is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K141201. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "A&D Medical UA-767F is a United States upper-arm home blood-pressure monitor, FDA-cleared K141201. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/and-ua-767f-real-use.jpg",
       "width": 1152,
@@ -423,13 +423,13 @@
     "regulatoryFindings": [
       "FDA-cleared K141201 is the clearance identifier recorded for UA-767F. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2018.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -451,11 +451,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (UA-420); 23–37 cm (UA-290); 31–45 cm (UA-291)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg or ±2%, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -468,20 +468,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K141201",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K141201",
         "sourceClass": "A"
+      },
+      {
+        "label": "FDA 510(k) summary",
+        "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf14/K141201.pdf",
+        "sourceClass": "A"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/premium-multi-userblood-pressure-monitor",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -977,14 +988,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "Advantage (ADC) 6024N is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K230075. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "Advantage (ADC) 6024N is a United States upper-arm home blood-pressure monitor, FDA-cleared K230075 (attribution unconfirmed; see regulatory findings). No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/adc-advantage-6024n-real-use.jpg",
       "width": 1152,
@@ -1067,14 +1078,15 @@
     ],
     "regulatoryFindings": [
       "FDA-cleared K230075 is the clearance identifier recorded for 6024N. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+      "The K230075 attribution for 6024N is unconfirmed: the retrieved 510(k) summary names Microlife model BP3KV1-5K and does not name 6024N.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ISO 81060-2:2018/AMD1:2020/AMD2:2024.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -1096,11 +1108,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (standard); 17–22 cm (optional-SA); 32–52 cm (optional-LA)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -1113,20 +1125,41 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K230075",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K230075",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://www.adctoday.com/sites/default/files/literature/93-6024N-00%20rev%207_0.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "Manufacturer product page",
+        "url": "https://www.adctoday.com/products/6024N",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/advantage-connectr-6024n",
+        "sourceClass": "A"
+      },
+      {
+        "label": "FDA 510(k) summary K230075 (names Microlife BP3KV1-5K)",
+        "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230075.pdf",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -2429,14 +2462,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "Greater Goods 0604 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K131395. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "Greater Goods 0604 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K131395. MDRank Score and category rank are withheld because the oscillometric measurement method is not stated in an exact-model source for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
     "scoreStatus": "withheld",
     "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The manufacturer guide lists 'Oscillographic testing mode' and does not use the word oscillometric, so the method gate is not met from an exact-model source. Evidence Confidence stays Moderate and separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/greater-goods-0604-real-use.jpg",
       "width": 1152,
@@ -2520,13 +2553,13 @@
     "regulatoryFindings": [
       "FDA-cleared K131395 is the clearance identifier recorded for 0604. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2018.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -2548,11 +2581,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (standard)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -2565,20 +2598,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K131395",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K131395",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://greatergoods.com/service/0604",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/greater-goods-bp",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer specifications and the ValidateBP exact-model listing. Score stays withheld: method gate not met. Affiliate weight remains zero."
     ]
   },
   {
@@ -2590,14 +2634,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "Greater Goods 0634 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K131395. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "Greater Goods 0634 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K131395. MDRank Score and category rank are withheld because the oscillometric measurement method is not stated in an exact-model source for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
     "scoreStatus": "withheld",
     "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The manufacturer guide lists 'Oscillographic testing mode' and does not use the word oscillometric, so the method gate is not met from an exact-model source. Evidence Confidence stays Moderate and separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/greater-goods-0634-real-use.jpg",
       "width": 1152,
@@ -2681,13 +2725,13 @@
     "regulatoryFindings": [
       "FDA-cleared K131395 is the clearance identifier recorded for 0634. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2018.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -2709,11 +2753,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (standard)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -2726,20 +2770,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K131395",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K131395",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://greatergoods.com/service/0634",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/smart-pro-series-blood-pressure-monitor",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer specifications and the ValidateBP exact-model listing. Score stays withheld: method gate not met. Affiliate weight remains zero."
     ]
   },
   {
@@ -4525,14 +4580,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "OMRON BP5000 (Iron) is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K133379. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "OMRON BP5000 (Iron) is a United States upper-arm home blood-pressure monitor, FDA-cleared K133379. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/omron-bp5000-real-use.jpg",
       "width": 1152,
@@ -4616,13 +4671,13 @@
     "regulatoryFindings": [
       "FDA-cleared K133379 is the clearance identifier recorded for BP5000 (Iron). FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2013.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -4644,11 +4699,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (included); 17–22 cm (optional)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -4661,20 +4716,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K133379",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K133379",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://omronhealthcare.com/storage/pdfs/iron-upper-arm-blood-pressure-monitor-bp5000-im-en_fr_3145996-0b.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/iron-upper-arm-blood-pressure-monitor",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -5010,14 +5076,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "OMRON BP5250 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K133383. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "OMRON BP5250 is a United States upper-arm home blood-pressure monitor, FDA-cleared K133383. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/omron-bp5250-real-use.jpg",
       "width": 1152,
@@ -5101,13 +5167,13 @@
     "regulatoryFindings": [
       "FDA-cleared K133383 is the clearance identifier recorded for BP5250. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2009.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -5129,11 +5195,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (included)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -5146,20 +5212,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K133383",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K133383",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://omronhealthcare.com/storage/pdfs/silver-upper-arm-blood-pressure-monitor-bp5250-im-en_3787143-0d.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/silver-wirelesshem-7320",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -5494,14 +5571,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "OMRON BP5350 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K133379. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "OMRON BP5350 is a United States upper-arm home blood-pressure monitor, FDA-cleared K133379. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/omron-bp5350-real-use.jpg",
       "width": 1152,
@@ -5585,13 +5662,13 @@
     "regulatoryFindings": [
       "FDA-cleared K133379 is the clearance identifier recorded for BP5350. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2009.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -5613,11 +5690,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (included); 17–22 cm (optional)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -5630,20 +5707,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K133379",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K133379",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://omronhealthcare.com/storage/pdfs/gold-upper-arm-blood-pressure-monitor-bp5350-im-en_3787131-6d.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/gold-upper-armhem-7311",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -5655,14 +5743,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "OMRON BP5360 (Gold) is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared (De Novo DEN230076). MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "OMRON BP5360 (Gold) is a United States upper-arm home blood-pressure monitor, FDA-cleared DEN230076. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/omron-bp5360-real-use.jpg",
       "width": 1152,
@@ -5746,13 +5834,13 @@
     "regulatoryFindings": [
       "FDA-cleared (De Novo DEN230076) is the clearance identifier recorded for BP5360 (Gold). FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2009.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -5774,11 +5862,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (included); 17–22 cm (optional)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -5791,20 +5879,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record DEN230076",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?ID=DEN230076",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://omronhealthcare.com/storage/pdfs/3146816-1d_bp5360_hem-7377t1-zaz_im_en_frca_web.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/gold-upper-arm-blood-pressure-monitor",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -5816,14 +5915,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "OMRON BP5450 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K133379. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "OMRON BP5450 is a United States upper-arm home blood-pressure monitor, FDA-cleared K133379. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/omron-bp5450-real-use.jpg",
       "width": 1152,
@@ -5907,13 +6006,13 @@
     "regulatoryFindings": [
       "FDA-cleared K133379 is the clearance identifier recorded for BP5450. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2009.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -5935,11 +6034,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (included); 17–22 cm (optional)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -5952,20 +6051,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K133379",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K133379",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://omronhealthcare.com/storage/pdfs/platinum-upper-arm-blood-pressure-monitor-bp5450-im-en_3787137-5d.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/platinum-upper-armhem-7311",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -5977,14 +6087,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "OMRON BP5465 (Platinum) is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared (De Novo DEN230076). MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "OMRON BP5465 (Platinum) is a United States upper-arm home blood-pressure monitor, FDA-cleared DEN230076. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/omron-bp5465-real-use.jpg",
       "width": 1152,
@@ -6068,13 +6178,13 @@
     "regulatoryFindings": [
       "FDA-cleared (De Novo DEN230076) is the clearance identifier recorded for BP5465 (Platinum). FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2009.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -6096,11 +6206,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (included); 17–22 cm (optional)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -6113,20 +6223,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record DEN230076",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?ID=DEN230076",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://omronhealthcare.com/storage/pdfs/3146838-2d_bp5465_hem-7382t1-azaz_im_en_frca_web.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/platinum-upper-arm-blood-pressure-monitor",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -6138,14 +6259,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "OMRON BP7350 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K133383. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "OMRON BP7350 is a United States upper-arm home blood-pressure monitor, FDA-cleared K133383. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/omron-bp7350-real-use.jpg",
       "width": 1152,
@@ -6229,13 +6350,13 @@
     "regulatoryFindings": [
       "FDA-cleared K133383 is the clearance identifier recorded for BP7350. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2009.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -6257,11 +6378,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (included)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -6274,20 +6395,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K133383",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K133383",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://omronhealthcare.com/storage/pdfs/7-series-wireless-upper-arm-blood-pressure-monitor-bp7350-im-en_3608691-7j.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/7-series-wirelesshem-7320",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -6460,14 +6592,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "OMRON BP7450 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K133383. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "OMRON BP7450 is a United States upper-arm home blood-pressure monitor, FDA-cleared K133383. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/omron-bp7450-real-use.jpg",
       "width": 1152,
@@ -6551,13 +6683,13 @@
     "regulatoryFindings": [
       "FDA-cleared K133383 is the clearance identifier recorded for BP7450. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2009.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -6579,11 +6711,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (included)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -6596,20 +6728,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K133383",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K133383",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://omronhealthcare.com/storage/pdfs/10-series-wireless-upper-arm-blood-pressure-monitor-bp7450-im-en_3608646-1j.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/10-series-wirelesshem-7320",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -6621,14 +6764,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "OMRON BP7465 (10 Series) is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared (De Novo DEN230076). MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "OMRON BP7465 (10 Series) is a United States upper-arm home blood-pressure monitor, FDA-cleared DEN230076. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/omron-bp7465-real-use.jpg",
       "width": 1152,
@@ -6712,13 +6855,13 @@
     "regulatoryFindings": [
       "FDA-cleared (De Novo DEN230076) is the clearance identifier recorded for BP7465 (10 Series). FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2009.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -6740,11 +6883,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (included)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -6757,20 +6900,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record DEN230076",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?ID=DEN230076",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://omronhealthcare.com/storage/pdfs/3146827-7d_bp7465_hem-7381t1-az_im_en_web.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/10-series-upper-arm-blood-pressure-monitor",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -6782,14 +6936,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "OMRON BP7900 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K182579. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "OMRON BP7900 is a United States upper-arm home blood-pressure monitor, FDA-cleared K182579. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/omron-bp7900-real-use.jpg",
       "width": 1152,
@@ -6873,13 +7027,13 @@
     "regulatoryFindings": [
       "FDA-cleared K182579 is the clearance identifier recorded for BP7900. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2009.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -6901,11 +7055,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (included); 17–22 cm (optional)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -6918,20 +7072,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K182579",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K182579",
         "sourceClass": "A"
+      },
+      {
+        "label": "Manufacturer instruction manual / guide",
+        "url": "https://omronhealthcare.com/storage/pdfs/complete-blood-pressure-monitor-ekg-bp7900-im-en_4602711-0e.pdf",
+        "sourceClass": "C"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/completetm-wireless-hem-7311",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -8232,14 +8397,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "Welch Allyn Home 1700 Series is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K161886. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "Welch Allyn Home 1700 Series is a United States upper-arm home blood-pressure monitor, FDA-cleared K161886. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/welch-allyn-home-1700-real-use.jpg",
       "width": 1152,
@@ -8323,13 +8488,13 @@
     "regulatoryFindings": [
       "FDA-cleared K161886 is the clearance identifier recorded for Home 1700 Series. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2013.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -8351,11 +8516,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (standard); 15–24 cm (XS); 40–54 cm (XL)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented). Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -8368,20 +8533,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K161886",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K161886",
         "sourceClass": "A"
+      },
+      {
+        "label": "FDA 510(k) summary",
+        "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf16/K161886.pdf",
+        "sourceClass": "A"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/welch-allyn-home-blood-pressure-monitor-1700-seriesh-bp100sbp",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {
@@ -8876,14 +9052,14 @@
     "category": "Upper-arm blood-pressure monitor",
     "evidenceCutoff": "October 28, 2026",
     "publishedOn": "2026-10-28",
-    "directAnswer": "Withings BPM Connect WPM05 is published as a United States upper-arm home blood-pressure monitor. The clearance identifier is FDA-cleared K223374. MDRank Score and category rank are withheld because exact-model validation evidence is insufficient for rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Low and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
+    "directAnswer": "Withings BPM Connect WPM05 is a United States upper-arm home blood-pressure monitor, FDA-cleared K223374. No exact-model validation study is credited; a ValidateBP listing is cited for context only. Manufacturer or FDA documents state the oscillometric method and the cuff range. The status row shows its MDRank Score and category rank under rubric upper-arm-home-bp-v1.0.0. Evidence Confidence stays Moderate and is separate from the score. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
     "disposition": "accepted-evidence-dossier",
-    "evidenceConfidence": "Low",
+    "evidenceConfidence": "Moderate",
     "publicExperienceConfidence": "Insufficient",
     "testingStatus": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.",
-    "scoreStatus": "withheld",
-    "rankStatus": "withheld",
-    "scoreReason": "Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays Low and separate.",
+    "scoreStatus": "published",
+    "rankStatus": "published",
+    "scoreReason": "Scored from documented exact-model evidence under rubric upper-arm-home-bp-v1.0.0. No exact-model validation is credited, so the validation dimension scores as absent; a ValidateBP listing is cited for context only. Missing warranty and positioning-resistance facts shrink toward neutral and are not filled in. Category rank is among scored-eligible public dossiers only and is not a market-wide best list. Evidence Confidence is separate.",
     "illustrativePhoto": {
       "src": "/images/dossiers/withings-bpm-connect-wpm05-real-use.jpg",
       "width": 1152,
@@ -8967,13 +9143,13 @@
     "regulatoryFindings": [
       "FDA-cleared K223374 is the clearance identifier recorded for BPM Connect WPM05. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.",
       "The clearance identifier is cited from the FDA database record linked in the evidence ledger.",
-      "No separate exact-model validation study is attached to this clearance identifier in the published packet.",
-      "This packet does not claim the result of an openFDA recall or enforcement query."
+      "This packet does not claim the result of an openFDA recall or enforcement query.",
+      "The ValidateBP listing is cited for context and is not credited as validation."
     ],
     "validationFindings": [
-      "No peer-reviewed exact-model validation study is recorded in this published packet.",
-      "MDRank has not performed hands-on or laboratory testing of this monitor.",
-      "Family-level records are not transferred as exact-model validation."
+      "No exact-model validation study is credited in this packet.",
+      "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2013.. Cited as context only; MDRank does not credit this listing as validation.",
+      "MDRank has not performed hands-on or laboratory testing of this monitor."
     ],
     "hsaFsa": {
       "status": "Not documented in this published packet",
@@ -8995,11 +9171,11 @@
       },
       {
         "label": "Cuff range",
-        "value": "Not documented in this published packet"
+        "value": "22–42 cm (integrated)"
       },
       {
         "label": "Measurement specifications",
-        "value": "Not documented in this published packet. MDRank did not measure this monitor."
+        "value": "Oscillometric method (manufacturer/FDA-documented), pressure accuracy ±3 mmHg or 2%, pulse accuracy ±5%. Manufacturer- or FDA-stated; MDRank did not measure this monitor."
       }
     ],
     "personaFit": [
@@ -9012,20 +9188,31 @@
     ],
     "limitations": [
       "MDRank did not perform hands-on, laboratory, or independent performance testing.",
-      "Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.",
       "Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test."
+      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No exact-model validation is credited; the validation dimension scores as absent. Warranty and positioning facts are not documented and score at neutral."
     ],
     "sources": [
       {
         "label": "FDA record K223374",
         "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K223374",
         "sourceClass": "A"
+      },
+      {
+        "label": "FDA 510(k) summary",
+        "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K223374.pdf",
+        "sourceClass": "A"
+      },
+      {
+        "label": "ValidateBP (AMA/AHA Validated Device Listing) exact-model page",
+        "url": "https://www.validatebp.org/device/withings-bpm-connect",
+        "sourceClass": "A"
       }
     ],
     "changeLog": [
-      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero."
+      "October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.",
+      "October 29, 2026: Added manufacturer/FDA specification sources; ValidateBP listing cited for context, not credited as validation. Score and rank published under the unchanged rubric. Affiliate weight remains zero."
     ]
   },
   {

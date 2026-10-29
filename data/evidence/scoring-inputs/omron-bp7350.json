@@ -28,23 +28,49 @@
     "namesExactModel": false,
     "peerReviewed": false,
     "namedProtocolPass": false,
-    "fundingIndependence": "not-applicable"
+    "fundingIndependence": "not-applicable",
+    "basis": "ValidateBP listing is cited as context only and is not credited as validation (owner decision 2026-10-29)."
   },
-  "measurement": {},
+  "measurement": {
+    "method": "oscillometric",
+    "pressureAccuracyBand": "±3 mmHg",
+    "pulseAccuracyBand": "±5%",
+    "positioningResistanceDocumented": null,
+    "positioningEvidenceIds": [],
+    "techniqueResistanceDocumented": null,
+    "techniqueEvidenceIds": []
+  },
   "fit": {
-    "rangesCm": []
+    "rangesCm": [
+      {
+        "min": 22,
+        "max": 42,
+        "packageId": "included"
+      }
+    ]
   },
-  "usability": {},
-  "dataHandling": {},
-  "ownership": {},
+  "usability": {
+    "displayDocumented": true,
+    "onDeviceReadingReview": null
+  },
+  "dataHandling": {
+    "memoryDocumented": true,
+    "syncDocumented": true,
+    "privacyPolicyCited": null
+  },
+  "ownership": {
+    "powerDocumented": true,
+    "warrantyDocumented": null,
+    "cuffService": null
+  },
   "recall": {},
   "conflicts": [],
   "publicExperience": {
     "licensedExactModelCorpus": false
   },
   "evidenceDates": {
-    "criticalRetrievedAt": "2026-10-28",
-    "asOf": "2026-10-28"
+    "criticalRetrievedAt": "2026-10-29",
+    "asOf": "2026-10-29"
   },
   "primarySources": [
     {
@@ -52,6 +78,18 @@
       "sourceClass": "A",
       "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K133383",
       "retrievedAt": "2026-10-28"
+    },
+    {
+      "id": "manufacturer-manual",
+      "sourceClass": "C",
+      "url": "https://omronhealthcare.com/storage/pdfs/7-series-wireless-upper-arm-blood-pressure-monitor-bp7350-im-en_3608691-7j.pdf",
+      "retrievedAt": "2026-10-29"
+    },
+    {
+      "id": "validatebp-listing",
+      "sourceClass": "A",
+      "url": "https://www.validatebp.org/device/7-series-wirelesshem-7320",
+      "retrievedAt": "2026-10-29"
     }
   ],
   "materialClaims": [
@@ -60,6 +98,34 @@
       "text": "The published packet records FDA-cleared K133383 for this exact model. Clearance is not accuracy proof.",
       "evidenceIds": [
         "fda-clearance"
+      ]
+    },
+    {
+      "id": "method-and-bands",
+      "text": "The OMRON instruction manual (BP7350 HEM-7340T-Z) states the oscillometric measurement method and pressure accuracy ±3 mmHg, pulse ±5% of display reading.",
+      "evidenceIds": [
+        "manufacturer-manual"
+      ]
+    },
+    {
+      "id": "cuff-ranges",
+      "text": "The manual lists the applicable cuff circumference: 22–42 cm (included cuff).",
+      "evidenceIds": [
+        "manufacturer-manual"
+      ]
+    },
+    {
+      "id": "display-power-memory",
+      "text": "The manual lists an LCD digital display and power from 4 AA batteries or an AC adapter. Memory: stores up to 60 readings per user. Bluetooth Low Energy transmission is listed.",
+      "evidenceIds": [
+        "manufacturer-manual"
+      ]
+    },
+    {
+      "id": "validation-listing",
+      "text": "ValidateBP lists this exact model against ANSI/AAMI/ISO 81060-2:2009.. Cited as context only; MDRank does not credit this listing as validation.",
+      "evidenceIds": [
+        "validatebp-listing"
       ]
     }
   ]
