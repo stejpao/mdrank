@@ -1084,6 +1084,72 @@
       "dimensionNotes": []
     },
     {
+      "slug": "aile-fc-bp120",
+      "productId": "aile-fc-bp120",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K220113",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "aile-x11",
+      "productId": "aile-x11",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K221040",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "aile-x5",
+      "productId": "aile-x5",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K221040",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
       "slug": "alcedo-ae176",
       "productId": "alcedo-ae176",
       "eligible": false,
@@ -1200,6 +1266,116 @@
       "dimensionNotes": []
     },
     {
+      "slug": "andesfit-a02-seb",
+      "productId": "andesfit-a02-seb",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K241129",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "aqeso-u83z",
+      "productId": "aqeso-u83z",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K243115",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "aqeso-u87e",
+      "productId": "aqeso-u87e",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K243115",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "avenra-ch-s691l",
+      "productId": "avenra-ch-s691l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "bblove-aes-u622",
+      "productId": "bblove-aes-u622",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K221913",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
       "slug": "beat-f1701t",
       "productId": "beat-f1701t",
       "eligible": false,
@@ -1215,6 +1391,52 @@
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K220886",
       "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "bronini-ch-s693l",
+      "productId": "bronini-ch-s693l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "byflo-fc-bp121",
+      "productId": "byflo-fc-bp121",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.36,
+      "clearanceLabel": "FDA-cleared K220113",
+      "failedGates": [
+        "identity-resolved",
+        "family-validation-not-exact",
         "category-upper-arm-home-bp"
       ],
       "rubricVersion": "upper-arm-home-bp-v1.0.0",
@@ -1244,6 +1466,50 @@
       "dimensionNotes": []
     },
     {
+      "slug": "doctorose-ch-s691l",
+      "productId": "doctorose-ch-s691l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "dosiheel-fc-bp127",
+      "productId": "dosiheel-fc-bp127",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K252769",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
       "slug": "ease-b21ht",
       "productId": "ease-b21ht",
       "eligible": false,
@@ -1261,6 +1527,28 @@
       "failedGates": [
         "identity-resolved",
         "family-validation-not-exact",
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "easehealthcare-fc-bp130",
+      "productId": "easehealthcare-fc-bp130",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K242721",
+      "failedGates": [
         "category-upper-arm-home-bp"
       ],
       "rubricVersion": "upper-arm-home-bp-v1.0.0",
@@ -1382,6 +1670,50 @@
       "dimensionNotes": []
     },
     {
+      "slug": "gymaora-u81x",
+      "productId": "gymaora-u81x",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K243115",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "healthsmart-dbp-1307",
+      "productId": "healthsmart-dbp-1307",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K200649",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
       "slug": "homedics-bpa-800-wt",
       "productId": "homedics-bpa-800-wt",
       "eligible": false,
@@ -1396,6 +1728,72 @@
       "evidenceConfidence": "Low",
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K191673",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "huangirl-fc-bp130",
+      "productId": "huangirl-fc-bp130",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K242721",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "hurra-ch-s693l",
+      "productId": "hurra-ch-s693l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "ideerfit-ch-s691l",
+      "productId": "ideerfit-ch-s691l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
       "failedGates": [
         "category-upper-arm-home-bp"
       ],
@@ -1494,6 +1892,120 @@
       "dimensionNotes": []
     },
     {
+      "slug": "iproven-bpm-35",
+      "productId": "iproven-bpm-35",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.36,
+      "clearanceLabel": "FDA-cleared K240832",
+      "failedGates": [
+        "identity-resolved",
+        "family-validation-not-exact",
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "jogfit-ch-s691l",
+      "productId": "jogfit-ch-s691l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "lineshare-fc-bp121",
+      "productId": "lineshare-fc-bp121",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.36,
+      "clearanceLabel": "FDA-cleared K220113",
+      "failedGates": [
+        "identity-resolved",
+        "family-validation-not-exact",
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "lineshare-fc-bp127",
+      "productId": "lineshare-fc-bp127",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K252769",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "longevousioo-aes-u382",
+      "productId": "longevousioo-aes-u382",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K231050",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
       "slug": "lovia-b66t",
       "productId": "lovia-b66t",
       "eligible": false,
@@ -1508,6 +2020,72 @@
       "evidenceConfidence": "Low",
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K172171",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "maguja-mj1d",
+      "productId": "maguja-mj1d",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K253142",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "maguja-rn-032a",
+      "productId": "maguja-rn-032a",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K193456",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "mearsun-ch-s693l",
+      "productId": "mearsun-ch-s693l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
       "failedGates": [
         "category-upper-arm-home-bp"
       ],
@@ -1552,6 +2130,52 @@
       "evidenceConfidence": "Low",
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K200738",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "movella-fc-bp103",
+      "productId": "movella-fc-bp103",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.36,
+      "clearanceLabel": "FDA-cleared K220113",
+      "failedGates": [
+        "identity-resolved",
+        "family-validation-not-exact",
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "neubutyan-ch-s693l",
+      "productId": "neubutyan-ch-s693l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
       "failedGates": [
         "category-upper-arm-home-bp"
       ],
@@ -1769,6 +2393,52 @@
       "dimensionNotes": []
     },
     {
+      "slug": "ourearth-fc-bp121",
+      "productId": "ourearth-fc-bp121",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.36,
+      "clearanceLabel": "FDA-cleared K220113",
+      "failedGates": [
+        "identity-resolved",
+        "family-validation-not-exact",
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "ownqobe-a02-be",
+      "productId": "ownqobe-a02-be",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K241129",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
       "slug": "paramed-b22s",
       "productId": "paramed-b22s",
       "eligible": false,
@@ -1837,6 +2507,28 @@
       "dimensionNotes": []
     },
     {
+      "slug": "rotopata-u87e",
+      "productId": "rotopata-u87e",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K243115",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
       "slug": "saker-u90b",
       "productId": "saker-u90b",
       "eligible": false,
@@ -1852,6 +2544,52 @@
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K241007",
       "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "savvybloom-ch-b606",
+      "productId": "savvybloom-ch-b606",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "sensifine-fc-bp103",
+      "productId": "sensifine-fc-bp103",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.36,
+      "clearanceLabel": "FDA-cleared K220113",
+      "failedGates": [
+        "identity-resolved",
+        "family-validation-not-exact",
         "category-upper-arm-home-bp"
       ],
       "rubricVersion": "upper-arm-home-bp-v1.0.0",
@@ -1947,6 +2685,74 @@
       "dimensionNotes": []
     },
     {
+      "slug": "vieykea-u83e",
+      "productId": "vieykea-u83e",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.36,
+      "clearanceLabel": "FDA-cleared K243115",
+      "failedGates": [
+        "identity-resolved",
+        "family-validation-not-exact",
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "vigorkeeper-ch-b606",
+      "productId": "vigorkeeper-ch-b606",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "wearwiz-ch-s693l",
+      "productId": "wearwiz-ch-s693l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
       "slug": "wellue-bp2a",
       "productId": "wellue-bp2a",
       "eligible": false,
@@ -1961,6 +2767,74 @@
       "evidenceConfidence": "Low",
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K193348",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "wellue-ch-s693l",
+      "productId": "wellue-ch-s693l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "wellwink-c06t",
+      "productId": "wellwink-c06t",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Family-level validation is not exact-model validation, so this dossier stays unranked.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.36,
+      "clearanceLabel": "FDA-cleared K233146",
+      "failedGates": [
+        "identity-resolved",
+        "family-validation-not-exact",
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "weony-ch-s691l",
+      "productId": "weony-ch-s691l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
       "failedGates": [
         "category-upper-arm-home-bp"
       ],
@@ -2005,6 +2879,28 @@
       "evidenceConfidence": "Low",
       "evidenceConfidenceNumeric": 0.47,
       "clearanceLabel": "FDA-cleared K243115",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "yonlo-a02-se",
+      "productId": "yonlo-a02-se",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K241129",
       "failedGates": [
         "category-upper-arm-home-bp"
       ],

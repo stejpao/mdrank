@@ -50,7 +50,7 @@ const B1_PASS_17_ELIGIBLE = [
 test('seed scoring inputs exclude affiliate, ASIN, merchant, TrueVitals, and Unredacted fields', () => {
   const held = JSON.parse(fs.readFileSync('web/src/data/heldPublishDossiers.json', 'utf8'));
   const slugs = inputs.map((input) => input.slug).sort();
-  assert.equal(slugs.length, 60);
+  assert.equal(slugs.length, 100);
   assert.ok(slugs.includes('ihealth-track-kn-550bt'));
   assert.ok(slugs.includes('omron-evolv-bp7000'));
   assert.deepEqual(

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "productId": "ownqobe-a02-be",
+  "slug": "ownqobe-a02-be",
+  "brand": "OWNQOBE",
+  "exactModel": "A02-BE",
+  "market": "US",
+  "formFactor": "upper-arm",
+  "identity": {
+    "status": "resolved"
+  },
+  "testingStatus": "public-evidence-only",
+  "testingLanguage": {
+    "handsOnClaimWithoutProtocol": false
+  },
+  "disclosureStatus": "independent-editorial",
+  "publication": {
+    "alreadyPublic": false,
+    "humanPublish": true,
+    "url": "/devices/ownqobe-a02-be"
+  },
+  "regulatory": {
+    "clearanceType": "fda-510k",
+    "clearanceNumber": "K241129"
+  },
+  "validation": {
+    "scope": "none",
+    "namesExactModel": false,
+    "peerReviewed": false,
+    "namedProtocolPass": false,
+    "fundingIndependence": "not-applicable"
+  },
+  "measurement": {},
+  "fit": {
+    "rangesCm": []
+  },
+  "usability": {},
+  "dataHandling": {},
+  "ownership": {},
+  "recall": {},
+  "conflicts": [],
+  "publicExperience": {
+    "licensedExactModelCorpus": false
+  },
+  "evidenceDates": {
+    "criticalRetrievedAt": "2026-11-03",
+    "asOf": "2026-11-03"
+  },
+  "primarySources": [
+    {
+      "id": "fda-clearance",
+      "sourceClass": "A",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K241129.pdf",
+      "retrievedAt": "2026-11-03"
+    }
+  ],
+  "materialClaims": [
+    {
+      "id": "clearance",
+      "text": "The published packet records FDA-cleared K241129 for this exact model. Clearance is not accuracy proof.",
+      "evidenceIds": [
+        "fda-clearance"
+      ]
+    }
+  ]
+}

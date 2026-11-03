@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "productId": "lineshare-fc-bp127",
+  "slug": "lineshare-fc-bp127",
+  "brand": "Lineshare",
+  "exactModel": "FC-BP127",
+  "market": "US",
+  "formFactor": "upper-arm",
+  "identity": {
+    "status": "resolved"
+  },
+  "testingStatus": "public-evidence-only",
+  "testingLanguage": {
+    "handsOnClaimWithoutProtocol": false
+  },
+  "disclosureStatus": "independent-editorial",
+  "publication": {
+    "alreadyPublic": false,
+    "humanPublish": true,
+    "url": "/devices/lineshare-fc-bp127"
+  },
+  "regulatory": {
+    "clearanceType": "fda-510k",
+    "clearanceNumber": "K252769"
+  },
+  "validation": {
+    "scope": "none",
+    "namesExactModel": false,
+    "peerReviewed": false,
+    "namedProtocolPass": false,
+    "fundingIndependence": "not-applicable"
+  },
+  "measurement": {},
+  "fit": {
+    "rangesCm": []
+  },
+  "usability": {},
+  "dataHandling": {},
+  "ownership": {},
+  "recall": {},
+  "conflicts": [],
+  "publicExperience": {
+    "licensedExactModelCorpus": false
+  },
+  "evidenceDates": {
+    "criticalRetrievedAt": "2026-11-03",
+    "asOf": "2026-11-03"
+  },
+  "primarySources": [
+    {
+      "id": "fda-clearance",
+      "sourceClass": "A",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252769.pdf",
+      "retrievedAt": "2026-11-03"
+    }
+  ],
+  "materialClaims": [
+    {
+      "id": "clearance",
+      "text": "The published packet records FDA-cleared K252769 for this exact model. Clearance is not accuracy proof.",
+      "evidenceIds": [
+        "fda-clearance"
+      ]
+    }
+  ]
+}

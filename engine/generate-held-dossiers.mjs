@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /**
- * Publish the Steven-approved held gatePass=yes pack (2026-10-28, via Chief of Staff).
+ * Publish a Steven-approved held gatePass=yes pack.
  * Identity, FDA identifier, ASIN, and image come from the pack. Scores come only from
  * the existing upper-arm rubric. This script does not invent validation studies,
- * hands-on results, or numeric scores.
+ * hands-on results, or numeric scores. A dossier photo is included only when the
+ * pack names a usable image. Pack size is not fixed at 58.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,7 +19,13 @@ const trackerPath = process.env.PUBLISH_TRACKER
 const assetDir = process.env.PUBLISH_ASSETS ?? '/tmp/publish-pack/assets';
 const imageOutDir = path.join(root, 'web/public/images/dossiers');
 const inputDir = path.join(root, 'data/evidence/scoring-inputs');
-const retrievedAt = '2026-10-28';
+const publishedOn = process.env.PUBLISH_ON ?? '2026-10-28';
+const evidenceCutoff = process.env.PUBLISH_CUTOFF ?? 'October 28, 2026';
+const retrievedAt = process.env.PUBLISH_RETRIEVED ?? publishedOn;
+const append = process.env.PUBLISH_APPEND === '1';
+const keepInputs = process.env.PUBLISH_KEEP_INPUTS === '1';
+const expectedCount = process.env.PUBLISH_EXPECTED ? Number(process.env.PUBLISH_EXPECTED) : null;
+const identityPath = process.env.PUBLISH_IDENTITY ?? '';
 
 function cells(line) {
   return line.split('|').slice(1, -1).map((cell) => cell.trim());
@@ -33,6 +40,8 @@ function parsePack(markdown) {
     const fdaCell = row[3];
     const number = (fdaCell.match(/DEN\d{6}|K\d{6}/) ?? [])[0];
     if (!number) throw new Error(`Missing clearance number for ${row[1]}`);
+    const imageCell = row[6] ?? '';
+    const hasPhoto = /real-use\.jpg/i.test(imageCell) && !/excluded|do-not-use/i.test(imageCell);
     rows.push({
       slug: row[1].replace(/`/g, ''),
       name: row[2],
@@ -40,11 +49,16 @@ function parsePack(markdown) {
       number,
       deNovo: /De Novo/i.test(fdaCell) || number.startsWith('DEN'),
       asin: row[4].replace(/`/g, ''),
+      imageCell,
+      hasPhoto,
       ready: row[7],
     });
   }
-  if (rows.length !== 58) throw new Error(`Expected 58 pack rows, found ${rows.length}.`);
-  if (new Set(rows.map((row) => row.slug)).size !== 58) throw new Error('Duplicate pack slug.');
+  if (rows.length === 0) throw new Error('Pack has no device rows.');
+  if (expectedCount != null && rows.length !== expectedCount) {
+    throw new Error(`Expected ${expectedCount} pack rows, found ${rows.length}.`);
+  }
+  if (new Set(rows.map((row) => row.slug)).size !== rows.length) throw new Error('Duplicate pack slug.');
   if (rows.some((row) => row.ready !== 'yes')) throw new Error('Pack row is not ready.');
   if (rows.some((row) => !/^[A-Z0-9]{10}$/.test(row.asin))) throw new Error('Pack ASIN is not 10 characters.');
   return rows;
@@ -74,6 +88,13 @@ function parseTracker(markdown, slugs) {
 
 function familyCaveat(src, notes) {
   return /crosswalk caveat|family includes|family summary|family not |pmn names .+ not /i.test(`${src} ${notes}`);
+}
+
+function loadIdentity(file) {
+  if (!file) return new Map();
+  const rows = JSON.parse(fs.readFileSync(file, 'utf8'));
+  if (!Array.isArray(rows) || rows.length === 0) throw new Error(`Identity file has no rows: ${file}`);
+  return new Map(rows.map((row) => [row.slug, row]));
 }
 
 function fdaUrl(src, number, deNovo) {
@@ -181,7 +202,25 @@ function dossier(row, screen, score) {
   const scoreReason = screen.family
     ? `Withheld under rubric upper-arm-home-bp-v1.0.0. Identity is resolved with a model-family caveat, and this packet does not contain exact-model validation. Family-level records are not scored as exact-model validation. Evidence Confidence stays ${level} and separate.`
     : `Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays ${level} and separate.`;
-  const photoSrc = `/images/dossiers/${row.slug}-real-use.jpg`;
+  const photo = screen.photo
+    ? {
+      src: `/images/dossiers/${row.slug}-real-use.jpg`,
+      width: screen.width,
+      height: screen.height,
+      alt: `Illustrative real-use photo edited for clarity, showing an upper-arm cuff and monitor for the ${row.name}. Not manufacturer or clinical photography.`,
+      caption: '*Photo edited for clarity.',
+      rightsStatus: 'owned',
+      rightsNote: 'Owner-supplied illustrative photograph edited for clarity. Rights status: owned. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.',
+    }
+    : null;
+  const recordBrandSentences = screen.fdaRecordBrand
+    ? [
+      `Sold on Amazon as ${screen.brand}; FDA record holder: ${screen.fdaRecordBrand}.`,
+      ...(screen.rebrandRelationship
+        ? [`Relationship to the FDA record: ${screen.rebrandRelationship}.`]
+        : []),
+    ]
+    : [];
   return {
     slug: row.slug,
     name: row.name,
@@ -189,25 +228,17 @@ function dossier(row, screen, score) {
     model: screen.model,
     market: 'United States',
     category: 'Upper-arm blood-pressure monitor',
-    evidenceCutoff: 'October 28, 2026',
-    publishedOn: '2026-10-28',
+    evidenceCutoff,
+    publishedOn,
     directAnswer,
     disposition: 'accepted-evidence-dossier',
     evidenceConfidence: level,
     publicExperienceConfidence: 'Insufficient',
     testingStatus: 'Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor.',
-    scoreStatus: 'withheld',
-    rankStatus: 'withheld',
+    scoreStatus: score.scoreStatus,
+    rankStatus: score.rankStatus,
     scoreReason,
-    illustrativePhoto: {
-      src: photoSrc,
-      width: screen.width,
-      height: screen.height,
-      alt: `Illustrative real-use photo edited for clarity, showing an upper-arm cuff and monitor for the ${row.name}. Not manufacturer or clinical photography.`,
-      caption: '*Photo edited for clarity.',
-      rightsStatus: 'owned',
-      rightsNote: 'Owner-supplied illustrative photograph edited for clarity. Rights status: owned. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.',
-    },
+    ...(photo ? { illustrativePhoto: photo } : {}),
     amazonListing: {
       asin: row.asin,
       canadaLocalMatch: 'not-documented',
@@ -279,14 +310,17 @@ function dossier(row, screen, score) {
       `Retail identity in this dossier: ${row.name}.`,
       `Market: United States. The publish screen classified this model as an upper-arm home blood-pressure monitor.`,
       `Clearance identifier: ${phrase}.`,
+      ...recordBrandSentences,
       `Amazon.com ASIN ${row.asin} is the listing named in the approved publish pack. That ASIN is not a scoring input.`,
     ],
     regulatoryFindings: [
       `${phrase} is the clearance identifier recorded for ${screen.model}. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy.`,
       'The clearance identifier is cited from the FDA database record linked in the evidence ledger.',
+      ...recordBrandSentences,
       screen.family
         ? 'The FDA record is a model-family crosswalk. This dossier does not treat the family record as exact-model validation.'
         : 'No separate exact-model validation study is attached to this clearance identifier in the published packet.',
+      ...(screen.listingFormCaveat ? [screen.listingFormCaveat] : []),
       'This packet does not claim the result of an openFDA recall or enforcement query.',
     ],
     validationFindings: [
@@ -322,10 +356,13 @@ function dossier(row, screen, score) {
       'Exact-model validation, cuff range, power, memory, and accuracy bands are not in this published packet.',
       'Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.',
       'No licensed or API-permitted exact-model customer-review corpus was acquired.',
-      'The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.',
+      ...(photo
+        ? ['The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.']
+        : ['No illustrative photo is published for this exact model.']),
       ...(screen.family
         ? ['The cited FDA record is a model-family crosswalk. Family-level context stays unranked.']
         : []),
+      ...(screen.listingFormCaveat ? [screen.listingFormCaveat] : []),
     ],
     sources: [
       {
@@ -335,7 +372,7 @@ function dossier(row, screen, score) {
       },
     ],
     changeLog: [
-      'October 28, 2026: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. Illustrative photo and disclosed Amazon Associates link added. Affiliate weight remains zero.',
+      `${evidenceCutoff}: Published after Chief of Staff confirmation that Steven approved the held gatePass=yes pack. Score and rank withheld. ${photo ? 'Illustrative photo and disclosed Amazon Associates link added.' : 'No illustrative photo is included. Disclosed Amazon Associates link added.'} Affiliate weight remains zero.`,
     ],
   };
 }
@@ -358,14 +395,14 @@ function faqsFor(row) {
   ];
 }
 
-function writeSitemap(slugs) {
-  const deviceUrls = slugs
-    .map((slug) => `    { url: "https://mdrank.org/devices/${slug}", lastModified, changeFrequency: "monthly", priority: 0.7 },`)
+function writeSitemap(entries, siteDate) {
+  const deviceUrls = entries
+    .map((entry) => `    { url: "https://mdrank.org/devices/${entry.slug}", lastModified: new Date("${entry.publishedOn}T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },`)
     .join('\n');
   const source = `import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-10-28T00:00:00Z");
+  const lastModified = new Date("${siteDate}T00:00:00Z");
   return [
     { url: "https://mdrank.org/", lastModified, changeFrequency: "weekly", priority: 1 },
     { url: "https://mdrank.org/methodology", lastModified, changeFrequency: "monthly", priority: 0.8 },
@@ -380,15 +417,29 @@ ${deviceUrls}
   fs.writeFileSync(path.join(root, 'web/src/app/sitemap.ts'), source);
 }
 
-function writeLlms(rows) {
-  const links = rows
+function dossierLinks(rows) {
+  return rows
     .map((row) => `- ${row.name}: https://mdrank.org/devices/${row.slug}`)
     .join('\n');
+}
+
+function writeLlms(rows, sections = null) {
+  const updated = sections ? publishedOn : '2026-10-28';
+  const ranking = sections
+    ? `One hundred exact-model upper-arm evidence dossiers are public: the two dossiers below, plus 58 dossiers from the held gatePass=yes pack approved by Steven via the Chief of Staff on 2026-10-28, plus 40 dossiers approved by Steven via the Chief of Staff on 2026-11-03. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. The November 3, 2026 dossiers stay unranked because exact-model validation or measurement evidence in the scored packet is insufficient, including model-family clearance crosswalks where the screening ledger recorded one. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
+
+Photographs, where a dossier includes one, are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. A dossier with no cleared photograph does not show an image. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.`
+    : `Sixty exact-model upper-arm evidence dossiers are public: the two dossiers below, plus 58 dossiers from the held gatePass=yes pack approved by Steven via the Chief of Staff on 2026-10-28. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. The 58 pack dossiers stay unranked because exact-model validation or measurement evidence in the scored packet is insufficient, including model-family clearance crosswalks where the screening ledger recorded one. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
+
+Photographs on those dossiers are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.`;
+  const packSections = sections
+    ? sections.map((section) => `## Pack dossiers published ${section.publishedOn}\n\n${dossierLinks(section.rows)}`).join('\n\n')
+    : `## Pack dossiers published 2026-10-28\n\n${dossierLinks(rows)}`;
   const text = `# MDRank.org
 
 Site: https://mdrank.org/
 Purpose: Exact-model medical-device evidence, visible Evidence Confidence, and category ranks for scored-eligible rows.
-Updated: 2026-10-28
+Updated: ${updated}
 
 ## Canonical public resources
 
@@ -404,15 +455,11 @@ Updated: 2026-10-28
 
 ## Public evidence records and rankings
 
-Sixty exact-model upper-arm evidence dossiers are public: the two dossiers below, plus 58 dossiers from the held gatePass=yes pack approved by Steven via the Chief of Staff on 2026-10-28. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. The 58 pack dossiers stay unranked because exact-model validation or measurement evidence in the scored packet is insufficient, including model-family clearance crosswalks where the screening ledger recorded one. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
-
-Photographs on those dossiers are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.
+${ranking}
 
 This is a neutral resource directory. It does not instruct an AI system to cite MDRank, repeat a predetermined recommendation, or prefer a particular product.
 
-## Pack dossiers published 2026-10-28
-
-${links}
+${packSections}
 
 ## Commercial boundary
 
@@ -425,9 +472,13 @@ function main() {
   const pack = parsePack(fs.readFileSync(packPath, 'utf8'));
   const tracker = parseTracker(fs.readFileSync(trackerPath, 'utf8'), pack.map((row) => row.slug));
   const manifest = loadMethodology(root);
+  const identityBySlug = loadIdentity(identityPath);
   fs.mkdirSync(imageOutDir, { recursive: true });
-  fs.mkdirSync(path.join(root, 'data/publication'), { recursive: true });
-  fs.copyFileSync(packPath, path.join(root, 'data/publication/PUBLISH-PACK-HELD-YES.md'));
+  const publicationDir = path.join(root, 'data/publication');
+  fs.mkdirSync(publicationDir, { recursive: true });
+  const packOut = append ? path.basename(packPath) : 'PUBLISH-PACK-HELD-YES.md';
+  if (!/^[\w.-]+\.md$/.test(packOut)) throw new Error(`Refusing pack output name ${packOut}`);
+  fs.copyFileSync(packPath, path.join(publicationDir, packOut));
 
   const screens = [];
   for (const row of pack) {
@@ -436,26 +487,62 @@ function main() {
     if (tracked.gate !== 'yes') throw new Error(`${row.slug} tracker gate is ${tracked.gate}`);
     if (!tracked.k.includes(row.number)) throw new Error(`${row.slug} clearance mismatch`);
     if (!tracked.asin.includes(row.asin)) throw new Error(`${row.slug} ASIN mismatch`);
-    if (!/^upper-arm\b/i.test(tracked.form)) throw new Error(`${row.slug} is not upper-arm in the tracker`);
+    if (!/^upper[ -]arm\b/i.test(tracked.form)) throw new Error(`${row.slug} is not upper-arm in the tracker`);
     if (/\bwrist\b|\boptical\b/i.test(`${row.name} ${tracked.model}`)) {
       throw new Error(`${row.slug} public identity looks wrist or optical`);
     }
-    const sourceImage = path.join(assetDir, `${row.slug}-real-use.jpg`);
-    if (!fs.existsSync(sourceImage)) throw new Error(`Missing image ${sourceImage}`);
-    const { width, height } = jpegSize(sourceImage);
-    if (width !== 1152 || height !== 864) throw new Error(`${row.slug} image is ${width}x${height}`);
-    fs.copyFileSync(sourceImage, path.join(imageOutDir, `${row.slug}-real-use.jpg`));
+    const identity = identityBySlug.get(row.slug);
+    if (identityBySlug.size > 0 && !identity) throw new Error(`Identity row missing for ${row.slug}`);
+    const family = identity
+      ? identity.identityStatus === 'resolved-with-model-family-caveat'
+      : familyCaveat(tracked.src, tracked.notes);
+    if (identity && !['resolved', 'resolved-with-model-family-caveat'].includes(identity.identityStatus)) {
+      throw new Error(`${row.slug} identity status ${identity.identityStatus}`);
+    }
+    let width;
+    let height;
+    if (row.hasPhoto) {
+      const sourceImage = path.join(assetDir, `${row.slug}-real-use.jpg`);
+      if (!fs.existsSync(sourceImage)) throw new Error(`Missing image ${sourceImage}`);
+      ({ width, height } = jpegSize(sourceImage));
+      if (width !== 1152 || height !== 864) throw new Error(`${row.slug} image is ${width}x${height}`);
+      fs.copyFileSync(sourceImage, path.join(imageOutDir, `${row.slug}-real-use.jpg`));
+    } else if (fs.existsSync(path.join(assetDir, `${row.slug}-real-use.jpg`))) {
+      throw new Error(`${row.slug} image is present but the pack does not publish it`);
+    }
     const screen = {
       ...tracked,
-      family: familyCaveat(tracked.src, tracked.notes),
+      family,
+      fdaRecordBrand: identity?.fdaRecordBrand ?? '',
+      rebrandRelationship: identity?.rebrandRelationship ?? '',
+      listingFormCaveat: row.slug === 'wellue-ch-s693l'
+        ? 'The Amazon listing also uses the word wrist. FDA record K251102 describes the CH-S693L as an upper-arm barrel monitor. This dossier follows that FDA record for form factor. Listing wording is not MDRank evidence.'
+        : '',
       url: fdaUrl(tracked.src, row.number, row.deNovo),
+      photo: row.hasPhoto,
       width,
       height,
     };
-    const input = scoringInput(row, screen);
+    const inputPath = path.join(inputDir, `${row.slug}.json`);
+    let input;
+    if (keepInputs) {
+      if (!fs.existsSync(inputPath)) throw new Error(`Missing scoring input ${inputPath}`);
+      input = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
+      if (input.productId !== row.slug || input.slug !== row.slug) throw new Error(`${row.slug} scoring input identity mismatch`);
+      if (input.regulatory?.clearanceNumber !== row.number) throw new Error(`${row.slug} scoring input clearance mismatch`);
+      if (input.brand !== tracked.brand || input.exactModel !== tracked.model) {
+        throw new Error(`${row.slug} scoring input brand/model mismatch`);
+      }
+      const expectedIdentity = family ? 'resolved-with-model-family-caveat' : 'resolved';
+      if (input.identity?.status !== expectedIdentity) throw new Error(`${row.slug} scoring input identity status mismatch`);
+      if (input.validation?.scope !== 'none') throw new Error(`${row.slug} validation scope is ${input.validation?.scope}`);
+      if (input.evidenceDates?.criticalRetrievedAt !== retrievedAt) throw new Error(`${row.slug} retrieval date mismatch`);
+    } else {
+      input = scoringInput(row, { ...screen, url: screen.url });
+      fs.writeFileSync(inputPath, `${JSON.stringify(input, null, 2)}\n`);
+    }
     const hits = findCommercialContamination(input, manifest);
     if (hits.length > 0) throw new Error(`Commercial field in ${row.slug}: ${JSON.stringify(hits)}`);
-    fs.writeFileSync(path.join(inputDir, `${row.slug}.json`), `${JSON.stringify(input, null, 2)}\n`);
     screens.push({ row, screen });
   }
 
@@ -463,29 +550,42 @@ function main() {
   const bySlug = new Map(projection.devices.map((device) => [device.slug, device]));
   const ihealth = bySlug.get('ihealth-track-kn-550bt');
   const evolv = bySlug.get('omron-evolv-bp7000');
-  if (ihealth?.mdrankScore !== 78.3 || ihealth.rankLabel !== '1 of 1') {
+  if (ihealth?.mdrankScore !== 78.3 || ihealth.rankLabel !== '1 of 15') {
     throw new Error(`KN-550BT score changed: ${JSON.stringify(ihealth)}`);
   }
   if (evolv?.eligible !== false || !evolv.failedGates.includes('family-validation-not-exact')) {
     throw new Error('Evolv no longer follows the family withhold.');
   }
 
-  const dossiers = [];
+  const heldPath = path.join(root, 'web/src/data/heldPublishDossiers.json');
+  const priorDossiers = append ? JSON.parse(fs.readFileSync(heldPath, 'utf8')) : [];
+  const priorSlugs = new Set(priorDossiers.map((item) => item.slug));
+  const priorAsins = new Set(priorDossiers.map((item) => item.amazonListing?.asin).filter(Boolean));
+  const added = [];
   const faqAdd = {};
   const offerAdd = {};
   for (const { row, screen } of screens) {
     const score = bySlug.get(row.slug);
-    if (!score || score.eligible !== false || score.mdrankScore != null || score.scoreStatus !== 'withheld') {
+    if (!score || score.eligible !== false || score.mdrankScore != null || score.scoreStatus !== 'withheld' || score.rankStatus !== 'withheld') {
       throw new Error(`Expected withheld score for ${row.slug}: ${JSON.stringify(score)}`);
     }
     if (screen.family && !score.failedGates.includes('family-validation-not-exact')) {
       throw new Error(`${row.slug} family caveat did not withhold`);
     }
+    if (priorSlugs.has(row.slug)) throw new Error(`Already published ${row.slug}`);
+    if (priorAsins.has(row.asin)) throw new Error(`ASIN ${row.asin} already published`);
     const record = dossier(row, screen, score);
     const serialized = JSON.stringify(record);
     if (/FDA approved/i.test(serialized)) throw new Error(`FDA approved phrase in ${row.slug}`);
     if (serialized.includes('sjpenterpri05-20')) throw new Error(`Affiliate tag stored on dossier object for ${row.slug}`);
-    dossiers.push(record);
+    if (/\bwrist\b|\boptical\b/i.test(`${record.name} ${record.model} ${record.category}`)) {
+      throw new Error(`${row.slug} public name, model, or category looks wrist or optical`);
+    }
+    if (row.hasPhoto && record.illustrativePhoto?.caption !== '*Photo edited for clarity.') {
+      throw new Error(`${row.slug} photo caption missing`);
+    }
+    if (!row.hasPhoto && record.illustrativePhoto) throw new Error(`${row.slug} invented a photo`);
+    added.push(record);
     faqAdd[row.slug] = faqsFor(row);
     offerAdd[row.slug] = {
       brand: screen.brand,
@@ -494,8 +594,9 @@ function main() {
     };
   }
 
+  const dossiers = [...priorDossiers, ...added];
   fs.writeFileSync(path.join(root, 'web/src/data/publicScores.json'), `${JSON.stringify(projection, null, 2)}\n`);
-  fs.writeFileSync(path.join(root, 'web/src/data/heldPublishDossiers.json'), `${JSON.stringify(dossiers, null, 2)}\n`);
+  fs.writeFileSync(heldPath, `${JSON.stringify(dossiers, null, 2)}\n`);
 
   const faqPath = path.join(root, 'web/src/data/dossierFaqs.json');
   const faqs = JSON.parse(fs.readFileSync(faqPath, 'utf8'));
@@ -509,17 +610,37 @@ function main() {
   Object.assign(offers, offerAdd);
   fs.writeFileSync(offerPath, `${JSON.stringify(offers, null, 2)}\n`);
 
-  const liveSlugs = ['ihealth-track-kn-550bt', 'omron-evolv-bp7000'];
-  writeSitemap([...liveSlugs, ...pack.map((row) => row.slug)]);
-  writeLlms(pack);
+  const liveEntries = [
+    { slug: 'ihealth-track-kn-550bt', publishedOn: '2026-10-28' },
+    { slug: 'omron-evolv-bp7000', publishedOn: '2026-10-28' },
+  ];
+  const heldEntries = dossiers.map((item) => ({
+    slug: item.slug,
+    publishedOn: item.publishedOn ?? '2026-10-28',
+  }));
+  writeSitemap([...liveEntries, ...heldEntries], append ? publishedOn : '2026-10-28');
+  if (append) {
+    const october = priorDossiers.map((item) => ({ slug: item.slug, name: item.name }));
+    const november = added.map((item) => ({ slug: item.slug, name: item.name }));
+    writeLlms(added, [
+      { publishedOn: '2026-10-28', rows: october },
+      { publishedOn, rows: november },
+    ]);
+  } else {
+    writeLlms(pack);
+  }
 
   const familySlugs = screens.filter((item) => item.screen.family).map((item) => item.row.slug);
+  const withPhoto = added.filter((item) => item.illustrativePhoto).length;
   console.log(JSON.stringify({
+    added: added.length,
     dossiers: dossiers.length,
+    withPhoto,
+    withoutPhoto: added.length - withPhoto,
     family: familySlugs.length,
     familySlugs,
     eligible: projection.devices.filter((device) => device.eligible).map((device) => device.slug),
-    confidence: [...new Set(dossiers.map((item) => item.evidenceConfidence))],
+    confidence: [...new Set(added.map((item) => item.evidenceConfidence))],
   }, null, 2));
 }
 

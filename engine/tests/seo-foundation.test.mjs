@@ -88,7 +88,7 @@ test('FAQ score status follows the published rubric row', () => {
 
 test('dossier schema is Product, Brand, Offer, and FAQPage without ratings or prices', () => {
   const held = JSON.parse(fs.readFileSync('web/src/data/heldPublishDossiers.json', 'utf8'));
-  assert.equal(held.length, 58);
+  assert.equal(held.length, 98);
   assert.deepEqual(
     Object.keys(offers).sort(),
     ['ihealth-track-kn-550bt', 'omron-evolv-bp7000', ...held.map((dossier) => dossier.slug)].sort(),
@@ -97,8 +97,12 @@ test('dossier schema is Product, Brand, Offer, and FAQPage without ratings or pr
     assert.equal(offers[dossier.slug].asin, dossier.amazonListing.asin);
     assert.equal(offers[dossier.slug].brand, dossier.manufacturer);
     assert.equal(faqs[dossier.slug].length, 3);
-    assert.equal(dossier.illustrativePhoto.caption, '*Photo edited for clarity.');
-    assert.equal(fs.existsSync(`web/public${dossier.illustrativePhoto.src}`), true);
+    if (dossier.illustrativePhoto) {
+      assert.equal(dossier.illustrativePhoto.caption, '*Photo edited for clarity.');
+      assert.equal(fs.existsSync(`web/public${dossier.illustrativePhoto.src}`), true);
+    } else {
+      assert.equal(dossier.illustrativePhoto, undefined);
+    }
     assert.equal(JSON.stringify(dossier).includes('FDA approved'), false);
   }
   assert.match(amazon, /sjpenterpri05-20/);
