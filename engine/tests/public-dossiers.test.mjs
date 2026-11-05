@@ -26,13 +26,14 @@ test('only explicitly owner-approved accepted dossier slugs are published',()=>{
   const pack=[
     fs.readFileSync('data/publication/PUBLISH-PACK-HELD-YES.md','utf8'),
     fs.readFileSync('data/publication/PUBLISH-PACK-N40.md','utf8'),
+    fs.readFileSync('data/publication/PUBLISH-PACK-BATCH-TWO.md','utf8'),
   ].join('\n');
   assert.match(data,/slug: "ihealth-track-kn-550bt"/);
   assert.match(data,/slug: "omron-evolv-bp7000"/);
   assert.match(data,/heldPublishDossiers/);
   assert.equal((data.match(/\n    disposition: "accepted-evidence-dossier"/g)||[]).length,2);
-  assert.equal(held.length,98);
-  assert.equal(held.filter((dossier)=>dossier.disposition==='accepted-evidence-dossier').length,98);
+  assert.equal(held.length,100);
+  assert.equal(held.filter((dossier)=>dossier.disposition==='accepted-evidence-dossier').length,100);
   for(const dossier of held){
     assert.match(pack,new RegExp(`\`${dossier.slug}\``));
     const row=scores.devices.find((item)=>item.slug===dossier.slug);
@@ -86,24 +87,50 @@ test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
   const held=JSON.parse(fs.readFileSync('web/src/data/heldPublishDossiers.json','utf8'));
   const withPhoto=held.filter((dossier)=>dossier.illustrativePhoto);
   const withoutPhoto=held.filter((dossier)=>!dossier.illustrativePhoto);
-  assert.equal((data.match(/caption: "\*Photo edited for clarity\.",/g)||[]).length,2);
-  assert.equal(withPhoto.length,80);
-  assert.equal(withoutPhoto.length,18);
-  assert.equal(withPhoto.filter((dossier)=>dossier.illustrativePhoto?.caption==='*Photo edited for clarity.').length,withPhoto.length);
-  assert.equal((data.match(/Illustrative real-use photo edited for clarity/g)||[]).length,2);
-  assert.equal(withPhoto.filter((dossier)=>dossier.illustrativePhoto?.alt?.includes('Illustrative real-use photo edited for clarity')).length,withPhoto.length);
-  assert.match(data,/Not manufacturer or clinical photography/);
-  assert.equal((data.match(/rightsStatus: "owned",/g)||[]).length,2);
-  assert.equal(withPhoto.filter((dossier)=>dossier.illustrativePhoto?.rightsStatus==='owned').length,withPhoto.length);
+  const amazonCaption='Image: Amazon listing photo (manufacturer/seller)';
+  assert.match(data,/Image: Amazon listing photo \(manufacturer\/seller\)/);
+  assert.equal(withPhoto.length,94);
+  assert.equal(withoutPhoto.length,6);
+  assert.equal(withPhoto.filter((dossier)=>dossier.illustrativePhoto?.caption===amazonCaption).length,withPhoto.length);
+  assert.equal(withPhoto.filter((dossier)=>dossier.illustrativePhoto?.alt?.startsWith('Amazon listing photo of the ')).length,withPhoto.length);
+  assert.equal(withPhoto.filter((dossier)=>dossier.illustrativePhoto?.rightsNote?.includes('not clinical photography')).length,withPhoto.length);
+  assert.equal((data.match(/rightsStatus: "manufacturer-seller-listing"/g)||[]).length,1);
+  assert.equal(withPhoto.filter((dossier)=>dossier.illustrativePhoto?.rightsStatus==='manufacturer-seller-listing').length,withPhoto.length);
   assert.match(component,/\{photo \? \(/);
+  const photoLess=['and-ua-1020','microlife-bp3gx1-5x','microlife-watchbp-home-a','oklar-b19t','omron-bp7465','qardioarm2-a200'];
+  assert.deepEqual(withoutPhoto.map((dossier)=>dossier.slug).sort(),[...photoLess].sort());
   for(const dossier of withoutPhoto){
     assert.equal(dossier.illustrativePhoto,undefined,dossier.slug);
-    assert.equal(fs.existsSync(`web/public/images/dossiers/${dossier.slug}-real-use.jpg`),false,dossier.slug);
+    assert.equal(fs.existsSync(`web/public/images/dossiers/${dossier.slug}-amazon-main.jpg`),false,dossier.slug);
+  }
+  assert.match(component,/listingStatus === "not-found"/);
+  assert.match(fs.readFileSync('web/src/components/DossierSeo.tsx','utf8'),/listingStatus === "not-found"/);
+  const listingMissing=['and-ua-1020','microlife-watchbp-home-a','qardioarm2-a200'];
+  for(const slug of listingMissing){
+    const dossier=held.find((item)=>item.slug===slug);
+    assert.equal(dossier.amazonListing.listingStatus,'not-found',slug);
+    assert.equal(JSON.stringify(dossier).includes('amazon.com/dp/'),false,slug);
+  }
+  assert.equal(held.find((item)=>item.slug==='microlife-bp3gx1-5x').amazonListing.asin,'B00XQ24PJQ');
+  assert.equal(held.find((item)=>item.slug==='oklar-b19t').amazonListing.asin,'B0G71BG669');
+  assert.equal(held.find((item)=>item.slug==='microlife-bp3gx1-5x').amazonListing.listingStatus,'current');
+  assert.equal(held.find((item)=>item.slug==='oklar-b19t').amazonListing.listingStatus,'current');
+  for(const slug of ['fondcircle-aoj-30b','evcere-ch-s691l']){
+    const dossier=held.find((item)=>item.slug===slug);
+    assert.equal(dossier.scoreStatus,'withheld',slug);
+    assert.equal(dossier.rankStatus,'withheld',slug);
+    assert.equal(dossier.publishedOn,'2026-11-05',slug);
+    assert.equal(dossier.evidenceCutoff,'November 4, 2026',slug);
+    assert.match(dossier.exactIdentity.join('\n'),/Sold on Amazon as /);
+    assert.match(dossier.exactIdentity.join('\n'),/FDA record holder:/);
+    assert.equal(dossier.illustrativePhoto.caption,amazonCaption,slug);
+    assert.equal(dossier.amazonListing.canadaLocalMatch,'not-documented',slug);
+    assert.equal(JSON.stringify(dossier).includes('FDA approved'),false,slug);
   }
   assert.match(amazon,/sjpenterpri05-20/);
   assert.match(amazon,/https:\/\/www\.amazon\.com\/dp\/\$\{asin\}\?tag=\$\{AMAZON_ASSOCIATES_TAG\}/);
   assert.deepEqual([...data.matchAll(/asin: "([A-Z0-9]{10})"/g)].map((match)=>match[1]),['B01C5QS1T8','B01MRL790Q']);
-  assert.equal(new Set(held.map((dossier)=>dossier.amazonListing.asin)).size,98);
+  assert.equal(new Set(held.map((dossier)=>dossier.amazonListing.asin)).size,100);
   assert.match(component,/amazonAssociateUrl/);
   assert.match(component,/Affiliate disclosure/);
   assert.match(component,/may earn a commission/i);
@@ -124,7 +151,7 @@ test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
   assert.match(seo,/AmazonCanadaNote/);
   assert.equal((data.match(/canadaLocalMatch: "confirmed"/g)||[]).length,2);
   assert.doesNotMatch(data,/canadaLocalMatch: "not-documented"/);
-  assert.equal(held.filter((dossier)=>dossier.amazonListing?.canadaLocalMatch==='not-documented').length,98);
+  assert.equal(held.filter((dossier)=>dossier.amazonListing?.canadaLocalMatch==='not-documented').length,100);
   assert.equal(held.filter((dossier)=>dossier.amazonListing?.canadaLocalMatch==='confirmed').length,0);
   assert.doesNotMatch([data,component,canadaNote,seo,amazon].join('\n'),/amazon\.ca\/dp\/|sjpenterpri03-20/);
   assert.match(component,/data-affiliate-weight="0"/);
@@ -152,7 +179,7 @@ test('illustrative photos and disclosed Amazon links stay outside scoring',()=>{
   assert.match(dynamicRoute,/getPublishedDossier/);
   assert.match(dynamicRoute,/generateStaticParams/);
   assert.doesNotMatch(dynamicRoute,/mdrank_score|hands-on/i);
-  assert.equal(fs.readdirSync('web/public/images/dossiers').filter((name)=>name.endsWith('.jpg')).length,82);
+  assert.equal(fs.readdirSync('web/public/images/dossiers').filter((name)=>name.endsWith('.jpg')).length,94);
 });
 
 test('dossier routes, sitemap, and neutral resource directory are wired',()=>{

@@ -27,6 +27,8 @@ test('accepted record fails closed on unresolved identity and unknown evidence',
 test('image rights and acquisition methods are enumerated',()=>{
   const bad=exactRecord(); bad.images=[{id:'hero',rightsStatus:'found-online'}];
   assert.throws(()=>validateExactModelContract(bad),/invalid rightsStatus/i);
+  const listing=exactRecord(); listing.images=[{id:'hero',rightsStatus:'manufacturer-seller-listing'}];
+  assert.equal(validateExactModelContract(listing),true);
 });
 
 test('methodology manifest owns every numeric rule and forbids LLM numeric choice',()=>{

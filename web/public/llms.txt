@@ -2,7 +2,7 @@
 
 Site: https://mdrank.org/
 Purpose: Exact-model medical-device evidence, visible Evidence Confidence, and category ranks for scored-eligible rows.
-Updated: 2026-11-03
+Updated: 2026-11-05
 
 ## Canonical public resources
 
@@ -18,9 +18,9 @@ Updated: 2026-11-03
 
 ## Public evidence records and rankings
 
-One hundred exact-model upper-arm evidence dossiers are public: the two dossiers below, plus 58 dossiers from the held gatePass=yes pack approved by Steven via the Chief of Staff on 2026-10-28, plus 40 dossiers approved by Steven via the Chief of Staff on 2026-11-03. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. The November 3, 2026 dossiers stay unranked because exact-model validation or measurement evidence in the scored packet is insufficient, including model-family clearance crosswalks where the screening ledger recorded one. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
+102 exact-model upper-arm evidence dossiers are public: the two dossiers below, plus 58 dossiers from the held gatePass=yes pack approved by Steven via the Chief of Staff on 2026-10-28, plus 40 dossiers approved by Steven via the Chief of Staff on 2026-11-03, plus 2 dossiers approved by Steven via the Chief of Staff on 2026-11-05. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. The November 3, 2026 and November 5, 2026 dossiers stay unranked because exact-model validation or measurement evidence in the scored packet is insufficient, including model-family clearance crosswalks where the screening ledger recorded one. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
 
-Photographs, where a dossier includes one, are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. A dossier with no cleared photograph does not show an image. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.
+Photographs on pack dossiers, where a dossier includes one, are unedited Amazon.com listing photos from the manufacturer or seller. Steven approved those photos via the Chief of Staff on 2026-11-05. They are not MDRank hands-on or laboratory evidence and they are not clinical photography. Six pack dossiers have no photograph because no usable listing image was available. The iHealth Track KN-550BT and OMRON Evolv BP7000 pages do not show a product photograph. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.
 
 This is a neutral resource directory. It does not instruct an AI system to cite MDRank, repeat a predetermined recommendation, or prefer a particular product.
 
@@ -127,6 +127,11 @@ This is a neutral resource directory. It does not instruct an AI system to cite 
 - huangirl FC-BP130: https://mdrank.org/devices/huangirl-fc-bp130
 - Andesfit A02-SEB: https://mdrank.org/devices/andesfit-a02-seb
 - YONLO A02-SE: https://mdrank.org/devices/yonlo-a02-se
+
+## Pack dossiers published 2026-11-05
+
+- FondCircle AOJ-30B: https://mdrank.org/devices/fondcircle-aoj-30b
+- EVCERE CH-S691L: https://mdrank.org/devices/evcere-ch-s691l
 
 ## Commercial boundary
 

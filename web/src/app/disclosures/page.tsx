@@ -292,6 +292,9 @@ export default function DisclosuresPage() {
             <li>
               <strong>November 3, 2026.</strong> Steven approved 40 more upper-arm dossiers through the Chief of Staff. Each shows the same Buy on Amazon link and ordinary affiliate-commission disclosure. Affiliate weight remains zero. Score and rank stay withheld. An illustrative photo appears only when one was cleared for that exact model.
             </li>
+            <li>
+              <strong>November 5, 2026.</strong> Steven approved unedited Amazon.com listing photos for published upper-arm dossiers, and two more upper-arm dossiers (FondCircle AOJ-30B and EVCERE CH-S691L), through the Chief of Staff. Each new dossier shows the same Buy on Amazon link and ordinary affiliate-commission disclosure. Affiliate weight remains zero. Score and rank stay withheld. A photograph is the manufacturer or seller listing image when one was supplied, and a dossier with no usable listing image shows no product photograph.
+            </li>
           </ul>
           <h3 className="mt-6 text-xl font-semibold text-slate-950">MDRank.org</h3>
           <p className="mt-3">

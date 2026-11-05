@@ -41,7 +41,7 @@ function parsePack(markdown) {
     const number = (fdaCell.match(/DEN\d{6}|K\d{6}/) ?? [])[0];
     if (!number) throw new Error(`Missing clearance number for ${row[1]}`);
     const imageCell = row[6] ?? '';
-    const hasPhoto = /real-use\.jpg/i.test(imageCell) && !/excluded|do-not-use/i.test(imageCell);
+    const hasPhoto = /amazon-main\.jpg/i.test(imageCell) && !/excluded|do-not-use|\bnone\b/i.test(imageCell);
     rows.push({
       slug: row[1].replace(/`/g, ''),
       name: row[2],
@@ -204,13 +204,13 @@ function dossier(row, screen, score) {
     : `Withheld under rubric upper-arm-home-bp-v1.0.0. The published packet records exact-model identity and FDA clearance, and it does not include the exact-model measurement and validation record required for a score. Evidence Confidence stays ${level} and separate.`;
   const photo = screen.photo
     ? {
-      src: `/images/dossiers/${row.slug}-real-use.jpg`,
+      src: `/images/dossiers/${row.slug}-amazon-main.jpg`,
       width: screen.width,
       height: screen.height,
-      alt: `Illustrative real-use photo edited for clarity, showing an upper-arm cuff and monitor for the ${row.name}. Not manufacturer or clinical photography.`,
-      caption: '*Photo edited for clarity.',
-      rightsStatus: 'owned',
-      rightsNote: 'Owner-supplied illustrative photograph edited for clarity. Rights status: owned. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.',
+      alt: `Amazon listing photo of the ${row.name}, an upper-arm blood-pressure monitor.`,
+      caption: 'Image: Amazon listing photo (manufacturer/seller)',
+      rightsStatus: 'manufacturer-seller-listing',
+      rightsNote: 'Unedited Amazon.com listing photograph from the manufacturer or seller. Rights status: manufacturer/seller listing image. It is not an MDRank hands-on or laboratory test, and it is not clinical photography.',
     }
     : null;
   const recordBrandSentences = screen.fdaRecordBrand
@@ -357,7 +357,7 @@ function dossier(row, screen, score) {
       'Amazon marketing copy, prices, and identifier crosswalks beyond the approved ASIN are not MDRank evidence.',
       'No licensed or API-permitted exact-model customer-review corpus was acquired.',
       ...(photo
-        ? ['The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.']
+        ? ['The photograph on this page is an unedited Amazon.com listing photo from the manufacturer or seller. It is not an MDRank hands-on or laboratory test, and it is not clinical photography.']
         : ['No illustrative photo is published for this exact model.']),
       ...(screen.family
         ? ['The cited FDA record is a model-family crosswalk. Family-level context stays unranked.']
@@ -428,10 +428,10 @@ function writeLlms(rows, sections = null) {
   const ranking = sections
     ? `One hundred exact-model upper-arm evidence dossiers are public: the two dossiers below, plus 58 dossiers from the held gatePass=yes pack approved by Steven via the Chief of Staff on 2026-10-28, plus 40 dossiers approved by Steven via the Chief of Staff on 2026-11-03. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. The November 3, 2026 dossiers stay unranked because exact-model validation or measurement evidence in the scored packet is insufficient, including model-family clearance crosswalks where the screening ledger recorded one. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
 
-Photographs, where a dossier includes one, are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. A dossier with no cleared photograph does not show an image. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.`
+Photographs, where a dossier includes one, are unedited Amazon.com listing photos from the manufacturer or seller. They are not MDRank hands-on or laboratory evidence and they are not clinical photography. A dossier with no photograph does not show an image. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.`
     : `Sixty exact-model upper-arm evidence dossiers are public: the two dossiers below, plus 58 dossiers from the held gatePass=yes pack approved by Steven via the Chief of Staff on 2026-10-28. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. The 58 pack dossiers stay unranked because exact-model validation or measurement evidence in the scored packet is insufficient, including model-family clearance crosswalks where the screening ledger recorded one. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
 
-Photographs on those dossiers are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.`;
+Photographs on those dossiers are unedited Amazon.com listing photos from the manufacturer or seller. They are not MDRank hands-on or laboratory evidence and they are not clinical photography. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.`;
   const packSections = sections
     ? sections.map((section) => `## Pack dossiers published ${section.publishedOn}\n\n${dossierLinks(section.rows)}`).join('\n\n')
     : `## Pack dossiers published 2026-10-28\n\n${dossierLinks(rows)}`;
@@ -502,12 +502,12 @@ function main() {
     let width;
     let height;
     if (row.hasPhoto) {
-      const sourceImage = path.join(assetDir, `${row.slug}-real-use.jpg`);
+      const sourceImage = path.join(assetDir, `${row.slug}-amazon-main.jpg`);
       if (!fs.existsSync(sourceImage)) throw new Error(`Missing image ${sourceImage}`);
       ({ width, height } = jpegSize(sourceImage));
-      if (width !== 1152 || height !== 864) throw new Error(`${row.slug} image is ${width}x${height}`);
-      fs.copyFileSync(sourceImage, path.join(imageOutDir, `${row.slug}-real-use.jpg`));
-    } else if (fs.existsSync(path.join(assetDir, `${row.slug}-real-use.jpg`))) {
+      if (width < 1 || height < 1) throw new Error(`${row.slug} image is ${width}x${height}`);
+      fs.copyFileSync(sourceImage, path.join(imageOutDir, `${row.slug}-amazon-main.jpg`));
+    } else if (fs.existsSync(path.join(assetDir, `${row.slug}-amazon-main.jpg`))) {
       throw new Error(`${row.slug} image is present but the pack does not publish it`);
     }
     const screen = {
@@ -581,7 +581,7 @@ function main() {
     if (/\bwrist\b|\boptical\b/i.test(`${record.name} ${record.model} ${record.category}`)) {
       throw new Error(`${row.slug} public name, model, or category looks wrist or optical`);
     }
-    if (row.hasPhoto && record.illustrativePhoto?.caption !== '*Photo edited for clarity.') {
+    if (row.hasPhoto && record.illustrativePhoto?.caption !== 'Image: Amazon listing photo (manufacturer/seller)') {
       throw new Error(`${row.slug} photo caption missing`);
     }
     if (!row.hasPhoto && record.illustrativePhoto) throw new Error(`${row.slug} invented a photo`);

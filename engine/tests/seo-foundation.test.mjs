@@ -88,7 +88,7 @@ test('FAQ score status follows the published rubric row', () => {
 
 test('dossier schema is Product, Brand, Offer, and FAQPage without ratings or prices', () => {
   const held = JSON.parse(fs.readFileSync('web/src/data/heldPublishDossiers.json', 'utf8'));
-  assert.equal(held.length, 98);
+  assert.equal(held.length, 100);
   assert.deepEqual(
     Object.keys(offers).sort(),
     ['ihealth-track-kn-550bt', 'omron-evolv-bp7000', ...held.map((dossier) => dossier.slug)].sort(),
@@ -98,7 +98,7 @@ test('dossier schema is Product, Brand, Offer, and FAQPage without ratings or pr
     assert.equal(offers[dossier.slug].brand, dossier.manufacturer);
     assert.equal(faqs[dossier.slug].length, 3);
     if (dossier.illustrativePhoto) {
-      assert.equal(dossier.illustrativePhoto.caption, '*Photo edited for clarity.');
+      assert.equal(dossier.illustrativePhoto.caption, 'Image: Amazon listing photo (manufacturer/seller)');
       assert.equal(fs.existsSync(`web/public${dossier.illustrativePhoto.src}`), true);
     } else {
       assert.equal(dossier.illustrativePhoto, undefined);
@@ -174,7 +174,7 @@ test('visible FAQ and trust links use the same dossier evidence', () => {
   assert.match(canadaNote, /Local match/);
   assert.match(fs.readFileSync('web/src/data/publishedDossiers.ts', 'utf8'), /canadaLocalMatch: "confirmed"/);
   assert.doesNotMatch(seo, /Buy Now|Check Price|AggregateRating/);
-  assert.match(seo, /\*Photo edited for clarity\./);
+  assert.match(seo, /Image: Amazon listing photo \(manufacturer\/seller\)/);
   assert.match(dossier, /"@type": "BreadcrumbList"/);
   assert.doesNotMatch(dossier, /AggregateRating/);
   for (const slug of ['ihealth-track-kn-550bt', 'omron-evolv-bp7000']) {
@@ -236,9 +236,9 @@ test('schema image is included only with the approved caption', () => {
     asin: 'B01MRL790Q',
     offerUrl: 'https://www.amazon.com/dp/B01MRL790Q?tag=sjpenterpri05-20',
     offerNote: offers['omron-evolv-bp7000'].offerNote,
-    image: `${SITE}/images/dossiers/omron-evolv-bp7000-real-use.jpg`,
+    image: `${SITE}/images/dossiers/omron-bp7450-amazon-main.jpg`,
   });
   const product = withImage.find((node) => node['@type'] === 'Product');
-  assert.equal(product.image, `${SITE}/images/dossiers/omron-evolv-bp7000-real-use.jpg`);
+  assert.equal(product.image, `${SITE}/images/dossiers/omron-bp7450-amazon-main.jpg`);
   assert.equal(product.aggregateRating, undefined);
 });

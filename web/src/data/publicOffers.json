@@ -2,7 +2,7 @@
   "ihealth-track-kn-550bt": {
     "brand": "iHealth",
     "asin": "B01C5QS1T8",
-    "offerNote": "Amazon.com listing ASIN B01C5QS1T8 for the iHealth Track KN-550BT standard 22–42 cm package in this dossier. The XL package is not identified by this ASIN. No price or availability is asserted."
+    "offerNote": "Amazon.com listing ASIN B01C5QS1T8 for the iHealth Track KN-550BT standard 22\u201342 cm package in this dossier. The XL package is not identified by this ASIN. No price or availability is asserted."
   },
   "omron-evolv-bp7000": {
     "brand": "OMRON",
@@ -12,7 +12,7 @@
   "and-ua-1020": {
     "brand": "A&D Medical",
     "asin": "B005QBH2LS",
-    "offerNote": "Amazon.com listing ASIN B005QBH2LS for A&D Medical UA-1020. No price or availability is asserted."
+    "offerNote": "No current amazon.com listing was found for A&D Medical UA-1020 on November 5, 2026. Previously recorded ASIN B005QBH2LS returns Page Not Found. No price or availability is asserted."
   },
   "and-ua-660": {
     "brand": "A&D Medical",
@@ -126,18 +126,18 @@
   },
   "microlife-bp3gx1-5x": {
     "brand": "Microlife",
-    "asin": "B00VMK8VL2",
-    "offerNote": "Amazon.com listing ASIN B00VMK8VL2 for Microlife BP3GX1-5X. No price or availability is asserted."
+    "asin": "B00XQ24PJQ",
+    "offerNote": "Amazon.com listing ASIN B00XQ24PJQ for Microlife BP3GX1-5X. The previously recorded ASIN B00VMK8VL2 returned Page Not Found. No price or availability is asserted."
   },
   "microlife-watchbp-home-a": {
     "brand": "Microlife",
     "asin": "B0072I38RA",
-    "offerNote": "Amazon.com listing ASIN B0072I38RA for Microlife WatchBP Home A. No price or availability is asserted."
+    "offerNote": "No current amazon.com listing was found for Microlife WatchBP Home A on November 5, 2026. Previously recorded ASIN B0072I38RA returns Page Not Found. No price or availability is asserted."
   },
   "oklar-b19t": {
     "brand": "Oklar",
-    "asin": "B0GTD1M83L",
-    "offerNote": "Amazon.com listing ASIN B0GTD1M83L for Oklar B19T. No price or availability is asserted."
+    "asin": "B0G71BG669",
+    "offerNote": "Amazon.com listing ASIN B0G71BG669 for Oklar B19T. The previously recorded ASIN B0GTD1M83L returned Page Not Found. No price or availability is asserted."
   },
   "oklar-c02t": {
     "brand": "Oklar",
@@ -237,7 +237,7 @@
   "qardioarm2-a200": {
     "brand": "Qardio",
     "asin": "B0C81SGBY6",
-    "offerNote": "Amazon.com listing ASIN B0C81SGBY6 for Qardio QardioArm2 A200. No price or availability is asserted."
+    "offerNote": "No current amazon.com listing was found for Qardio QardioArm2 A200 on November 5, 2026. Previously recorded ASIN B0C81SGBY6 returns Page Not Found. No price or availability is asserted."
   },
   "saker-u90b": {
     "brand": "SAKER",
@@ -315,9 +315,9 @@
     "offerNote": "Amazon.com listing ASIN B0FNRDR168 for BBLOVE AES-U622. No price or availability is asserted."
   },
   "iproven-bpm-35": {
-    "brand": "iProvèn",
+    "brand": "iProv\u00e8n",
     "asin": "B0DKP6Y2F7",
-    "offerNote": "Amazon.com listing ASIN B0DKP6Y2F7 for iProvèn BPM-35. No price or availability is asserted."
+    "offerNote": "Amazon.com listing ASIN B0DKP6Y2F7 for iProv\u00e8n BPM-35. No price or availability is asserted."
   },
   "wellwink-c06t": {
     "brand": "WellWink",
@@ -498,5 +498,15 @@
     "brand": "YONLO",
     "asin": "B0FG8123J3",
     "offerNote": "Amazon.com listing ASIN B0FG8123J3 for YONLO A02-SE. No price or availability is asserted."
+  },
+  "fondcircle-aoj-30b": {
+    "brand": "FondCircle",
+    "asin": "B0FGNMRP3M",
+    "offerNote": "Amazon.com listing ASIN B0FGNMRP3M for FondCircle AOJ-30B. No price or availability is asserted."
+  },
+  "evcere-ch-s691l": {
+    "brand": "EVCERE",
+    "asin": "B0H4L9B58T",
+    "offerNote": "Amazon.com listing ASIN B0H4L9B58T for EVCERE CH-S691L. No price or availability is asserted."
   }
 }

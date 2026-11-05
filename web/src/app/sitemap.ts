@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-11-03T00:00:00Z");
+  const lastModified = new Date("2026-11-05T00:00:00Z");
   return [
     { url: "https://mdrank.org/", lastModified, changeFrequency: "weekly", priority: 1 },
     { url: "https://mdrank.org/methodology", lastModified, changeFrequency: "monthly", priority: 0.8 },
@@ -107,6 +107,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://mdrank.org/devices/huangirl-fc-bp130", lastModified: new Date("2026-11-03T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
     { url: "https://mdrank.org/devices/andesfit-a02-seb", lastModified: new Date("2026-11-03T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
     { url: "https://mdrank.org/devices/yonlo-a02-se", lastModified: new Date("2026-11-03T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
+    { url: "https://mdrank.org/devices/fondcircle-aoj-30b", lastModified: new Date("2026-11-05T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
+    { url: "https://mdrank.org/devices/evcere-ch-s691l", lastModified: new Date("2026-11-05T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
     { url: "https://mdrank.org/disclosures", lastModified, changeFrequency: "yearly", priority: 0.4 },
     { url: "https://mdrank.org/privacy", lastModified, changeFrequency: "yearly", priority: 0.3 },
   ];

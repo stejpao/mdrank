@@ -12,7 +12,7 @@ const REQUIRED_SECTIONS = [
   'warrantyAndSupport', 'recallAndSafety', 'conflicts', 'images',
 ];
 const DISPOSITIONS = new Set(['accepted', 'pending', 'rejected', 'identity-review', 'ambiguous', 'unavailable', 'insufficient-evidence']);
-const RIGHTS = new Set(['owned', 'original-product-photography', 'manufacturer-authorized', 'properly-licensed', 'api-feed-permitted', 'generated', 'public-domain', 'none']);
+const RIGHTS = new Set(['owned', 'original-product-photography', 'manufacturer-authorized', 'manufacturer-seller-listing', 'properly-licensed', 'api-feed-permitted', 'generated', 'public-domain', 'none']);
 const ACQUISITION = new Set(['official-api', 'licensed-feed', 'authorized-export', 'public-document', 'public-page-manual-review', 'public-dataset']);
 
 function required(value, label) {

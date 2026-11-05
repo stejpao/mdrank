@@ -1626,6 +1626,50 @@
       "dimensionNotes": []
     },
     {
+      "slug": "evcere-ch-s691l",
+      "productId": "evcere-ch-s691l",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K251102",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
+      "slug": "fondcircle-aoj-30b",
+      "productId": "fondcircle-aoj-30b",
+      "eligible": false,
+      "scoreStatus": "withheld",
+      "rankStatus": "withheld",
+      "mdrankScore": null,
+      "scoreLabel": "Withheld",
+      "rank": null,
+      "cohortSize": 15,
+      "rankLabel": "Withheld",
+      "rankDetail": "Withheld. Exact-model evidence is incomplete for a score under this rubric.",
+      "evidenceConfidence": "Low",
+      "evidenceConfidenceNumeric": 0.47,
+      "clearanceLabel": "FDA-cleared K222125",
+      "failedGates": [
+        "category-upper-arm-home-bp"
+      ],
+      "rubricVersion": "upper-arm-home-bp-v1.0.0",
+      "publicInputApplied": 0,
+      "dimensionNotes": []
+    },
+    {
       "slug": "greater-goods-0604",
       "productId": "greater-goods-0604",
       "eligible": false,

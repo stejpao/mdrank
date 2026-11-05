@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "productId": "fondcircle-aoj-30b",
+  "slug": "fondcircle-aoj-30b",
+  "brand": "FondCircle",
+  "exactModel": "AOJ-30B",
+  "market": "US",
+  "formFactor": "upper-arm",
+  "identity": {
+    "status": "resolved"
+  },
+  "testingStatus": "public-evidence-only",
+  "testingLanguage": {
+    "handsOnClaimWithoutProtocol": false
+  },
+  "disclosureStatus": "independent-editorial",
+  "publication": {
+    "alreadyPublic": false,
+    "humanPublish": true,
+    "url": "/devices/fondcircle-aoj-30b"
+  },
+  "regulatory": {
+    "clearanceType": "fda-510k",
+    "clearanceNumber": "K222125"
+  },
+  "validation": {
+    "scope": "none",
+    "namesExactModel": false,
+    "peerReviewed": false,
+    "namedProtocolPass": false,
+    "fundingIndependence": "not-applicable"
+  },
+  "measurement": {},
+  "fit": {
+    "rangesCm": []
+  },
+  "usability": {},
+  "dataHandling": {},
+  "ownership": {},
+  "recall": {},
+  "conflicts": [],
+  "publicExperience": {
+    "licensedExactModelCorpus": false
+  },
+  "evidenceDates": {
+    "criticalRetrievedAt": "2026-11-04",
+    "asOf": "2026-11-04"
+  },
+  "primarySources": [
+    {
+      "id": "fda-clearance",
+      "sourceClass": "A",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K222125.pdf",
+      "retrievedAt": "2026-11-04"
+    }
+  ],
+  "materialClaims": [
+    {
+      "id": "clearance",
+      "text": "The published packet records FDA-cleared K222125 for this exact model. Clearance is not accuracy proof.",
+      "evidenceIds": [
+        "fda-clearance"
+      ]
+    }
+  ]
+}

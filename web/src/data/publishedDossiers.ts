@@ -18,8 +18,8 @@ export type IllustrativePhoto = {
   width: number;
   height: number;
   alt: string;
-  caption: "*Photo edited for clarity.";
-  rightsStatus: "owned";
+  caption: "Image: Amazon listing photo (manufacturer/seller)";
+  rightsStatus: "manufacturer-seller-listing";
   rightsNote: string;
 };
 
@@ -30,6 +30,8 @@ export type AmazonListing = {
   listingNote: string;
   /** Confirmed Amazon.ca Local-match substitution for this US ASIN, or none documented. */
   canadaLocalMatch: AmazonCanadaLocalMatch;
+  /** not-found: the recorded ASIN returns Page Not Found and must not be linked. */
+  listingStatus?: "current" | "not-found";
 };
 
 export type HandlingMeter = "strong" | "mixed" | "limited" | "unsupported" | "documented";
@@ -163,7 +165,7 @@ export const publishedDossiers: PublishedDossier[] = [
       "The manufacturer support source exposes manual-derived specifications, but a current standalone exact manual PDF was not exposed through the reviewed support route.",
       "An older manufacturer correction identifies a KN-550BT/KN-550LT cover typo; no KN-550LT evidence is transferred here.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No illustrative photo is published for this exact model.",
     ],
     sources: [
       { label: "FDA K160014 record", url: "https://api.fda.gov/device/510k.json?search=k_number:K160014&limit=10", sourceClass: "A" },
@@ -178,6 +180,7 @@ export const publishedDossiers: PublishedDossier[] = [
       "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
       "October 28, 2026: Owner-enabled rubric upper-arm-home-bp-v1.0.0. MDRank Score and category rank published for this exact model. Evidence Confidence remains High and separate. The disclosed Amazon Associates link stays weight zero. Evidence cutoff unchanged.",
       "October 28, 2026: The amazon.com Buy link stays ASIN B01C5QS1T8. An on-page note says Amazon.ca Local match may show Canadian shoppers a similar product that is not this exact model. It does not appear on every visit. Affiliate weight remains zero.",
+      "November 5, 2026: Removed the illustrative product photograph. No unedited Amazon.com listing photo for this exact model was in the approved batch, and no replacement image was created. Score and rank unchanged. Affiliate weight remains zero.",
     ],
     handlingGlance: [
       { id: "cuff-fit", label: "Cuff fit", summary: "22–42 cm standard · 42–48 cm XL", fit: "Strong with the matching package", confidence: "High", meter: "strong" },
@@ -197,15 +200,6 @@ export const publishedDossiers: PublishedDossier[] = [
       { id: "power", criterion: "Power", finding: "Four 1.5V AAA batteries.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "iHealth KN-550BT specifications and display symbols" },
       { id: "connectivity", criterion: "Connectivity", finding: "Bluetooth with iHealth MyVitals synchronization.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "iHealth KN-550BT memory and synchronization support" },
     ],
-    illustrativePhoto: {
-      src: "/images/dossiers/ihealth-kn-550bt-real-use.jpg",
-      width: 1152,
-      height: 864,
-      alt: "Illustrative real-use photo edited for clarity, showing an upper-arm cuff and monitor for the iHealth Track KN-550BT. Not manufacturer or clinical photography.",
-      caption: "*Photo edited for clarity.",
-      rightsStatus: "owned",
-      rightsNote: "Owner-supplied illustrative photograph edited for clarity. Rights status: owned. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
-    },
     amazonListing: {
       asin: "B01C5QS1T8",
       canadaLocalMatch: "confirmed",
@@ -283,7 +277,7 @@ export const publishedDossiers: PublishedDossier[] = [
       "Prior stored readings require a compatible smart device; app behavior and compatibility can change.",
       "Manufacturer portability, ease-of-use, movement-interference, and accuracy wording is not independent proof.",
       "No licensed or API-permitted exact-model customer-review corpus was acquired.",
-      "The photograph on this page is an owner-supplied illustrative image edited for clarity. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
+      "No illustrative photo is published for this exact model.",
     ],
     sources: [
       { label: "FDA 510(k) K162092 summary", url: "https://www.accessdata.fda.gov/cdrh_docs/pdf16/K162092.pdf", sourceClass: "A" },
@@ -298,6 +292,7 @@ export const publishedDossiers: PublishedDossier[] = [
       "July 22, 2026: Evidence dossier published. Score, rank, and public-experience claims withheld.",
       "October 28, 2026: Owner-enabled rubric upper-arm-home-bp-v1.0.0. Score and rank remain withheld because validation is family-level. Evidence Confidence remains Moderate. The disclosed Amazon Associates link stays weight zero. Evidence cutoff unchanged.",
       "October 28, 2026: The amazon.com Buy link stays ASIN B01MRL790Q. An on-page note says Amazon.ca Local match may show Canadian shoppers a similar product that is not this exact model. It does not appear on every visit. Affiliate weight remains zero.",
+      "November 5, 2026: Removed the illustrative product photograph. No unedited Amazon.com listing photo for this exact model was in the approved batch, and no replacement image was created. Score and rank unchanged. Affiliate weight remains zero.",
     ],
     handlingGlance: [
       { id: "cuff-fit", label: "Cuff fit", summary: "22–42 cm integrated cuff", fit: "Strong", confidence: "High", meter: "strong" },
@@ -317,15 +312,6 @@ export const publishedDossiers: PublishedDossier[] = [
       { id: "power", criterion: "Power", finding: "Four AAA batteries.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "OMRON Evolv BP7000 instruction manual" },
       { id: "connectivity", criterion: "Connectivity", finding: "Bluetooth Low Energy with OMRON connect.", confidence: "Stated in cited specifications", sourceClass: "C", sourceLabel: "OMRON US BP7000 product page" },
     ],
-    illustrativePhoto: {
-      src: "/images/dossiers/omron-evolv-bp7000-real-use.jpg",
-      width: 1152,
-      height: 864,
-      alt: "Illustrative real-use photo edited for clarity, showing an upper-arm cuff monitor for the OMRON Evolv BP7000. Not manufacturer or clinical photography.",
-      caption: "*Photo edited for clarity.",
-      rightsStatus: "owned",
-      rightsNote: "Owner-supplied illustrative photograph edited for clarity. Rights status: owned. It is not manufacturer photography, clinical photography, or an MDRank hands-on or laboratory test.",
-    },
     amazonListing: {
       asin: "B01MRL790Q",
       canadaLocalMatch: "confirmed",
