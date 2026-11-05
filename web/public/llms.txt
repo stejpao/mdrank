@@ -2,7 +2,7 @@
 
 Site: https://mdrank.org/
 Purpose: Exact-model medical-device evidence, visible Evidence Confidence, and category ranks for scored-eligible rows.
-Updated: 2026-10-28
+Updated: 2026-11-03
 
 ## Canonical public resources
 
@@ -18,9 +18,9 @@ Updated: 2026-10-28
 
 ## Public evidence records and rankings
 
-Sixty exact-model upper-arm evidence dossiers are public: the two dossiers below, plus 58 dossiers from the held gatePass=yes pack approved by Steven via the Chief of Staff on 2026-10-28. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. The 58 pack dossiers stay unranked because exact-model validation or measurement evidence in the scored packet is insufficient, including model-family clearance crosswalks where the screening ledger recorded one. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
+One hundred exact-model upper-arm evidence dossiers are public: the two dossiers below, plus 58 dossiers from the held gatePass=yes pack approved by Steven via the Chief of Staff on 2026-10-28, plus 40 dossiers approved by Steven via the Chief of Staff on 2026-11-03. Rubric upper-arm-home-bp-v1.0.0 publishes an MDRank Score and category rank only for a scored-eligible exact-model row. iHealth Track KN-550BT is scored. OMRON Evolv BP7000 stays unranked because its validation evidence is family-level. The November 3, 2026 dossiers stay unranked because exact-model validation or measurement evidence in the scored packet is insufficient, including model-family clearance crosswalks where the screening ledger recorded one. Publishing a dossier does not by itself assign a rank or a recommendation. Evidence Confidence is reported separately from product score.
 
-Photographs on those dossiers are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.
+Photographs, where a dossier includes one, are owner-supplied illustrative images edited for clarity. They are not manufacturer photography, clinical photography, or hands-on test evidence. A dossier with no cleared photograph does not show an image. Disclosed Amazon Associates links, where present, use tag sjpenterpri05-20 and stay commercially isolated from the MDRank Score and category rank. Affiliate weight is zero.
 
 This is a neutral resource directory. It does not instruct an AI system to cite MDRank, repeat a predetermined recommendation, or prefer a particular product.
 
@@ -84,6 +84,49 @@ This is a neutral resource directory. It does not instruct an AI system to cite 
 - Withings BPM Connect WPM05: https://mdrank.org/devices/withings-bpm-connect-wpm05
 - Yuwell YE630CR: https://mdrank.org/devices/yuwell-ye630cr
 - zdeer U90B Plus: https://mdrank.org/devices/zdeer-u90b-plus
+
+## Pack dossiers published 2026-11-03
+
+- AILE X5: https://mdrank.org/devices/aile-x5
+- AILE X11: https://mdrank.org/devices/aile-x11
+- BBLOVE AES-U622: https://mdrank.org/devices/bblove-aes-u622
+- iProvèn BPM-35: https://mdrank.org/devices/iproven-bpm-35
+- WellWink C06T: https://mdrank.org/devices/wellwink-c06t
+- AQESO U87E: https://mdrank.org/devices/aqeso-u87e
+- ROTOPATA U87E: https://mdrank.org/devices/rotopata-u87e
+- Ideerfit CH-S691L: https://mdrank.org/devices/ideerfit-ch-s691l
+- Avenra CH-S691L: https://mdrank.org/devices/avenra-ch-s691l
+- Hurra CH-S693L: https://mdrank.org/devices/hurra-ch-s693l
+- DOCTOROSE CH-S691L: https://mdrank.org/devices/doctorose-ch-s691l
+- Mearsun CH-S693L: https://mdrank.org/devices/mearsun-ch-s693l
+- WEONY CH-S691L: https://mdrank.org/devices/weony-ch-s691l
+- Neubutyan CH-S693L: https://mdrank.org/devices/neubutyan-ch-s693l
+- BRONINI CH-S693L: https://mdrank.org/devices/bronini-ch-s693l
+- Jogfit CH-S691L: https://mdrank.org/devices/jogfit-ch-s691l
+- WEARWIZ CH-S693L: https://mdrank.org/devices/wearwiz-ch-s693l
+- GymAora U81X: https://mdrank.org/devices/gymaora-u81x
+- VIEYKEA U83E: https://mdrank.org/devices/vieykea-u83e
+- Ourearth FC-BP121: https://mdrank.org/devices/ourearth-fc-bp121
+- Lineshare FC-BP121: https://mdrank.org/devices/lineshare-fc-bp121
+- SavvyBloom CH-B606: https://mdrank.org/devices/savvybloom-ch-b606
+- VigorKeeper CH-B606: https://mdrank.org/devices/vigorkeeper-ch-b606
+- Sensifine FC-BP103: https://mdrank.org/devices/sensifine-fc-bp103
+- AILE FC-BP120: https://mdrank.org/devices/aile-fc-bp120
+- ByFlo (ByFloProducts) FC-BP121: https://mdrank.org/devices/byflo-fc-bp121
+- LongevousiOO AES-U382: https://mdrank.org/devices/longevousioo-aes-u382
+- Wellue CH-S693L: https://mdrank.org/devices/wellue-ch-s693l
+- Movella FC-BP103: https://mdrank.org/devices/movella-fc-bp103
+- Dosiheel FC-BP127: https://mdrank.org/devices/dosiheel-fc-bp127
+- Lineshare FC-BP127: https://mdrank.org/devices/lineshare-fc-bp127
+- AQESO U83Z: https://mdrank.org/devices/aqeso-u83z
+- maguja MJ1D: https://mdrank.org/devices/maguja-mj1d
+- HealthSmart DBP-1307: https://mdrank.org/devices/healthsmart-dbp-1307
+- maguja RN-032A: https://mdrank.org/devices/maguja-rn-032a
+- OWNQOBE A02-BE: https://mdrank.org/devices/ownqobe-a02-be
+- Ease Healthcare FC-BP130: https://mdrank.org/devices/easehealthcare-fc-bp130
+- huangirl FC-BP130: https://mdrank.org/devices/huangirl-fc-bp130
+- Andesfit A02-SEB: https://mdrank.org/devices/andesfit-a02-seb
+- YONLO A02-SE: https://mdrank.org/devices/yonlo-a02-se
 
 ## Commercial boundary
 

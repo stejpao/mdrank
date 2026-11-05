@@ -289,6 +289,9 @@ export default function DisclosuresPage() {
             <li>
               <strong>October 28, 2026.</strong> Steven approved the held gatePass=yes pack of 58 upper-arm dossiers through the Chief of Staff. Each of those dossiers shows the same Buy on Amazon link and ordinary affiliate-commission disclosure. Affiliate weight remains zero. Score and rank stay withheld where exact-model evidence is insufficient.
             </li>
+            <li>
+              <strong>November 3, 2026.</strong> Steven approved 40 more upper-arm dossiers through the Chief of Staff. Each shows the same Buy on Amazon link and ordinary affiliate-commission disclosure. Affiliate weight remains zero. Score and rank stay withheld. An illustrative photo appears only when one was cleared for that exact model.
+            </li>
           </ul>
           <h3 className="mt-6 text-xl font-semibold text-slate-950">MDRank.org</h3>
           <p className="mt-3">

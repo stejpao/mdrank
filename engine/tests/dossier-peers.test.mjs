@@ -60,14 +60,14 @@ test('manufacturer tokens group the scored dossier with its brand and ignore com
 test('every published dossier links to 3-4 other published upper-arm dossiers', () => {
   assert.equal(DOSSIER_PEER_MIN, 3);
   assert.equal(DOSSIER_PEER_MAX, 4);
-  assert.equal(catalog.length, 60);
-  assert.equal(publishedSlugs.size, 60);
+  assert.equal(catalog.length, 100);
+  assert.equal(publishedSlugs.size, 100);
   for (const seed of seeds) {
     assert.match(source, new RegExp(`slug: "${seed.slug}"`));
     assert.match(source, new RegExp(`manufacturer: "${seed.manufacturer.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`));
     assert.match(source, new RegExp(`category: "${seed.category}"`));
   }
-  assert.equal(held.length, 58);
+  assert.equal(held.length, 98);
 
   const inbound = new Map(catalog.map((dossier) => [dossier.slug, 0]));
   const rankedWords = /\bbetter\b|\btop\b|\bbest\b|\brecommended\b|\brank\b|\bscore\b|FDA approved/i;

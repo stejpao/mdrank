@@ -59,7 +59,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
     headline: `${dossier.name} evidence dossier`,
     description: dossier.directAnswer,
     datePublished: dossier.publishedOn ?? "2026-07-22",
-    dateModified: "2026-10-28",
+    dateModified: dossier.publishedOn ?? "2026-10-28",
     mainEntityOfPage: `https://mdrank.org/devices/${dossier.slug}`,
     author: { "@type": "Organization", name: "MDRank", url: "https://mdrank.org" },
     publisher: { "@type": "Organization", name: "MDRank", url: "https://mdrank.org" },
@@ -314,7 +314,7 @@ export function EvidenceDossier({ dossier }: { dossier: PublishedDossier }) {
       <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
         <h2 className="text-xl font-bold text-slate-950">Publication and change log</h2>
         <ul className="mt-4 space-y-2 text-sm text-slate-700">{dossier.changeLog.map((item) => <li key={item}>• {item}</li>)}</ul>
-        <p className="mt-4 text-sm text-slate-600">No price or rating schema appears on this dossier. A schema.org Offer records the verified Amazon listing and has zero weight in the MDRank Score and category rank. The illustrative photo is not product evidence.</p>
+        <p className="mt-4 text-sm text-slate-600">No price or rating schema appears on this dossier. A schema.org Offer records the verified Amazon listing and has zero weight in the MDRank Score and category rank. {photo ? "The illustrative photo is not product evidence." : "This dossier does not include an illustrative photo."}</p>
         {dossier.amazonListing ? (
           <AmazonCanadaNote asin={dossier.amazonListing.asin} canadaLocalMatch={dossier.amazonListing.canadaLocalMatch} />
         ) : null}
