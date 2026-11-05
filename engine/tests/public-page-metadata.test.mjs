@@ -45,7 +45,8 @@ const PUBLIC_PAGES = [
     title: "iHealth Track KN-550BT Evidence Dossier",
     socialTitle: "iHealth Track KN-550BT Evidence Dossier | MDRank",
     ogType: "article",
-    image: "/images/dossiers/ihealth-kn-550bt-real-use.jpg",
+    image: null,
+    dossierPage: true,
   },
   {
     file: "web/src/app/devices/omron-evolv-bp7000/page.tsx",
@@ -53,7 +54,8 @@ const PUBLIC_PAGES = [
     title: "OMRON Evolv BP7000 Evidence Dossier",
     socialTitle: "OMRON Evolv BP7000 Evidence Dossier | MDRank",
     ogType: "article",
-    image: "/images/dossiers/omron-evolv-bp7000-real-use.jpg",
+    image: null,
+    dossierPage: true,
   },
   {
     file: "web/src/app/disclosures/page.tsx",
@@ -96,6 +98,9 @@ test("public pages declare Open Graph and Twitter cards that match the canonical
       assert.match(source, /approvedShareImage\(dossier\.illustrativePhoto\)/);
       assert.equal(fs.readFileSync("web/src/data/publishedDossiers.ts", "utf8").includes(page.image), true);
       assert.equal(fs.existsSync(`web/public${page.image}`), true);
+    } else if (page.dossierPage) {
+      assert.match(source, /ogType: "article"/);
+      assert.match(source, /approvedShareImage\(dossier\.illustrativePhoto\)/);
     } else if (page.path !== "/") {
       assert.doesNotMatch(source, /og:image|approvedShareImage|ogType: "article"/);
     }

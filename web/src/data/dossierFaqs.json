@@ -1406,5 +1406,33 @@
       "question": "What exact-model validation is recorded for the YONLO A02-SE?",
       "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
     }
+  ],
+  "fondcircle-aoj-30b": [
+    {
+      "question": "Is the FondCircle AOJ-30B FDA cleared?",
+      "answer": "The published packet records FDA-cleared K222125 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the FondCircle AOJ-30B?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the FondCircle AOJ-30B?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
+  ],
+  "evcere-ch-s691l": [
+    {
+      "question": "Is the EVCERE CH-S691L FDA cleared?",
+      "answer": "The published packet records FDA-cleared K251102 for this exact model. FDA clearance is not FDA approval, endorsement, independent validation, or proof of superior accuracy."
+    },
+    {
+      "question": "Did MDRank test the EVCERE CH-S691L?",
+      "answer": "Public evidence only. MDRank has not performed hands-on or laboratory testing of this monitor. No licensed or API-permitted exact-model customer-review corpus was acquired."
+    },
+    {
+      "question": "What exact-model validation is recorded for the EVCERE CH-S691L?",
+      "answer": "No peer-reviewed exact-model validation study is recorded in this published packet. Family-level records are not transferred as exact-model validation. MDRank has not performed hands-on or laboratory testing of this monitor."
+    }
   ]
 }

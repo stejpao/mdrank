@@ -9,7 +9,7 @@ import { selectDossierPeers } from "@/lib/dossierPeers.mjs";
 import { buildDossierStructuredData, scoreStatusFaq } from "@/lib/dossierSchema.mjs";
 import { getPublicScore } from "@/lib/publicScore";
 
-const PHOTO_CAPTION = "*Photo edited for clarity.";
+const PHOTO_CAPTION = "Image: Amazon listing photo (manufacturer/seller)";
 
 type FaqMap = Record<string, Array<{ question: string; answer: string }>>;
 type OfferMap = Record<string, { brand: string; asin: string; offerNote: string }>;
@@ -18,7 +18,7 @@ const faqsBySlug = dossierFaqs as FaqMap;
 const offersBySlug = publicOffers as OfferMap;
 
 type CommerceFields = {
-  amazonListing?: { asin?: string; canadaLocalMatch?: "confirmed" | "not-documented" };
+  amazonListing?: { asin?: string; canadaLocalMatch?: "confirmed" | "not-documented"; listingStatus?: "current" | "not-found" };
   illustrativePhoto?: { src?: string; caption?: string };
 };
 
@@ -29,7 +29,8 @@ function jsonLd(data: Record<string, unknown>) {
 export function DossierSeo({ dossier }: { dossier: PublishedDossier }) {
   const offer = offersBySlug[dossier.slug];
   const commerce = dossier as PublishedDossier & CommerceFields;
-  const asin = commerce.amazonListing?.asin || offer?.asin || null;
+  const listingMissing = commerce.amazonListing?.listingStatus === "not-found";
+  const asin = listingMissing ? null : (commerce.amazonListing?.asin || offer?.asin || null);
   const canadaLocalMatch = commerce.amazonListing?.canadaLocalMatch ?? "not-documented";
   const photo = commerce.illustrativePhoto;
   const image =

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 const SITE_NAME = "MDRank";
 const SITE_ORIGIN = "https://mdrank.org";
-const APPROVED_PHOTO_CAPTION = "*Photo edited for clarity.";
+const APPROVED_PHOTO_CAPTION = "Image: Amazon listing photo (manufacturer/seller)";
 
 export function canonicalUrl(path: string): string {
   if (path === "/") return SITE_ORIGIN;
@@ -16,7 +16,7 @@ export type ShareImage = {
   height: number;
 };
 
-/** Real-use dossier photo already approved for publication. No invented artwork. */
+/** Amazon listing photo already approved for publication. No invented artwork. */
 export function approvedShareImage(
   photo:
     | {

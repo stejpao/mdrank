@@ -28,7 +28,7 @@ const unrankedCount = listPublicScores().filter((row) => row.rankStatus !== "pub
 const published = [
   `${publishedDossiers.length} upper-arm blood-pressure monitor dossiers are public, including iHealth Track KN-550BT (Evidence Confidence: High) and OMRON Evolv BP7000 (Evidence Confidence: Moderate).`,
   `iHealth Track KN-550BT MDRank Score ${ihealth.scoreLabel} / 100 and category rank ${ihealth.rankLabel} under rubric ${ihealth.rubricVersion}.`,
-  "Exact-model identity, regulatory findings, validation status, limitations, and cited sources. Pack dossiers record the approved brand, model, FDA clearance identifier, and Amazon.com ASIN. An illustrative photo is included only when one was cleared for that exact model. Dossiers added on November 3, 2026 follow that rule.",
+  "Exact-model identity, regulatory findings, validation status, limitations, and cited sources. Pack dossiers record the approved brand, model, FDA clearance identifier, and Amazon.com ASIN. A photograph is an unedited Amazon.com listing photo when one was approved for that exact model. Six dossiers have no product photograph. Dossiers added on November 5, 2026 follow that rule and stay unranked.",
   "Testing status on each dossier: public evidence only. MDRank has not performed hands-on or laboratory testing of these monitors.",
   "Public Experience Confidence: Insufficient. No permitted customer-review record is in use, so the public-input sprinkle stays neutral.",
   "Affiliate, sponsorship, margin, inventory, advertising, and conversion data are unavailable to scoring.",
@@ -46,7 +46,7 @@ export default function EvidenceStatusPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
       <PublicPageJsonLd path="/evidence-status" />
-      <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Public record as of November 3, 2026</p>
+      <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">Public record as of November 5, 2026</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">Evidence status</h1>
       <p className="mt-5 text-lg leading-relaxed text-slate-700">
         MDRank publishes exact-model evidence for upper-arm home blood-pressure monitors under rubric upper-arm-home-bp-v1.0.0. Each dossier shows Evidence Confidence separately from the MDRank Score. Score and rank stay withheld when exact-model evidence is incomplete.
